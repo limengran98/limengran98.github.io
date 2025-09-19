@@ -1,167 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mengran Li - CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        header img {
-            border-radius: 50%;
-            width: 140px;  /* Adjusted size */
-            height: 150px; /* Adjusted size */
-            margin-bottom: 5px;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        .section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        .pub-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .pub-item {
-            margin-bottom: 10px;
-        }
-        .pub-item a {
-            text-decoration: none;
-            color: #333;
-        }
-        .pub-item a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 40px;
-        }
-        .social-links a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mengran Li — Technical CV</title>
+  <meta name="description" content="Mengran Li · Ph.D. Student in Control Science & Engineering, Sun Yat-sen University. AI for Science, Graph Learning, Hypergraphs, Temporal Modeling." />
+  <meta property="og:title" content="Mengran Li — Technical CV" />
+  <meta property="og:description" content="Ph.D. Student, Control Science & Engineering · SYSU" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" />
+  <link rel="icon" href="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" />
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
 </head>
-<body>
+<body class="bg-gradient-to-b from-white to-zinc-50 text-zinc-900 dark:from-zinc-950 dark:to-zinc-900 dark:text-zinc-100">
 
-<header>
-    <img src="https://github.com/limengran98/limengran98.github.io/blob/main/lmr.jpg?raw=true" alt="Mengran Li">
-    <h1>Mengran Li</h1>
-    <p>Ph.D. Student in Control Science & Engineering, Sun Yat-sen University</p>
-</header>
-
-<div class="container">
-    <!-- Personal Profile Section -->
-    <div class="section">
-        <h2>1. Personal Profile</h2>
-        <p>I am currently pursuing a Ph.D. in Engineering at the School of Intelligent Engineering, Sun Yat-sen University, focusing on Control Science and Engineering. Before this, I obtained a Master's degree in Control Science and Engineering from Beijing University of Technology. My main research interests include the application of network science in social media, heterogeneous graph learning, hypergraph learning, temporal modeling, traffic big data, and bioinformatics. I am advised by Dr. Ronghui Zhang at Sun Yat-sen University and Dr. Yong Zhang at Beijing University of Technology. As the first author, I have published over 10 high-level papers in top-tier journals, including IEEE Transactions and ACM Transactions.</p>
+  <!-- Top Nav -->
+  <nav class="sticky top-0 z-40 backdrop-blur border-b border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-950/60">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#about" class="font-semibold tracking-tight">Mengran Li</a>
+      <div class="hidden md:flex gap-5 text-sm">
+        <a href="#about">Profile</a>
+        <a href="#education">Education</a>
+        <a href="#featured">Featured</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="darkToggle" class="border px-3 py-1.5 rounded-xl text-sm">🌙</button>
     </div>
+  </nav>
 
-    <!-- Education Section -->
-    <div class="section">
-        <h2>2. Education</h2>
-        <ul>
-            <li><strong>2023 – Present</strong>: Ph.D. Student, Sun Yat-sen University, School of Intelligent Engineering</li>
-            <li><strong>2020 – 2023</strong>: Master's Degree in Control Science and Engineering, Beijing University of Technology</li>
-            <li><strong>2016 – 2020</strong>: Bachelor's Degree, East China Jiaotong University</li>
-        </ul>
+  <!-- Hero -->
+  <header class="max-w-5xl mx-auto px-4 pt-10 md:pt-16">
+    <div class="grid md:grid-cols-[160px,1fr] gap-6 items-center">
+      <img src="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" alt="Mengran Li" class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover border" />
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Mengran Li</h1>
+        <p class="text-zinc-600 dark:text-zinc-300 mt-2">Ph.D. Student · Control Science & Engineering · Sun Yat-sen University</p>
+        <div class="flex flex-wrap gap-2 mt-4 text-sm">
+          <span class="border rounded-full px-2 py-0.5">AI for Science</span>
+          <span class="border rounded-full px-2 py-0.5">Graph Learning</span>
+          <span class="border rounded-full px-2 py-0.5">Hypergraphs</span>
+          <span class="border rounded-full px-2 py-0.5">Temporal Modeling</span>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <!-- Publications Section -->
-    <div class="section">
-        <h2>3. Publications</h2>
-        <p>For the latest and complete list of publications, please refer to my <a href="https://scholar.google.com.hk/citations?user=MLff8bQAAAAJ&hl">Google Scholar Profile</a></p>
-        <ul class="pub-list">
-            <li class="pub-item"><a href="https://doi.org/10.1109/JIOT.2025.3531985" target="_blank">Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things</a>, IEEE Internet of Things Journal, 2025.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1109/TCSS.2024.3509399" target="_blank">TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation</a>, IEEE Transactions on Computational Social Systems, 2024.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1109/TNNLS.2024.3357080" target="_blank">Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning</a>, IEEE Transactions on Neural Networks and Learning Systems, 2024.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1145/3672078" target="_blank">SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning</a>, ACM Transactions on Multimedia Computing, Communications and Applications, 2024.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1109/TCSS.2023.3292145" target="_blank">CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks</a>, IEEE Transactions on Computational Social Systems, 2023.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1109/TBDATA.2023.3275374" target="_blank">Self-supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning</a>, IEEE Transactions on Big Data, 2023.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1145/3565028" target="_blank">Hypergraph Transformer Neural Networks</a>, ACM Transactions on Knowledge Discovery from Data, 2022.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1016/j.engappai.2022.105174" target="_blank">Multi-view hypergraph neural networks for student academic performance prediction</a>, Engineering Applications of Artificial Intelligence, 2022.</li>
-            <li class="pub-item"><a href="https://doi.org/10.1109/BigData55660.2022.10020643" target="_blank">SHCN: Self-supervised general hypergraph clustering network</a>, in 2022 IEEE International Conference on Big Data (Big Data), 2022.</li>
-            <li class="pub-item"><a href="https://doi.org/10.3233/IDA-216318" target="_blank">Inferring student social link from spatiotemporal behavior data via entropy-based analyzing model</a>, Intelligent Data Analysis, 2022.</li>
-        </ul>
-    </div>
+  <main class="max-w-5xl mx-auto px-4 pb-16">
+    <!-- Profile -->
+    <section id="about" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Profile</h2>
+      <p>I am a Ph.D. student in Control Science and Engineering at Sun Yat-sen University. My research interests include AI for Science, network science, heterogeneous graph learning, hypergraph learning, temporal modeling, traffic big data, and bioinformatics. I am advised by Prof. Ronghui Zhang (SYSU) and Prof. Yong Zhang (BJUT). As first author, I have published over 20 papers in IEEE/ACM Transactions and CCF-A conferences.</p>
+    </section>
 
-    <!-- Honors and Awards Section -->
-    <div class="section">
-        <h2>4. Honors and Awards</h2>
-        <ul>
-            <li>Beijing Excellent Graduate of Ordinary Higher Education Institutions (2023)</li>
-            <li>National Scholarship for Master's Students (2022)</li>
-            <li>Beijing University of Technology Outstanding Graduate (2023)</li>
-            <li>Outstanding Master's Thesis Award, Beijing University of Technology (2023)</li>
-            <li>Xiaomi Special Award, Beijing University of Technology (Top 10 University-wide, 2022)</li>
-            <li>First-class Academic Scholarship, Sun Yat-sen University (2024)</li>
-        </ul>
-    </div>
+    <!-- Education -->
+    <section id="education" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Education</h2>
+      <ul class="space-y-3">
+        <li><strong>2023 – Present</strong>: Ph.D., Sun Yat-sen University</li>
+        <li><strong>2020 – 2023</strong>: M.Eng., Beijing University of Technology</li>
+        <li><strong>2016 – 2020</strong>: B.Eng., East China Jiaotong University</li>
+      </ul>
+    </section>
 
-    <!-- Academic Service Section -->
-    <div class="section">
-        <h2>5. Academic Service</h2>
-        <p>I serve as a reviewer for prestigious journals, including:</p>
-        <ul>
-            <li>IEEE Transactions on Neural Networks and Learning Systems</li>
-            <li>IEEE Transactions on Computational Social Systems</li>
-            <li>IEEE Transactions on Mobile Computing</li>
-            <li>IEEE Transactions on Emerging Topics in Computing</li>
-            <li>IEEE Communications Letters</li>
-            <li>Information Fusion</li>
-            <li>Neural Networks</li>
-            <li>Neurocomputing</li>
-            <li>Engineering Applications of Artificial Intelligence</li>
-            <li>Expert Systems with Applications</li>
-            <li>Knowledge-Based Systems</li>
-        </ul>
-    </div>
+    <!-- Featured -->
+    <section id="featured" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Featured Research</h2>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Selected works with representative figures will be shown here.</p>
+      <img src="assets/figures/representative.png" alt="Representative works" class="rounded-xl border" />
+    </section>
 
-    <!-- Contact Information Section -->
-    <div class="section">
-        <h2>6. Contact Information</h2>
-        <p>If you are interested in collaboration opportunities or would like to discuss research, feel free to reach out to me via email:</p>
-        <ul>
-            <li><a href="mailto:limr39@mail2.sysu.edu.cn">limr39@mail2.sysu.edu.cn</a></li>
-            <li><a href="mailto:limengran1998@163.com">limengran1998@163.com</a></li>
-        </ul>
-    </div>
-</div>
+    <!-- Publications -->
+    <section id="publications" class="scroll-mt-24 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight border-b border-zinc-200 dark:border-zinc-800 pb-3 mb-6">Publications (Categorized)</h2>
 
-<footer>
-    <p>&copy; 2025 Mengran Li</p>
-</footer>
+      <!-- AI for Science (Focus) -->
+      <div class="mb-10">
+        <h3 class="text-xl font-semibold mb-3">AI for Science — Focus Area</h3>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">AAAI 2026. <em>Under Review</em></div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">Gene Expression Prediction from Histology Images via Hypergraph Neural Networks.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Briefings in Bioinformatics, 2024.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">PhenoProfiler: Advancing Phenotypic Learning for Image-based Drug Discovery.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">arXiv. <em>Under Review</em></div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IJCAI 2025.</div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Graph Foundation Models -->
+      <div class="mb-10">
+        <h3 class="text-xl font-semibold mb-3">Graph Foundation Models</h3>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1145/3565028" target="_blank">Hypergraph Transformer Neural Networks.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">ACM Transactions on Knowledge Discovery from Data, 2023.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TBDATA.2023.3275374" target="_blank">Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Big Data, 2024.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TCSS.2023.3292145" target="_blank">CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Computational Social Systems, 2024.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1145/3672078" target="_blank">SCAE: Structural Contrastive Auto-Encoder for Incomplete Multi-view Representation Learning.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">ACM TOMM, 2024.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TNNLS.2024.3357080" target="_blank">Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Neural Networks and Learning Systems, 2025.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TCSS.2024.3509399" target="_blank">TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Computational Social Systems, 2025.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/JIOT.2025.3531985" target="_blank">Topology-Driven Attribute Recovery for Attribute-Missing Graph Learning in Social Internet of Things.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Internet of Things Journal, 2025.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">Review: A Survey of Large Language Models for Data Challenges in Graphs.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Expert Systems with Applications, 2025.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graph Models + X -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3">Graph Models + X</h3>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.1016/j.engappai.2022.105174" target="_blank">Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Engineering Applications of Artificial Intelligence, 2022.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium"><a class="link" href="https://doi.org/10.3233/IDA-216318" target="_blank">Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model.</a></div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Intelligent Data Analysis, 2023.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">TAS-TsC: A Data-driven Framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of Truck Trajectories.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Applied Soft Computing, 2025.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">Ms-AeDNet: A Multi-scale Attention-Enhanced Dynamic Network for Multi-step Performance Prediction of Hydrogen Proton Exchange Membrane Fuel Cells.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Process Safety and Environmental Protection, 2025.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Computational Social Systems, 2024.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Intelligent Transportation Systems, 2025.</div>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
+            <div class="font-medium">MDVT: Enhancing Multimodal Recommendation with Model-Agnostic Multimodal-Driven Virtual Triplets.</div>
+            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">KDD 2025.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm">Full list: <a class="link" href="https://scholar.google.com.hk/citations?user=MLff8bQAAAAJ&hl" target="_blank">Google Scholar</a></div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Honors & Awards</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Beijing Excellent Graduate of Ordinary Higher Education Institutions (2023)</li>
+        <li>National Scholarship for Master's Students (2022)</li>
+        <li>Outstanding Graduate, BJUT (2023)</li>
+        <li>Outstanding Master's Thesis Award, BJUT (2023)</li>
+        <li>Xiaomi Special Award, BJUT (Top 10 University-wide, 2022)</li>
+        <li>First-class Academic Scholarship, Sun Yat-sen University (2024)</li>
+      </ul>
+    </section>
+
+    <!-- Service -->
+    <section id="service" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Academic Service</h2>
+      <p>Reviewer for IEEE TNNLS, IEEE TCSS, IEEE TMC, IEEE TETC, IEEE Communications Letters, Information Fusion, Neural Networks, Neurocomputing, EAAI, Expert Systems with Applications, Knowledge-Based Systems.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Contact</h2>
+      <ul class="list-disc pl-6">
+        <li><a href="mailto:limr39@mail2.sysu.edu.cn">limr39@mail2.sysu.edu.cn</a></li>
+        <li><a href="mailto:limengran1998@163.com">limengran1998@163.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="border-t py-10 mt-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
+    © 2025 Mengran Li. Built with TailwindCSS.
+  </footer>
+
+  <script>
+    (function(){
+      const key='ml-dark';
+      const root=document.documentElement;
+      const saved=localStorage.getItem(key);
+      if(saved==='1'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
+        root.classList.add('dark');
+      }
+      document.getElementById('darkToggle').addEventListener('click',()=>{
+        const d=root.classList.toggle('dark');
+        localStorage.setItem(key,d?'1':'0');
+      });
+    })();
+  </script>
 </body>
 </html>
