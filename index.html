@@ -154,7 +154,7 @@
         paperUrl: 'https://doi.org/10.1145/3711896.3737042',
         codeUrl: 'https://github.com/Jinfeng-Xu/MDVT',
         authors: 'Jinfeng Xu, Zheyu Chen, Jinze Li, Shuo Yang, Hewei Wang, Yijie Li, Mengran Li, Puzhen Wu, Edith CH Ngai',
-        abstract: '',
+        abstract: 'The data sparsity problem significantly hinders the performance of recommender systems, as traditional models rely on limited historical interactions to learn user preferences and item properties. While incorporating multimodal information can explicitly represent these preferences and properties, existing works often use it only as side information, failing to fully leverage its potential. In this paper, we propose MDVT, a model-agnostic approach that constructs multimodal-driven virtual triplets to provide valuable supervision signals, effectively mitigating the data sparsity problem in multimodal recommendation systems. To ensure high-quality virtual triplets, we introduce three tailored warm-up threshold strategies: static, dynamic, and hybrid. The static warm-up threshold strategy exhaustively searches for the optimal number of warm-up epochs but is time-consuming and computationally intensive. The dynamic warm-up threshold strategy adjusts the warm-up period based on loss trends, improving efficiency but potentially missing optimal performance. The hybrid strategy combines both, using the dynamic strategy to find the approximate optimal number of warm-up epochs and then refining it with the static strategy in a narrow hyper-parameter space. Once the warm-up threshold is satisfied, the virtual triplets are used for joint model optimization by our enhanced pair-wise loss function without causing significant gradient skew. Extensive experiments on multiple real-world datasets demonstrate that integrating MDVT into advanced multimodal recommendation models effectively alleviates the data sparsity problem and improves recommendation performance, particularly in sparse data scenarios.',
         thumbnail: ''
       },
       {
@@ -164,7 +164,7 @@
         paperUrl: 'https://doi.org/10.1109/TNNLS.2024.3357080',
         codeUrl: null,
         authors: 'Mengran Li, Yong Zhang, Shaofan Wang, Yongli Hu, Baocai Yin',
-        abstract: '',
+        abstract: 'Attribute graphs are a crucial data structure for graph communities. However, the presence of redundancy and noise in the attribute graph can impair the aggregation effect of integrating two different heterogeneous distributions of attribute and structural features, resulting in inconsistent and distorted data that ultimately compromises the accuracy and reliability of attribute graph learning. For instance, redundant or irrelevant attributes can result in overfitting, while noisy attributes can lead to underfitting. Similarly, redundant or noisy structural features can affect the accuracy of graph representations, making it challenging to distinguish between different nodes or communities. To address these issues, we propose the embedded fusion graph auto-encoder framework for self-supervised learning (SSL), which leverages multitask learning to fuse node features across different tasks to reduce redundancy. The embedding fusion graph auto-encoder (EFGAE) framework comprises two phases: pretraining (PT) and downstream task learning (DTL). During the PT phase, EFGAE uses a graph auto-encoder (GAE) based on adversarial contrastive learning to learn structural and attribute embeddings separately and then fuses these embeddings to obtain a representation of the entire graph. During the DTL phase, we introduce an adaptive graph convolutional network (AGCN), which is applied to graph neural network (GNN) classifiers to enhance recognition for downstream tasks. The experimental results demonstrate that our approach outperforms state-of-the-art (SOTA) techniques in terms of accuracy, generalization ability, and robustness.',
         thumbnail: '',
         esi: true
       },
@@ -185,7 +185,7 @@
         paperUrl: 'https://doi.org/10.1109/JIOT.2025.3531985',
         codeUrl: 'https://github.com/limengran98/TDAR',
         authors: 'Mengran Li, Junzhou Chen, Chenyun Yu, Guanying Jiang, Ronghui Zhang, Yanming Shen, Houbing Herbert Song',
-        abstract: '',
+        abstract: 'With the advancement of information technology, the Social Internet of Things (SIoT) has fostered the integration of physical devices and social networks, deepening the study of complex interaction patterns. Text attribute graphs (TAGs) capture both topological structures and semantic attributes, enhancing the analysis of complex interactions within the SIoT. However, existing graph learning methods are typically designed for complete attributed graphs, and the common issue of missing attributes in attribute missing graphs (AMGs) increases the difficulty of analysis tasks. To address this, we propose the topology-driven attribute recovery (TDAR) framework, which leverages topological data for AMG learning. TDAR introduces an improved prefilling method for initial attribute recovery using native graph topology. Additionally, it dynamically adjusts propagation weights and incorporates homogeneity strategies within the embedding space to suit AMGs’ unique topological structures, effectively reducing noise during information propagation. Extensive experiments on public datasets demonstrate that TDAR significantly outperforms state-of-the-art methods in attribute reconstruction and downstream tasks, offering a robust solution to the challenges posed by AMGs.',
         thumbnail: ''
       },
       {
@@ -195,7 +195,7 @@
         paperUrl: 'https://doi.org/10.1109/TBDATA.2023.3275374',
         codeUrl: 'https://github.com/limengran98/SNHE',
         authors: 'Mengran Li, Yong Zhang, Wei Zhang, Yi Chu, Yongli Hu, Baocai Yin',
-        abstract: '',
+        abstract: 'The exploration of self-supervised information mining of heterogeneous datasets has gained significant traction in recent years. Heterogeneous graph neural networks (HGNNs) have emerged as a highly promising method for handling heterogeneous information networks (HINs) due to their superior performance. These networks leverage aggregation functions to convert pairwise relations-based features from raw heterogeneous graphs into embedding vectors. However, real-world HINs contain valuable higher-order relations that are often overlooked but can provide complementary information. To address this issue, we propose a novel method called Self-supervised Nodes-Hyperedges Embedding (SNHE), which leverages hypergraph structures to incorporate higher-order information into the embedding process of HINs. Our method decomposes the raw graph structure into snapshots based on various meta-paths, which are then transformed into hypergraphs to aggregate high-order information within the data and generate embedding representations. Given the complexity of HINs, we develop a dual self-supervised structure that maximizes mutual information in the enhanced graph data space, guides the overall model update, and reduces redundancy and noise. We evaluate our proposed method on various real-world datasets for node classification and clustering tasks, and compare it against state-of-the-art methods.',
         thumbnail: ''
       },
       {
@@ -205,7 +205,7 @@
         paperUrl: 'https://doi.org/10.1109/TCSS.2023.3292145',
         codeUrl: null,
         authors: 'Mengran Li, Yong Zhang, Wei Zhang, Shiyu Zhao, Xinglin Piao, Baocai Yin',
-        abstract: '',
+        abstract: 'Community detection aims to identify dense subgroups of nodes within a network. However, in real-world networks, node attributes are often missing, making traditional methods less effective. In networks with missing attributes, the main challenge of community detection is to deal with the missing attribute information efficiently and use network structure information to make accurate predictions. This article proposes an innovative method called contrastive sampling-aggregating transformer (CSAT) for community detection in attribute-missing networks. CSAT incorporates the contrastive learning principle to capture hidden patterns among nodes and to aggregate information from different samples to create a more robust and accurate methodology for community detection. Specifically, CSAT utilizes a sampling and propagation strategy to obtain different samples and smooth attribute features of the network structure and leverages the Transformer architecture to model the pairwise relationships between nodes. Therefore, our method can address the attribute-missing issue by integrating the auxiliary information from both the network structure and other sources. Extensive experiments on several benchmark datasets demonstrate CSAT’s superior performance compared to the state-of-the-art methods for community detection.',
         thumbnail: ''
       },
       {
@@ -215,7 +215,7 @@
         paperUrl: 'https://doi.org/10.1145/3672078',
         codeUrl: 'https://github.com/limengran98/SCAE',
         authors: 'Mengran Li, Ronghui Zhang, Yong Zhang, Xinglin Piao, Shiyu Zhao, Baocai Yin',
-        abstract: '',
+        abstract: 'Describing an object from multiple perspectives often leads to incomplete data representation. Consequently, learning consistent representations for missing data from multiple views has emerged as a key focus in the realm of Incomplete Multi-view Representation Learning (IMRL). In recent years, various strategies, such as subspace learning, matrix decomposition, and deep learning, have been harnessed to develop numerous IMRL methods. In this article, our primary research revolves around IMRL, with a particular emphasis on addressing two main challenges. Firstly, we delve into the effective integration of intra-view similarity and contextual structure into a unified framework. Secondly, we explore the effective facilitation of information exchange and fusion across multiple views. To tackle these issues, we propose a deep learning approach known as Structural Contrastive Auto-Encoder (SCAE) to solve the challenges of IMRL. SCAE comprises two major components: intra-view structural representation learning and inter-view contrastive representation learning. The former involves capturing intra-view similarity by minimizing the Dirichlet energy of the feature matrix, while also applying spatial dispersion regularization to capture intra-view contextual structure. The latter encourages maximizing the mutual information of inter-view representations, facilitating information exchange and fusion across views. Experimental results demonstrate the efficacy of our approach in significantly enhancing model accuracy and robustly addressing IMRL problems.',
         thumbnail: '',
         esi: true
       },
@@ -236,7 +236,7 @@
         paperUrl: 'https://doi.org/10.1109/BigData55660.2022.10020643',
         codeUrl: 'https://github.com/limengran98/SHCN',
         authors: 'Li Mengran, Piao Xinglin, Zhang Yong, Hu Yongli, Yin Baocai',
-        abstract: '',
+        abstract: 'Clustering is a fundamental and hot issue in the unsupervised learning area. With the rapid development of deep learning and graph neural networks (GNNs) techniques, researchers have proposed a series of effective clustering methods. However, most existing approaches adopt a conventional graph to aggregate the neighborhood information, where only the pairwise relations are considered. Moreover, the redundancy/noise in the raw data samples may result in less accurate sample relations and inferior clustering results. In this paper, we proposed a new GNNs based clustering method, which adopts the hypergraph learning approach to explore the high-order relationship for accurate relation learning. Specifically, we first construct two hypergraph representations based on the topology feature and attribute feature from data samples. Then, a self-supervised structure is integrated to learn a cross-correlation matrix from the original hypergraph to act as a higher-order neighborhood with reduced redundancy and noise. Finally the embedding representation of the clustering space is learned in the graph convolution. The proposed method has been evaluated on six public datasets for clustering tasks. Experimental results show that our proposed method outperforms the state-of-the-art ones.',
         thumbnail: ''
       }
     ];
@@ -249,7 +249,7 @@
         paperUrl: 'https://doi.org/10.1109/TITS.2025.3588867',
         codeUrl: 'https://github.com/BMRETURN/MM-STFlowNet',
         authors: 'Ronghui Zhang, Wenbin Xing, Mengran Li, Zihan Wang, Junzhou Chen, Xiaolei Ma, Zhiyuan Liu, Zhengbing He',
-        abstract: '',
+        abstract: 'Accurate and refined passenger flow prediction is essential for optimizing the collaborative management of multiple collection and distribution modes in large-scale transportation hubs. Traditional methods often focus only on the overall passenger volume, neglecting the interdependence between different modes within the hub. To address this limitation, we propose MM-STFlowNet, a comprehensive multi-mode prediction framework grounded in dynamic spatial-temporal graph modeling. Initially, an integrated temporal feature processing strategy is implemented using signal decomposition and convolution techniques to address data spikes and high volatility. Subsequently, we introduce the Spatial-Temporal Dynamic Graph Convolutional Recurrent Network (STDGCRN) to capture detailed spatial-temporal dependencies across multiple traffic modes, enhanced by an adaptive channel attention mechanism. Finally, the self-attention mechanism is applied to incorporate various external factors, further enhancing prediction accuracy. Experiments on a real-world dataset from Guangzhounan Railway Station in China demonstrate that MM-STFlowNet achieves state-of-the-art performance, particularly during peak periods, providing valuable insight for transportation hub management.',
         thumbnail: ''
       },
       {
@@ -259,7 +259,7 @@
         paperUrl: 'https://doi.org/10.1016/j.psep.2025.107674',
         codeUrl: 'https://github.com/BMRETURN/Ms-AeDNet',
         authors: 'Mengran Li, Wenbin Xing, Ronghui Zhang',
-        abstract: '',
+        abstract: 'The global transition to sustainable, low-carbon energy systems positions hydrogen energy as a pivotal solution for mitigating climate change and enhancing energy security. Among the most promising technologies for clean hydrogen utilization are Proton Exchange Membrane Fuel Cells (PEMFCs), known for their high efficiency and zero emissions. However, the long-term durability and performance prediction of PEMFCs remain major challenges, hindering their widespread adoption in critical sectors. Traditional methods struggle to capture the multi-scale temporal dependencies and the dynamic effects of external operating conditions. To address these challenges, we propose a Multi-scale Attention-enhanced Dynamic Network (Ms-AeDNet) that integrates global adaptive decomposition, local time enhancement, and cross-factor attentive fusion. This solution enhances the performance prediction accuracy of PEMFCs by leveraging deep learning to model degradation patterns and environmental influences simultaneously. Validated on two industrial datasets, Ms-AeDNet outperforms baseline models, reducing MAE and MSE by 27.63% and 37.48% on average. Functional contribution analysis and visualization studies further confirm its robustness across varying operating conditions, making it a reliable tool for predictive maintenance and life cycle optimization of hydrogen PEMFCs.',
         thumbnail: ''
       },
       {
@@ -269,7 +269,7 @@
         paperUrl: 'https://doi.org/10.1016/j.asoc.2025.113214',
         codeUrl: null,
         authors: 'Mengran Li, Junzhou Chen, Guanying Jiang, Fuliang Li, Ronghui Zhang, Siyuan Gong, Zhihan Lv',
-        abstract: '',
+        abstract: 'Accurately estimating the time of arrival (ETA) for trucks is crucial for optimizing transportation efficiency in logistics. GPS trajectory data provides valuable information for ETA, but challenges arise due to temporal sparsity, variable sequence lengths, and the interdependencies among multiple trucks. To address these issues, we propose the Temporal-Attribute-Spatial Tri-space Coordination (TAS-TsC) framework, which leverages three feature spaces – temporal, attribute, and spatial – to enhance ETA. Our framework consists of a Temporal Learning Module (TLM) that uses state space models to capture temporal dependencies, an Attribute Extraction Module (AEM) that transforms sequential features into structured attribute embeddings, and a Spatial Fusion Module (SFM) that models the interactions among multiple trajectories using graph representation learning. These modules collaboratively learn trajectory embeddings, which are then used by a Downstream Prediction Module (DPM) to estimate arrival times. We validate TAS-TsC on real truck trajectory datasets collected from Shenzhen, China, demonstrating its superior performance compared to existing methods.',
         thumbnail: ''
       },
       {
@@ -279,7 +279,7 @@
         paperUrl: '',
         codeUrl: null,
         authors: 'Shiyu Zhao, Yong Zhang, Mengran Li, Xinglin Piao, Baocai Yin',
-        abstract: '',
+        abstract: 'Recommender systems have become an indispensable tool in today's digital age, significantly enhancing user engagement on various online platforms by curating personalized item recommendations tailored to individual preferences. While the field has long been dominated by the collaborative filtering technique, which primarily leverages user–item interaction data, it often falls short in encapsulating the rich contextual intricacies and evolving dynamics inherent to these interactions. Recognizing this limitation, our research introduces the contextual semantic interaction graph embedding (CSI-GE) method. This advanced model incorporates a dynamic hop window within a multilayer graph convolutional network, ensuring a comprehensive extraction of both immediate and evolving contextual features. By amalgamating self-supervised contrastive learning, we achieve a refinement of user and item embeddings. Furthermore, our innovative variance–invariance–covariance (VIC) regularization-based loss function fortifies the robustness of these embeddings. Through rigorous testing, CSI-GE consistently outperformed contemporary methods, underscoring its superior accuracy and stability.',
         thumbnail: ''
       },
       {
@@ -289,7 +289,7 @@
         paperUrl: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248',
         codeUrl: 'https://github.com/QSong-github/HGGEP',
         authors: 'Bo Li, Yong Zhang, Qing Wang, Chengyang Zhang, Mengran Li, Guangyu Wang, Qianqian Song',
-        abstract: '',
+        abstract: 'Spatial transcriptomics reveals the spatial distribution of genes in complex tissues, providing crucial insights into biological processes, disease mechanisms, and drug development. The prediction of gene expression based on cost-effective histology images is a promising yet challenging field of research. Existing methods for gene prediction from histology images exhibit two major limitations. First, they ignore the intricate relationship between cell morphological information and gene expression. Second, these methods do not fully utilize the different latent stages of features extracted from the images. To address these limitations, we propose a novel hypergraph neural network model, HGGEP, to predict gene expressions from histology images. HGGEP includes a gradient enhancement module to enhance the model’s perception of cell morphological information. A lightweight backbone network extracts multiple latent stage features from the image, followed by attention mechanisms to refine the representation of features at each latent stage and capture their relations with nearby features. To explore higher-order associations among multiple latent stage features, we stack them and feed into the hypergraph to establish associations among features at different scales. Experimental results on multiple datasets from disease samples including cancers and tumor disease, demonstrate the superior performance of our HGGEP model than existing methods.',
         thumbnail: ''
       },
       {
@@ -299,7 +299,7 @@
         paperUrl: 'https://doi.org/10.3233/IDA-216318',
         codeUrl: null,
         authors: 'Mengran Li, Yong Zhang, Xiaoyong Li, Xuanqi Lin, Baocai Yin',
-        abstract: '',
+        abstract: 'Social link is an important index to understand master students’ mental health and social ability in educational management. Extracting hidden social strength from students’ rich daily life behaviors has also become an attractive research hotspot. Devices with positioning functions record many students’ spatiotemporal behavior data, which can infer students’ social links. However, under the guidance of school regulations, students’ daily activities have a certain regularity and periodicity. Traditional methods usually compare the co-occurrence frequency of two users to infer social association but do not consider the location-intensive and time-sensitive in campus scenes. Aiming at the campus environment, a Spatiotemporal Entropy-Based Analyzing (S-EBA) model for inferring students’ social strength is proposed. The model is based on students’ multi-source heterogeneous behavioral data to calculate the frequency of co-occurrence under the influence of time intervals. Then, the three features of diversity, spatiotemporal hotspot and behavior similarity are introduced to calculate social strength. Experiments show that our method is superior to the traditional methods under many evaluating criteria. The inferred social strength is used as the weight of the edge to construct a social network further to analyze its important impact on students’ education management.',
         thumbnail: ''
       },
       {
@@ -309,7 +309,7 @@
         paperUrl: 'https://doi.org/10.1007/s40747-022-00731-8',
         codeUrl: null,
         authors: 'Xiaoyong Li, Yong Zhang, Huimin Cheng, Mengran Li, Baocai Yin',
-        abstract: '',
+        abstract: 'Finding students at high risk of poor academic performance as early as possible plays an important role in improving education quality. To do so, most existing studies have used the traditional machine learning algorithms to predict students’ achievement based on their behavior data, from which behavior features are extracted manually thanks to expert experience and knowledge. However, owing to an increase in the varieties and overall volume of behavioral data, it has become more and more challenging to identify high-quality handcrafted features. In this paper, we propose an end-to-end deep learning model that automatically extracts features from students’ multi-source heterogeneous behavior data to predict academic performance. The key innovation of this model is that it uses long short-term memory networks to capture inherent time-series features for each type of behavior, and it takes two-dimensional convolutional networks to extract correlation features among different behaviors. We conducted experiments with four types of daily behavior data from students of the university in Beijing. The experimental results demonstrate that the proposed deep model method outperforms several machine learning algorithms.',
         thumbnail: ''
       },
       {
@@ -319,7 +319,7 @@
         paperUrl: 'https://doi.org/10.1016/j.engappai.2022.105174',
         codeUrl: null,
         authors: 'Mengran Li, Yong Zhang, Xiaoyong Li, Lijia Cai, Baocai Yin',
-        abstract: '',
+        abstract: 'Academic performance prediction is a fundamental and hot issue in educational data mining (EDM). Recently, researchers have proposed a series of effective machine learning (ML) based classification strategies to predict students’ academic performance. However, prior arts are typically concerned about individual models but neglect the association among students, which might considerably have an effect on the integrity of the academic performance-related representations. Meanwhile, students’ multi-viewing behavior contains complex relations among students. Therefore, we propose a Multi-View Hypergraph Neural Network (MVHGNN) for predicting students’ academic performance. MVHGNN uses hypergraphs to construct high-order relations among students. The semantic information implied by multiple behaviors is consolidated through meta-paths. Further, a Cascade Attention Transformer (CAT) module is introduced to mine the weight of different behaviors by the self-attention mechanism. Our method is evaluated on real campus student behavioral datasets. The experimental results demonstrate that our method outperforms the state-of-the-art ones.',
         thumbnail: ''
       }
 
