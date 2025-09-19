@@ -5,18 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mengran Li — Technical CV</title>
   <meta name="description" content="Mengran Li · Ph.D. Student in Control Science & Engineering, Sun Yat-sen University. AI for Science, Graph Learning, Hypergraphs, Temporal Modeling." />
-  <meta property="og:title" content="Mengran Li — Technical CV" />
-  <meta property="og:description" content="Ph.D. Student, Control Science & Engineering · SYSU" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" />
   <link rel="icon" href="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" />
-  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { darkMode: 'class' }
-  </script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
 </head>
-<body class="bg-gradient-to-b from-white to-zinc-50 text-zinc-900 dark:from-zinc-950 dark:to-zinc-900 dark:text-zinc-100">
+<body class="bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-950 dark:to-zinc-900 text-zinc-900 dark:text-zinc-100">
 
   <!-- Top Nav -->
   <nav class="sticky top-0 z-40 backdrop-blur border-b border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-950/60">
@@ -42,11 +35,11 @@
       <div>
         <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Mengran Li</h1>
         <p class="text-zinc-600 dark:text-zinc-300 mt-2">Ph.D. Student · Control Science & Engineering · Sun Yat-sen University</p>
-        <div class="flex flex-wrap gap-2 mt-4 text-sm">
-          <span class="border rounded-full px-2 py-0.5">AI for Science</span>
-          <span class="border rounded-full px-2 py-0.5">Graph Learning</span>
-          <span class="border rounded-full px-2 py-0.5">Hypergraphs</span>
-          <span class="border rounded-full px-2 py-0.5">Temporal Modeling</span>
+        <div class="flex gap-4 mt-4 text-sm">
+          <a class="underline" href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <a class="underline" href="https://orcid.org/0000-0001-7540-530X" target="_blank">ORCID</a>
+          <a class="underline" href="https://github.com/limengran98" target="_blank">GitHub</a>
+          <a class="underline" href="mailto:limr39@mail2.sysu.edu.cn">Email</a>
         </div>
       </div>
     </div>
@@ -56,7 +49,7 @@
     <!-- Profile -->
     <section id="about" class="py-12 md:py-16">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Profile</h2>
-      <p>I am a Ph.D. student in Control Science and Engineering at Sun Yat-sen University. My research interests include AI for Science, network science, heterogeneous graph learning, hypergraph learning, temporal modeling, traffic big data, and bioinformatics. I am advised by Prof. Ronghui Zhang (SYSU) and Prof. Yong Zhang (BJUT). As first author, I have published over 20 papers in IEEE/ACM Transactions and CCF-A conferences.</p>
+      <p>I am a Ph.D. student in Control Science and Engineering at Sun Yat-sen University. My research interests include AI for Science, heterogeneous graph learning, hypergraph learning, temporal modeling, traffic big data, and bioinformatics. I am advised by Prof. Ronghui Zhang (SYSU) and Prof. Yong Zhang (BJUT). As first author, I have published over 20 papers in IEEE/ACM Transactions and CCF-A conferences.</p>
     </section>
 
     <!-- Education -->
@@ -69,115 +62,24 @@
       </ul>
     </section>
 
+    <!-- Featured -->
+    <section id="featured" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Featured Research</h2>
+      <img src="assets/figures/representative.png" alt="Representative works" class="rounded-xl border" />
+    </section>
+
     <!-- Publications -->
     <section id="publications" class="scroll-mt-24 py-12 md:py-16">
       <h2 class="text-2xl md:text-3xl font-semibold tracking-tight border-b border-zinc-200 dark:border-zinc-800 pb-3 mb-6">Publications</h2>
-
-      <!-- AI for Science (Focus) -->
-      <div class="mb-10">
-        <h3 class="text-xl font-semibold mb-3">AI for Science — Focus Area</h3>
-        <div class="space-y-4">
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">AAAI 2026. <em>Under Review</em></div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">Gene Expression Prediction from Histology Images via Hypergraph Neural Networks.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Briefings in Bioinformatics, 2024.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">PhenoProfiler: Advancing Phenotypic Learning for Image-based Drug Discovery.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">arXiv. <em>Under Review</em></div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IJCAI 2025.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Graph Foundation Models -->
-      <div class="mb-10">
-        <h3 class="text-xl font-semibold mb-3">Graph Foundation Models</h3>
-        <div class="space-y-4">
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1145/3565028" target="_blank">Hypergraph Transformer Neural Networks.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">ACM Transactions on Knowledge Discovery from Data, 2023.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TBDATA.2023.3275374" target="_blank">Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Big Data, 2024.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TCSS.2023.3292145" target="_blank">CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Computational Social Systems, 2024.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1145/3672078" target="_blank">SCAE: Structural Contrastive Auto-Encoder for Incomplete Multi-view Representation Learning.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">ACM TOMM, 2024.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TNNLS.2024.3357080" target="_blank">Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Neural Networks and Learning Systems, 2025.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/TCSS.2024.3509399" target="_blank">TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Computational Social Systems, 2025.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1109/JIOT.2025.3531985" target="_blank">Topology-Driven Attribute Recovery for Attribute-Missing Graph Learning in Social Internet of Things.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Internet of Things Journal, 2025.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">Review: A Survey of Large Language Models for Data Challenges in Graphs.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Expert Systems with Applications, 2025.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Graph Models + X -->
-      <div>
-        <h3 class="text-xl font-semibold mb-3">Graph Models + X</h3>
-        <div class="space-y-4">
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.1016/j.engappai.2022.105174" target="_blank">Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Engineering Applications of Artificial Intelligence, 2022.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium"><a class="link" href="https://doi.org/10.3233/IDA-216318" target="_blank">Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model.</a></div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Intelligent Data Analysis, 2023.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">TAS-TsC: A Data-driven Framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of Truck Trajectories.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Applied Soft Computing, 2025.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">Ms-AeDNet: A Multi-scale Attention-Enhanced Dynamic Network for Multi-step Performance Prediction of Hydrogen Proton Exchange Membrane Fuel Cells.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Process Safety and Environmental Protection, 2025.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Computational Social Systems, 2024.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">IEEE Transactions on Intelligent Transportation Systems, 2025.</div>
-          </div>
-          <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-5">
-            <div class="font-medium">MDVT: Enhancing Multimodal Recommendation with Model-Agnostic Multimodal-Driven Virtual Triplets.</div>
-            <div class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">KDD 2025.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 text-sm">Full list: <a class="link" href="https://scholar.google.com.hk/citations?user=MLff8bQAAAAJ&hl" target="_blank">Google Scholar</a></div>
+      <div id="pub-list" class="space-y-10"></div>
+      <div class="mt-8 text-sm">Full list on <a class="underline" href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
     </section>
 
     <!-- Awards -->
     <section id="awards" class="py-12 md:py-16">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Honors & Awards</h2>
       <ul class="list-disc pl-6 space-y-2">
-        <li>Beijing Excellent Graduate of Ordinary Higher Education Institutions (2023)</li>
+        <li>Beijing Excellent Graduate (2023)</li>
         <li>National Scholarship for Master's Students (2022)</li>
         <li>Outstanding Graduate, BJUT (2023)</li>
         <li>Outstanding Master's Thesis Award, BJUT (2023)</li>
@@ -207,6 +109,7 @@
   </footer>
 
   <script>
+    // Dark mode
     (function(){
       const key='ml-dark';
       const root=document.documentElement;
@@ -219,6 +122,122 @@
         localStorage.setItem(key,d?'1':'0');
       });
     })();
+
+    // ---- Publications Data
+    // ---- AI for Science
+    title: 'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning',
+    venue: 'ACM TOMM',
+    year: '2024',
+    paperUrl: 'https://doi.org/10.1145/3672078',
+    codeUrl: null,
+    authors: 'M. Li, R. Zhang, Y. Zhang, X. Piao, S. Zhao, B. Yin',
+    abstract: '',
+    thumbnail: ''
+    },
+    {
+    title: 'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning',
+    venue: 'IEEE TNNLS',
+    year: '2025',
+    paperUrl: 'https://doi.org/10.1109/TNNLS.2024.3357080',
+    codeUrl: null,
+    authors: 'M. Li, Y. Zhang, S. Wang, Y. Hu, B. Yin',
+    abstract: '',
+    thumbnail: ''
+    },
+    {
+    title: 'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation',
+    venue: 'IEEE TCSS',
+    year: '2025',
+    paperUrl: 'https://doi.org/10.1109/TCSS.2024.3509399',
+    codeUrl: null,
+    authors: 'M. Li, J. Chen, B. Li, Y. Zhang, R. Zhang, S. Gong, X. Ma, Z. Tian',
+    abstract: '',
+    thumbnail: ''
+    },
+    {
+    title: 'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things',
+    venue: 'IEEE IoT Journal',
+    year: '2025',
+    paperUrl: 'https://doi.org/10.1109/JIOT.2025.3531985',
+    codeUrl: null,
+    authors: 'M. Li, J. Chen, C. Yu, G. Jiang, R. Zhang, Y. Shen, H. Song',
+    abstract: '',
+    thumbnail: ''
+    }
+    ];
+    
+    
+    // ---- Graph Models + X
+    const GRAPH_MODELS_X = [
+    {
+    title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems',
+    venue: 'IEEE TCSS',
+    year: '2024',
+    paperUrl: '',
+    codeUrl: null,
+    authors: 'S. Zhao, Y. Zhang, M. Li, X. Piao, B. Yin',
+    abstract: '',
+    thumbnail: ''
+    },
+    {
+    title: 'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction',
+    venue: 'Engineering Applications of AI',
+    year: '2022',
+    paperUrl: 'https://doi.org/10.1016/j.engappai.2022.105174',
+    codeUrl: null,
+    authors: 'M. Li, Y. Zhang, X. Li, L. Cai, B. Yin',
+    abstract: '',
+    thumbnail: ''
+    },
+    {
+    title: 'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model',
+    venue: 'Intelligent Data Analysis',
+    year: '2023',
+    paperUrl: 'https://doi.org/10.3233/IDA-216318',
+    codeUrl: null,
+    authors: 'M. Li, Y. Zhang, X. Li, X. Lin, B. Yin',
+    abstract: '',
+    thumbnail: ''
+    },
+    {
+    title: 'SHCN: Self-supervised General Hypergraph Clustering Network',
+    venue: 'IEEE BigData (Conf.)',
+    year: '2022',
+    paperUrl: 'https://doi.org/10.1109/BigData55660.2022.10020643',
+    codeUrl: null,
+    authors: 'M. Li et al.',
+    abstract: '',
+    thumbnail: ''
+    }
+    ];
+
+    // Render publications
+    function renderCategory(title, list){
+      let html = `<div><h3 class='text-xl font-semibold mb-3'>${title}</h3><div class='space-y-4'>`;
+      list.forEach((p,i)=>{
+        html += `<div class='border rounded-xl p-4 bg-white/70 dark:bg-zinc-900/60'>
+          <div class='font-medium'>${p.title}</div>
+          <div class='text-sm text-zinc-500 dark:text-zinc-400 mt-1'>${p.venue}, ${p.year}</div>
+          <div class='flex gap-3 mt-2'>
+            ${p.paperUrl?`<a href='${p.paperUrl}' target='_blank' class='text-blue-600'>📄 Paper</a>`:`<span class='text-zinc-400'>📄 Paper</span>`}
+            ${p.codeUrl?`<a href='${p.codeUrl}' target='_blank' class='text-green-600'>🐙 Code</a>`:`<span class='text-zinc-400'>🐙 Code</span>`}
+            <button onclick=\"document.getElementById('det-${title}-${i}').classList.toggle('hidden')\" class='ml-auto text-sm underline'>Details</button>
+          </div>
+          <div id='det-${title}-${i}' class='hidden mt-3 text-sm text-zinc-600 dark:text-zinc-400'>
+            <div><strong>Authors:</strong> ${p.authors||'N/A'}</div>
+            ${p.abstract?`<div><strong>Abstract:</strong> ${p.abstract}</div>`:''}
+            ${p.thumbnail?`<img src='${p.thumbnail}' alt='thumbnail' class='mt-2 rounded' />`:''}
+          </div>
+        </div>`;
+      });
+      html += `</div></div>`;
+      return html;
+    }
+
+    document.getElementById('pub-list').innerHTML =
+      renderCategory('AI for Science — Focus Area', AI_FOR_SCIENCE) +
+      renderCategory('Graph Foundation Models', GRAPH_FOUNDATION_MODELS) +
+      renderCategory('Graph Models + X', GRAPH_MODELS_X);
   </script>
 </body>
 </html>
