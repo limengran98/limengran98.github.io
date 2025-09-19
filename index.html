@@ -62,9 +62,56 @@
       </ul>
     </section>
 
+    <!-- Featured (optional) -->
+    <section id="featured" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Featured Research</h2>
+      <img src="assets/figures/representative.png" alt="Representative works" class="rounded-xl border" />
+    </section>
 
+    <!-- Publications -->
+    <section id="publications" class="scroll-mt-24 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight border-b border-zinc-200 dark:border-zinc-800 pb-3 mb-6">Publications</h2>
+      <!-- This container MUST exist for JS to render -->
+      <div id="pub-list" class="space-y-10"></div>
+      <div class="mt-8 text-sm">Full list on <a class="underline" href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Honors & Awards</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Beijing Excellent Graduate (2023)</li>
+        <li>National Scholarship for Master's Students (2022)</li>
+        <li>Outstanding Graduate, BJUT (2023)</li>
+        <li>Outstanding Master's Thesis Award, BJUT (2023)</li>
+        <li>Xiaomi Special Award, BJUT (Top 10 University-wide, 2022)</li>
+        <li>First-class Academic Scholarship, Sun Yat-sen University (2024)</li>
+      </ul>
+    </section>
+
+    <!-- Service -->
+    <section id="service" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Academic Service</h2>
+      <p>Reviewer for IEEE TNNLS, IEEE TCSS, IEEE TMC, IEEE TETC, IEEE Communications Letters, Information Fusion, Neural Networks, Neurocomputing, EAAI, Expert Systems with Applications, Knowledge-Based Systems.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 md:py-16">
+      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Contact</h2>
+      <ul class="list-disc pl-6">
+        <li><a href="mailto:limr39@mail2.sysu.edu.cn">limr39@mail2.sysu.edu.cn</a></li>
+        <li><a href="mailto:limengran1998@163.com">limengran1998@163.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="border-t py-10 mt-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
+    © 2025 Mengran Li. Built with TailwindCSS.
+  </footer>
+
+  <!-- Put scripts AFTER the DOM so #pub-list exists -->
   <script>
-    // ---- Dark mode
+    // Dark mode
     (function(){
       const key='ml-dark';
       const root=document.documentElement;
@@ -78,140 +125,29 @@
       });
     })();
 
-    // ---- Publications Data (EN only)
-    // AI for Science — focus first
+    // ---- Publications Data
     const AI_FOR_SCIENCE = [
-      {
-        title: 'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks',
-        venue: 'Briefings in Bioinformatics',
-        year: '2024',
-        paperUrl: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248',
-        codeUrl: null,
-        authors: 'B. Li, Y. Zhang, Q. Wang, C. Zhang, M. Li, G. Wang, Q. Song',
-        abstract: '',
-        thumbnail: ''
-      }
+      { title:'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks', venue:'Briefings in Bioinformatics', year:'2024', paperUrl:'https://academic.oup.com/bib/article/25/6/bbae500/7937248', codeUrl:null, authors:'B. Li, Y. Zhang, Q. Wang, C. Zhang, M. Li, G. Wang, Q. Song', abstract:'', thumbnail:'' }
     ];
 
-    // Graph Foundation Models
     const GRAPH_FOUNDATION_MODELS = [
-      {
-        title: 'Hypergraph Transformer Neural Networks',
-        venue: 'ACM TKDD',
-        year: '2023',
-        paperUrl: 'https://doi.org/10.1145/3565028',
-        codeUrl: null,
-        authors: 'M. Li, Y. Zhang, X. Li, Y. Zhang, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning',
-        venue: 'IEEE TBD',
-        year: '2024',
-        paperUrl: 'https://doi.org/10.1109/TBDATA.2023.3275374',
-        codeUrl: null,
-        authors: 'M. Li, Y. Zhang, W. Zhang, Y. Chu, Y. Hu, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks',
-        venue: 'IEEE TCSS',
-        year: '2024',
-        paperUrl: 'https://doi.org/10.1109/TCSS.2023.3292145',
-        codeUrl: null,
-        authors: 'M. Li, Y. Zhang, W. Zhang, S. Zhao, X. Piao, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning',
-        venue: 'ACM TOMM',
-        year: '2024',
-        paperUrl: 'https://doi.org/10.1145/3672078',
-        codeUrl: null,
-        authors: 'M. Li, R. Zhang, Y. Zhang, X. Piao, S. Zhao, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning',
-        venue: 'IEEE TNNLS',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/TNNLS.2024.3357080',
-        codeUrl: null,
-        authors: 'M. Li, Y. Zhang, S. Wang, Y. Hu, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation',
-        venue: 'IEEE TCSS',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/TCSS.2024.3509399',
-        codeUrl: null,
-        authors: 'M. Li, J. Chen, B. Li, Y. Zhang, R. Zhang, S. Gong, X. Ma, Z. Tian',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things',
-        venue: 'IEEE Internet of Things Journal',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/JIOT.2025.3531985',
-        codeUrl: null,
-        authors: 'M. Li, J. Chen, C. Yu, G. Jiang, R. Zhang, Y. Shen, H. Song',
-        abstract: '',
-        thumbnail: ''
-      }
+      { title:'Hypergraph Transformer Neural Networks', venue:'ACM TKDD', year:'2023', paperUrl:'https://doi.org/10.1145/3565028', codeUrl:null, authors:'M. Li, Y. Zhang, X. Li, Y. Zhang, B. Yin', abstract:'', thumbnail:'' },
+      { title:'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning', venue:'IEEE TBD', year:'2024', paperUrl:'https://doi.org/10.1109/TBDATA.2023.3275374', codeUrl:null, authors:'M. Li, Y. Zhang, W. Zhang, Y. Chu, Y. Hu, B. Yin', abstract:'', thumbnail:'' },
+      { title:'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks', venue:'IEEE TCSS', year:'2024', paperUrl:'https://doi.org/10.1109/TCSS.2023.3292145', codeUrl:null, authors:'M. Li, Y. Zhang, W. Zhang, S. Zhao, X. Piao, B. Yin', abstract:'', thumbnail:'' },
+      { title:'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning', venue:'ACM TOMM', year:'2024', paperUrl:'https://doi.org/10.1145/3672078', codeUrl:null, authors:'M. Li, R. Zhang, Y. Zhang, X. Piao, S. Zhao, B. Yin', abstract:'', thumbnail:'' },
+      { title:'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning', venue:'IEEE TNNLS', year:'2025', paperUrl:'https://doi.org/10.1109/TNNLS.2024.3357080', codeUrl:null, authors:'M. Li, Y. Zhang, S. Wang, Y. Hu, B. Yin', abstract:'', thumbnail:'' },
+      { title:'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation', venue:'IEEE TCSS', year:'2025', paperUrl:'https://doi.org/10.1109/TCSS.2024.3509399', codeUrl:null, authors:'M. Li, J. Chen, B. Li, Y. Zhang, R. Zhang, S. Gong, X. Ma, Z. Tian', abstract:'', thumbnail:'' },
+      { title:'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things', venue:'IEEE Internet of Things Journal', year:'2025', paperUrl:'https://doi.org/10.1109/JIOT.2025.3531985', codeUrl:null, authors:'M. Li, J. Chen, C. Yu, G. Jiang, R. Zhang, Y. Shen, H. Song', abstract:'', thumbnail:'' }
     ];
 
-    // Graph Models + X
     const GRAPH_MODELS_X = [
-      {
-        title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems',
-        venue: 'IEEE TCSS',
-        year: '2024',
-        paperUrl: '',
-        codeUrl: null,
-        authors: 'S. Zhao, Y. Zhang, M. Li, X. Piao, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction',
-        venue: 'Engineering Applications of AI',
-        year: '2022',
-        paperUrl: 'https://doi.org/10.1016/j.engappai.2022.105174',
-        codeUrl: null,
-        authors: 'M. Li, Y. Zhang, X. Li, L. Cai, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model',
-        venue: 'Intelligent Data Analysis',
-        year: '2023',
-        paperUrl: 'https://doi.org/10.3233/IDA-216318',
-        codeUrl: null,
-        authors: 'M. Li, Y. Zhang, X. Li, X. Lin, B. Yin',
-        abstract: '',
-        thumbnail: ''
-      },
-      {
-        title: 'SHCN: Self-supervised General Hypergraph Clustering Network',
-        venue: 'IEEE BigData (Conference)',
-        year: '2022',
-        paperUrl: 'https://doi.org/10.1109/BigData55660.2022.10020643',
-        codeUrl: null,
-        authors: 'M. Li et al.',
-        abstract: '',
-        thumbnail: ''
-      }
+      { title:'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems', venue:'IEEE TCSS', year:'2024', paperUrl:'', codeUrl:null, authors:'S. Zhao, Y. Zhang, M. Li, X. Piao, B. Yin', abstract:'', thumbnail:'' },
+      { title:'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction', venue:'Engineering Applications of AI', year:'2022', paperUrl:'https://doi.org/10.1016/j.engappai.2022.105174', codeUrl:null, authors:'M. Li, Y. Zhang, X. Li, L. Cai, B. Yin', abstract:'', thumbnail:'' },
+      { title:'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model', venue:'Intelligent Data Analysis', year:'2023', paperUrl:'https://doi.org/10.3233/IDA-216318', codeUrl:null, authors:'M. Li, Y. Zhang, X. Li, X. Lin, B. Yin', abstract:'', thumbnail:'' },
+      { title:'SHCN: Self-supervised General Hypergraph Clustering Network', venue:'IEEE BigData (Conference)', year:'2022', paperUrl:'https://doi.org/10.1109/BigData55660.2022.10020643', codeUrl:null, authors:'M. Li et al.', abstract:'', thumbnail:'' }
     ];
 
-    // ---- Render publications (bug-free, no inline onclick, safe IDs)
+    // Render publications
     function renderCategory(categoryKey, title, list){
       const wrap = document.createElement('div');
       wrap.innerHTML = `<h3 class="text-xl font-semibold mb-3">${title}</h3>`;
@@ -287,40 +223,5 @@
       renderCategory('gxx', 'Graph Models + X', GRAPH_MODELS_X)
     );
   </script>
-
-    <!-- Awards -->
-    <section id="awards" class="py-12 md:py-16">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Honors & Awards</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>Beijing Excellent Graduate (2023)</li>
-        <li>National Scholarship for Master's Students (2022)</li>
-        <li>Outstanding Graduate, BJUT (2023)</li>
-        <li>Outstanding Master's Thesis Award, BJUT (2023)</li>
-        <li>Xiaomi Special Award, BJUT (Top 10 University-wide, 2022)</li>
-        <li>First-class Academic Scholarship, Sun Yat-sen University (2024)</li>
-      </ul>
-    </section>
-
-    <!-- Service -->
-    <section id="service" class="py-12 md:py-16">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Academic Service</h2>
-      <p>Reviewer for IEEE TNNLS, IEEE TCSS, IEEE TMC, IEEE TETC, IEEE Communications Letters, Information Fusion, Neural Networks, Neurocomputing, EAAI, Expert Systems with Applications, Knowledge-Based Systems.</p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-12 md:py-16">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-6">Contact</h2>
-      <ul class="list-disc pl-6">
-        <li><a href="mailto:limr39@mail2.sysu.edu.cn">limr39@mail2.sysu.edu.cn</a></li>
-        <li><a href="mailto:limengran1998@163.com">limengran1998@163.com</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="border-t py-10 mt-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
-    © 2025 Mengran Li. Built with TailwindCSS.
-  </footer>
-
-
 </body>
 </html>
