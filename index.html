@@ -65,8 +65,7 @@
        </p>
     </section>
 
-    <!-- Education -->
-    <!-- 
+    <!-- Education (commented out)
     <section id="education" class="py-6 md:py-8">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Education</h2>
       <ul class="space-y-2">
@@ -77,11 +76,9 @@
     </section>
     -->
 
-    
     <!-- Publications -->
     <section id="publications" class="scroll-mt-24 py-6 md:py-8">
       <h2 class="text-2xl md:text-3xl font-semibold tracking-tight border-b border-zinc-200 dark:border-zinc-800 pb-3 mb-3">Publications</h2>
-      <!-- This container MUST exist for JS to render -->
       <div id="pub-list" class="space-y-10"></div>
       <div class="mt-8 text-sm">Full list on <a class="underline" href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
     </section>
@@ -121,7 +118,7 @@
     © 2025 Mengran Li. Built with TailwindCSS.
   </footer>
 
-  <!-- Put scripts AFTER the DOM so #pub-list exists -->
+  <!-- Scripts after DOM so #pub-list exists -->
   <script>
     // Dark mode
     (function(){
@@ -138,6 +135,19 @@
     })();
 
     // ---- Publications Data
+    // AI for Science (added, required by renderCategory)
+    const AI_FOR_SCIENCE = [
+      {
+        title: 'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks',
+        venue: 'Briefings in Bioinformatics',
+        year: '2024',
+        paperUrl: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248',
+        codeUrl: null,
+        authors: 'B. Li, Y. Zhang, Q. Wang, C. Zhang, M. Li, G. Wang, Q. Song',
+        abstract: '',
+        thumbnail: ''
+      }
+    ];
 
     const GRAPH_FOUNDATION_MODELS = [
       {
@@ -213,7 +223,7 @@
         thumbnail: ''
       }
     ];
-    
+
     const GRAPH_MODELS_X = [
       {
         title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems',
@@ -267,7 +277,7 @@
       }
     ];
 
-    // Render publications
+    // Render publications (with ESI badge)
     function renderCategory(categoryKey, title, list){
       const wrap = document.createElement('div');
       wrap.innerHTML = `<h3 class="text-xl font-semibold mb-3">${title}</h3>`;
@@ -281,13 +291,11 @@
 
         const head = document.createElement('div');
         head.className = 'font-medium flex items-center gap-2';
-        
-        // 论文标题
+
         const titleSpan = document.createElement('span');
         titleSpan.textContent = p.title;
         head.appendChild(titleSpan);
-        
-        // 🔥 如果是 ESI 高被引，就加上标记
+
         if (p.esi) {
           const badge = document.createElement('span');
           badge.textContent = '🔥 ESI Highly Cited';
@@ -335,7 +343,6 @@
 
       wrap.append(group);
 
-      // bind toggles within this category only
       wrap.querySelectorAll('[data-toggle]').forEach(btn => {
         btn.addEventListener('click', () => {
           const id = btn.getAttribute('data-toggle');
