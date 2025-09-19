@@ -104,7 +104,7 @@
     <!-- Service -->
     <section id="service" class="py-6 md:py-8">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Academic Service</h2>
-      <p>Reviewer for IEEE TNNLS, IEEE TCSS, IEEE TMC, IEEE TETC, IEEE Communications Letters, Information Fusion, Neural Networks, Neurocomputing, EAAI, Expert Systems with Applications, Knowledge-Based Systems.</p>
+      <p>Reviewer for IEEE TNNLS, IEEE TCSS, IEEE TMC, IEEE TETC, ACM TIST, ACM TKDD, IEEE Communications Letters, Information Fusion, Neural Networks, Pattern Recognition, Neurocomputing, EAAI, ESWA, KBS, ACM MM, AAAI.</p>
     </section>
 
     <!-- Contact -->
@@ -138,25 +138,133 @@
     })();
 
     // ---- Publications Data
-    const AI_FOR_SCIENCE = [
-      { title:'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks', venue:'Briefings in Bioinformatics', year:'2024', paperUrl:'https://academic.oup.com/bib/article/25/6/bbae500/7937248', codeUrl:null, authors:'B. Li, Y. Zhang, Q. Wang, C. Zhang, M. Li, G. Wang, Q. Song', abstract:'', thumbnail:'' }
-    ];
 
     const GRAPH_FOUNDATION_MODELS = [
-      { title:'Hypergraph Transformer Neural Networks', venue:'ACM TKDD', year:'2023', paperUrl:'https://doi.org/10.1145/3565028', codeUrl:null, authors:'M. Li, Y. Zhang, X. Li, Y. Zhang, B. Yin', abstract:'', thumbnail:'' },
-      { title:'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning', venue:'IEEE TBD', year:'2024', paperUrl:'https://doi.org/10.1109/TBDATA.2023.3275374', codeUrl:null, authors:'M. Li, Y. Zhang, W. Zhang, Y. Chu, Y. Hu, B. Yin', abstract:'', thumbnail:'' },
-      { title:'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks', venue:'IEEE TCSS', year:'2024', paperUrl:'https://doi.org/10.1109/TCSS.2023.3292145', codeUrl:null, authors:'M. Li, Y. Zhang, W. Zhang, S. Zhao, X. Piao, B. Yin', abstract:'', thumbnail:'' },
-      { title:'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning', venue:'ACM TOMM', year:'2024', paperUrl:'https://doi.org/10.1145/3672078', codeUrl:null, authors:'M. Li, R. Zhang, Y. Zhang, X. Piao, S. Zhao, B. Yin', abstract:'', thumbnail:'' },
-      { title:'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning', venue:'IEEE TNNLS', year:'2025', paperUrl:'https://doi.org/10.1109/TNNLS.2024.3357080', codeUrl:null, authors:'M. Li, Y. Zhang, S. Wang, Y. Hu, B. Yin', abstract:'', thumbnail:'' },
-      { title:'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation', venue:'IEEE TCSS', year:'2025', paperUrl:'https://doi.org/10.1109/TCSS.2024.3509399', codeUrl:null, authors:'M. Li, J. Chen, B. Li, Y. Zhang, R. Zhang, S. Gong, X. Ma, Z. Tian', abstract:'', thumbnail:'' },
-      { title:'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things', venue:'IEEE Internet of Things Journal', year:'2025', paperUrl:'https://doi.org/10.1109/JIOT.2025.3531985', codeUrl:null, authors:'M. Li, J. Chen, C. Yu, G. Jiang, R. Zhang, Y. Shen, H. Song', abstract:'', thumbnail:'' }
+      {
+        title: 'Hypergraph Transformer Neural Networks',
+        venue: 'ACM TKDD',
+        year: '2023',
+        paperUrl: 'https://doi.org/10.1145/3565028',
+        codeUrl: null,
+        authors: 'M. Li, Y. Zhang, X. Li, Y. Zhang, B. Yin',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning',
+        venue: 'IEEE TBD',
+        year: '2024',
+        paperUrl: 'https://doi.org/10.1109/TBDATA.2023.3275374',
+        codeUrl: null,
+        authors: 'M. Li, Y. Zhang, W. Zhang, Y. Chu, Y. Hu, B. Yin',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks',
+        venue: 'IEEE TCSS',
+        year: '2024',
+        paperUrl: 'https://doi.org/10.1109/TCSS.2023.3292145',
+        codeUrl: null,
+        authors: 'M. Li, Y. Zhang, W. Zhang, S. Zhao, X. Piao, B. Yin',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning',
+        venue: 'ACM TOMM',
+        year: '2024',
+        paperUrl: 'https://doi.org/10.1145/3672078',
+        codeUrl: null,
+        authors: 'M. Li, R. Zhang, Y. Zhang, X. Piao, S. Zhao, B. Yin',
+        abstract: '',
+        thumbnail: '',
+        esi: true
+      },
+      {
+        title: 'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning',
+        venue: 'IEEE TNNLS',
+        year: '2025',
+        paperUrl: 'https://doi.org/10.1109/TNNLS.2024.3357080',
+        codeUrl: null,
+        authors: 'M. Li, Y. Zhang, S. Wang, Y. Hu, B. Yin',
+        abstract: '',
+        thumbnail: '',
+        esi: true
+      },
+      {
+        title: 'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation',
+        venue: 'IEEE TCSS',
+        year: '2025',
+        paperUrl: 'https://doi.org/10.1109/TCSS.2024.3509399',
+        codeUrl: null,
+        authors: 'M. Li, J. Chen, B. Li, Y. Zhang, R. Zhang, S. Gong, X. Ma, Z. Tian',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things',
+        venue: 'IEEE Internet of Things Journal',
+        year: '2025',
+        paperUrl: 'https://doi.org/10.1109/JIOT.2025.3531985',
+        codeUrl: null,
+        authors: 'M. Li, J. Chen, C. Yu, G. Jiang, R. Zhang, Y. Shen, H. Song',
+        abstract: '',
+        thumbnail: ''
+      }
     ];
-
+    
     const GRAPH_MODELS_X = [
-      { title:'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems', venue:'IEEE TCSS', year:'2024', paperUrl:'', codeUrl:null, authors:'S. Zhao, Y. Zhang, M. Li, X. Piao, B. Yin', abstract:'', thumbnail:'' },
-      { title:'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction', venue:'Engineering Applications of AI', year:'2022', paperUrl:'https://doi.org/10.1016/j.engappai.2022.105174', codeUrl:null, authors:'M. Li, Y. Zhang, X. Li, L. Cai, B. Yin', abstract:'', thumbnail:'' },
-      { title:'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model', venue:'Intelligent Data Analysis', year:'2023', paperUrl:'https://doi.org/10.3233/IDA-216318', codeUrl:null, authors:'M. Li, Y. Zhang, X. Li, X. Lin, B. Yin', abstract:'', thumbnail:'' },
-      { title:'SHCN: Self-supervised General Hypergraph Clustering Network', venue:'IEEE BigData (Conference)', year:'2022', paperUrl:'https://doi.org/10.1109/BigData55660.2022.10020643', codeUrl:null, authors:'M. Li et al.', abstract:'', thumbnail:'' }
+      {
+        title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems',
+        venue: 'IEEE TCSS',
+        year: '2024',
+        paperUrl: '',
+        codeUrl: null,
+        authors: 'S. Zhao, Y. Zhang, M. Li, X. Piao, B. Yin',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction',
+        venue: 'Engineering Applications of AI',
+        year: '2022',
+        paperUrl: 'https://doi.org/10.1016/j.engappai.2022.105174',
+        codeUrl: null,
+        authors: 'M. Li, Y. Zhang, X. Li, L. Cai, B. Yin',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model',
+        venue: 'Intelligent Data Analysis',
+        year: '2023',
+        paperUrl: 'https://doi.org/10.3233/IDA-216318',
+        codeUrl: null,
+        authors: 'M. Li, Y. Zhang, X. Li, X. Lin, B. Yin',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'SHCN: Self-supervised General Hypergraph Clustering Network',
+        venue: 'IEEE BigData (Conference)',
+        year: '2022',
+        paperUrl: 'https://doi.org/10.1109/BigData55660.2022.10020643',
+        codeUrl: null,
+        authors: 'M. Li et al.',
+        abstract: '',
+        thumbnail: ''
+      },
+      {
+        title: 'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks',
+        venue: 'Briefings in Bioinformatics',
+        year: '2024',
+        paperUrl: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248',
+        codeUrl: null,
+        authors: 'B. Li, Y. Zhang, Q. Wang, C. Zhang, M. Li, G. Wang, Q. Song',
+        abstract: '',
+        thumbnail: ''
+      }
     ];
 
     // Render publications
@@ -172,8 +280,20 @@
         card.className = 'border rounded-xl p-4 bg-white/70 dark:bg-zinc-900/60';
 
         const head = document.createElement('div');
-        head.className = 'font-medium';
-        head.textContent = p.title;
+        head.className = 'font-medium flex items-center gap-2';
+        
+        // 论文标题
+        const titleSpan = document.createElement('span');
+        titleSpan.textContent = p.title;
+        head.appendChild(titleSpan);
+        
+        // 🔥 如果是 ESI 高被引，就加上标记
+        if (p.esi) {
+          const badge = document.createElement('span');
+          badge.textContent = '🔥 ESI Highly Cited';
+          badge.className = 'text-xs px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 border border-orange-300';
+          head.appendChild(badge);
+        }
 
         const meta = document.createElement('div');
         meta.className = 'text-sm text-zinc-500 dark:text-zinc-400 mt-1';
