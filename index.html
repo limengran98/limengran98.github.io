@@ -45,7 +45,7 @@
 
   <main class="max-w-5xl mx-auto px-4 pb-16">
     <!-- Profile -->
-    <section id="about" class="py-6 md:py-8">
+    <section id="about" class="py-6 md:py-4">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Profile</h2>
        <p>
         I am a Ph.D. student in Control Science and Engineering at 
@@ -66,7 +66,7 @@
     </section>
 
     <!-- Education (commented out)
-    <section id="education" class="py-6 md:py-8">
+    <section id="education" class="py-6 md:py-4">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Education</h2>
       <ul class="space-y-2">
         <li><strong>2023 – Present</strong>: Ph.D., Sun Yat-sen University</li>
@@ -84,28 +84,26 @@
     </section>
 
     <!-- Awards -->
-    <section id="awards" class="py-6 md:py-8">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Honors & Awards</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>National Scholarship for Master's Students (2022)</li>
-        <li>Xiaomi Special Award, BJUT (Top 10 University-wide, 2022)</li>
-        <li>Beijing Excellent Graduate (2023)</li>
-        <li>Outstanding Graduate, BJUT (2023)</li>
-        <li>Outstanding Master's Thesis Award, BJUT (2023)</li>
-        <li>First-class Academic Scholarship, Sun Yat-sen University (2024)</li>
-        <li>Presidential Scholarship, Sun Yat-sen University (2025)</li>
-        <li>National Scholarship for Ph.D. Students (2025)</li>
+    <section id="awards" class="py-6 md:py-4">
+      <li>National Scholarship for Ph.D. Students (2025)</li>
+      <li>Presidential Scholarship, Sun Yat-sen University (2025)</li>
+      <li>First-class Academic Scholarship, Sun Yat-sen University (2024)</li>
+      <li>Outstanding Master's Thesis Award, BJUT (2023)</li>
+      <li>Outstanding Graduate, BJUT (2023)</li>
+      <li>Beijing Excellent Graduate (2023)</li>
+      <li>Xiaomi Special Award, BJUT (Top 10 University-wide, 2022)</li>
+      <li>National Scholarship for Master's Students (2022)</li>
       </ul>
     </section>
 
     <!-- Service -->
-    <section id="service" class="py-6 md:py-8">
+    <section id="service" class="py-6 md:py-4">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Academic Service</h2>
       <p>Reviewer for IEEE TNNLS, IEEE TCSS, IEEE TMC, IEEE TETC, ACM TIST, ACM TKDD, IEEE Communications Letters, Information Fusion, Neural Networks, Pattern Recognition, Neurocomputing, EAAI, ESWA, KBS, ACM MM, AAAI.</p>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-6 md:py-8">
+    <section id="contact" class="py-6 md:py-4">
       <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Contact</h2>
       <ul class="list-disc pl-6">
         <li><a href="mailto:limr39@mail2.sysu.edu.cn">limr39@mail2.sysu.edu.cn</a></li>
@@ -405,7 +403,6 @@
     const pubRoot = document.getElementById('pub-list');
     pubRoot.innerHTML = '';
     pubRoot.append(
-      renderCategory('aifs', 'AI for Science — Focus Area', AI_FOR_SCIENCE),
       renderCategory('gfm', 'Graph Foundation Models', GRAPH_FOUNDATION_MODELS),
       renderCategory('gxx', 'Graph Models + X', GRAPH_MODELS_X)
     );
