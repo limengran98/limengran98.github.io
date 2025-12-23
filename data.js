@@ -80,6 +80,22 @@ const selectedWorks = [
 const fullPublications = [
   // --- 2025 ---
   { 
+    title: "PhenoProfiler: advancing phenotypic learning for image-based drug discovery", 
+    venue: "Nature Communications", 
+    year: "2025", 
+    url: "https://doi.org/10.1038/s41467-025-67479-w",
+    codeUrl: "https://github.com/QSong-github/PhenoProfiler", 
+    rank: "8th Author" 
+  },
+  { 
+    title: "Hypergraph-driven spatial multimodal fusion for precise domain delineation and tumor microenvironment decoding", 
+    venue: "Communications Biology", 
+    year: "2025", 
+    url: "https://doi.org/10.1038/s42003-025-09312-0",
+    codeUrl: "https://github.com/VitaIntelli-CQU/HAST", 
+    rank: "5th Author" 
+  },
+  { 
     title: "Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling", 
     venue: "AAAI Oral", year: "2025", 
     url: "https://arxiv.org/abs/2511.21120",
@@ -258,5 +274,5 @@ const awardsData = [
 
 // 5. Service (学术服务)
 const serviceData = [
-  "<strong>Reviewer:</strong> IEEE TNNLS, IEEE TCSS, ACM TIST, ACM MM, AAAI, Neural Networks, Pattern Recognition."
+  "<strong>Reviewer:</strong> IJCV, IEEE TPAMI,TNNLS, IEEE TCSS, ACM TKDD, TIST, ACM MM, AAAI, Neural Networks, Pattern Recognition, Information Fusion etc."
 ];
