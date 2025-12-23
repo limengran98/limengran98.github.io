@@ -3,124 +3,404 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mengran Li — Technical CV</title>
-  <meta name="description" content="Mengran Li · Ph.D. Student in Control Science & Engineering, Sun Yat-sen University. AI for Science, Graph Learning, Hypergraphs, Temporal Modeling." />
+  <title>Mengran Li — Researcher Profile</title>
+  <meta name="description" content="Mengran Li · Ph.D. Student in Control Science & Engineering, Sun Yat-sen University." />
   <link rel="icon" href="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" />
+  
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' };</script>
-</head>
-<body class="bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-950 dark:to-zinc-900 text-zinc-900 dark:text-zinc-100">
+  <script>
+    tailwind.config = { 
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb', // Sci-blue
+          }
+        }
+      }
+    };
+  </script>
 
-  <!-- Top Nav -->
-  <nav class="sticky top-0 z-40 backdrop-blur border-b border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-950/60">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#about" class="font-semibold tracking-tight">Mengran Li</a>
-      <div class="hidden md:flex gap-5 text-sm">
-        <a href="#about">Profile</a>
-        <a href="#publications">Publications</a>
-        <a href="#awards">Awards</a>
-        <a href="#service">Service</a>
-        <a href="#contact">Contact</a>
+  <style>
+    .fade-in { animation: fadeIn 0.5s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    /* BibTeX Modal Styles */
+    .modal-overlay { background-color: rgba(0, 0, 0, 0.5); }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased font-sans relative">
+
+  <nav class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-zinc-950/80 border-b border-zinc-200 dark:border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="#" class="font-bold text-lg tracking-tight">Mengran Li</a>
+      <div class="hidden md:flex gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+        <a href="#about" class="hover:text-primary transition">About</a>
+        <a href="#news" class="hover:text-primary transition">News</a>
+        <a href="#selected" class="hover:text-primary transition">Selected</a>
+        <a href="#publications" class="hover:text-primary transition">Publications</a>
+        <a href="#contact" class="hover:text-primary transition">Contact</a>
       </div>
-      <button id="darkToggle" class="border px-3 py-1.5 rounded-xl text-sm">🌙</button>
+      <button id="darkToggle" class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
+        🌙
+      </button>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="max-w-5xl mx-auto px-4 pt-10 md:pt-16">
-    <div class="grid md:grid-cols-[160px,1fr] gap-6 items-center">
-      <img src="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" alt="Mengran Li" class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover border" />
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
+    
+    <section id="about" class="grid md:grid-cols-[180px,1fr] gap-8 items-start fade-in">
+      <div class="relative group">
+        <img src="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" 
+             alt="Mengran Li" 
+             class="w-40 h-40 rounded-xl object-cover shadow-lg border border-zinc-100 dark:border-zinc-800" />
+      </div>
       <div>
-        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Mengran Li</h1>
-        <p class="text-zinc-600 dark:text-zinc-300 mt-2">Ph.D. Student · Control Science & Engineering · Sun Yat-sen University</p>
-        <div class="flex gap-4 mt-4 text-sm">
-          <a class="underline" href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank">Google Scholar</a>
-          <a class="underline" href="https://orcid.org/0000-0001-7540-530X" target="_blank">ORCID</a>
-          <a class="underline" href="https://github.com/limengran98" target="_blank">GitHub</a>
-          <a class="underline" href="mailto:limr39@mail2.sysu.edu.cn">Email</a>
+        <h1 class="text-4xl font-bold tracking-tight mb-2">Mengran Li <span class="text-zinc-400 font-normal text-2xl">(李梦然)</span></h1>
+        <p class="text-lg text-zinc-600 dark:text-zinc-300 mb-4">
+          Ph.D. Student in Control Science & Engineering @ <a href="https://www.sysu.edu.cn/" class="text-primary hover:underline">Sun Yat-sen University</a>
+        </p>
+        <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6 max-w-2xl">
+          My research focuses on <strong>AI for Science</strong>, specifically in heterogeneous graph learning, temporal modeling, and bioinformatics. 
+          I am advised by <a href="https://ise.sysu.edu.cn/teacher/ZhangRonghui" target="_blank" class="text-primary hover:underline">Prof. Ronghui Zhang</a> and <a href="https://sist.bjut.edu.cn/info/1403/2489.htm" target="_blank" class="text-primary hover:underline">Prof. Yong Zhang</a>.
+          Previously, I interned at Baidu, SIAT, Westlake University, and CAIR.
+        </p>
+        <div class="flex gap-4 text-sm font-medium">
+          <a href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank" class="flex items-center gap-1 hover:text-primary transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+            Google Scholar
+          </a>
+          <a href="https://github.com/limengran98" target="_blank" class="flex items-center gap-1 hover:text-primary transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:limr39@mail2.sysu.edu.cn" class="flex items-center gap-1 hover:text-primary transition">
+            ✉️ Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2 class="text-2xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-4 flex items-center gap-2">
+        🔥 News
+      </h2>
+      <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.12</span>
+          <span>One paper accepted by <strong>Pattern Recognition (PR)</strong>.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.12</span>
+          <span>
+            Research reported by media: 
+            <a href="https://mp.weixin.qq.com/s/iC9xO-69NZXqvNLymqaIBA" target="_blank" class="text-primary hover:underline">Analysis of CHMR Framework</a>.
+          </span>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.11</span>
+          <span>One paper accepted by <strong>AAAI 2025 (Oral)</strong>.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.10</span>
+          <span>Awarded the <strong>National Scholarship</strong> for Ph.D. Students.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.10</span>
+          <span>Awarded the <strong>Presidential Scholarship</strong> of Sun Yat-sen University.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.09</span>
+          <span>One survey paper on Graph LLMs accepted by <strong>Expert Systems with Applications (ESWA)</strong>.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.03</span>
+          <span>
+             Awarded the SYSU Hong Kong/Macau Exchange Funding. Joint training at <strong>Westlake University</strong> and <strong>CAIR, HK</strong> (Supervisor: Prof. Stan Z. Li and Prof. Jiebo Luo).
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="selected" class="scroll-mt-20">
+      <h2 class="text-2xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6">
+        🌟 Selected Publications
+      </h2>
+      <div id="selected-list" class="space-y-8">
+        </div>
+    </section>
+
+    <section id="publications" class="scroll-mt-20">
+      <h2 class="text-2xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6">
+        📝 Full Publication List
+      </h2>
+      <div class="flex gap-2 mb-4 text-sm">
+        <span class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500">Filters:</span>
+        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('all')">All</button>
+        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2025')">2025</button>
+        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2024')">2024</button>
+        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2023')">2023</button>
+      </div>
+      <div id="full-list" class="space-y-3">
+        </div>
+    </section>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <section id="awards">
+        <h2 class="text-xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-4">🏆 Awards</h2>
+        <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <li><strong>National Scholarship</strong> (2025, 2022)</li>
+          <li>Presidential Scholarship, SYSU (2025)</li>
+          <li>Outstanding Master's Thesis, BJUT (2023)</li>
+          <li>Xiaomi Special Award (Top 10), BJUT (2022)</li>
+        </ul>
+      </section>
+      
+      <section id="service">
+        <h2 class="text-xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-4">⚖️ Service</h2>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          <strong>Reviewer:</strong> IEEE TNNLS, IEEE TCSS, ACM TIST, ACM MM, AAAI, Neural Networks, Pattern Recognition.
+        </p>
+      </section>
+    </div>
+
+    <section id="map" class="pt-8 border-t border-zinc-200 dark:border-zinc-800">
+      <h2 class="text-xl font-bold mb-4 text-center">Visitor Map</h2>
+      <div class="flex justify-center grayscale hover:grayscale-0 transition opacity-80 hover:opacity-100">
+        <div class="w-full max-w-2xl h-48 bg-zinc-100 dark:bg-zinc-900 rounded-xl flex flex-col items-center justify-center border border-dashed border-zinc-300">
+            <span class="text-zinc-400 text-sm font-semibold">ClustrMaps Widget Area</span>
+            <span class="text-zinc-400 text-xs mt-1">Please insert your ClustrMaps script here</span>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="py-10 text-center text-sm text-zinc-500">
+      <p>© 2025 Mengran Li. Hosted on GitHub Pages.</p>
+    </footer>
+
+  </main>
+
+  <div id="bibtexModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-overlay opacity-0 transition-opacity duration-300">
+    <div class="bg-white dark:bg-zinc-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 overflow-hidden transform scale-95 transition-transform duration-300" id="modalContent">
+      <div class="px-6 py-4 border-b dark:border-zinc-800 flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/50">
+        <h3 class="font-bold text-lg">BibTeX Citation</h3>
+        <button onclick="closeModal()" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200">✕</button>
+      </div>
+      <div class="p-6">
+        <textarea id="bibtexText" class="w-full h-48 p-3 text-xs font-mono bg-zinc-100 dark:bg-zinc-950 rounded border dark:border-zinc-800 focus:outline-none focus:ring-2 ring-primary/50 resize-none" readonly></textarea>
+        <div class="mt-4 flex justify-end gap-3">
+          <button onclick="closeModal()" class="px-4 py-2 text-sm rounded-lg border hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800 transition">Close</button>
+          <button onclick="copyBibtex()" class="px-4 py-2 text-sm rounded-lg bg-primary text-white hover:bg-blue-600 transition shadow-lg shadow-blue-500/20">Copy to Clipboard</button>
         </div>
       </div>
     </div>
-  </header>
+  </div>
 
-  <main class="max-w-5xl mx-auto px-4 pb-16">
-    <!-- Profile -->
-    <section id="about" class="py-6 md:py-8">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Profile</h2>
-       <p>
-        I am a Ph.D. student in Control Science and Engineering at 
-        <a href="https://www.sysu.edu.cn/" target="_blank" class="text-blue-600 underline">Sun Yat-sen University</a>. 
-        My research interests include AI for Science, heterogeneous graph learning, hypergraph learning, temporal modeling, traffic big data, and bioinformatics. 
-        I am advised by 
-        <a href="https://ise.sysu.edu.cn/teacher/ZhangRonghui" target="_blank" class="text-blue-600 underline">Prof. Ronghui Zhang (SYSU)</a> 
-        and 
-        <a href="https://sist.bjut.edu.cn/info/1403/2489.htm" target="_blank" class="text-blue-600 underline">Prof. Yong Zhang (BJUT)</a>. 
-        As first author, I have published over 20 papers in IEEE/ACM Transactions and CCF-A conferences. 
-        I also gained research experience through internships at 
-        <a href="https://home.baidu.com/" target="_blank" class="text-blue-600 underline">Baidu</a>, 
-        <a href="http://english.siat.cas.cn/" target="_blank" class="text-blue-600 underline">SIAT (Chinese Academy of Sciences, Shenzhen Institute of Advanced Technology)</a>, 
-        <a href="https://en.westlake.edu.cn/" target="_blank" class="text-blue-600 underline">Westlake University</a>, 
-        and the 
-        <a href="https://www.cair-cas.org.hk/" target="_blank" class="text-blue-600 underline">Hong Kong Centre for Artificial Intelligence and Robotics (CAIR)</a>.
-       </p>
-    </section>
-
-    <!-- Education (commented out)
-    <section id="education" class="py-6 md:py-8">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Education</h2>
-      <ul class="space-y-2">
-        <li><strong>2023 – Present</strong>: Ph.D., Sun Yat-sen University</li>
-        <li><strong>2020 – 2023</strong>: M.Eng., Beijing University of Technology</li>
-        <li><strong>2016 – 2020</strong>: B.Eng., East China Jiaotong University</li>
-      </ul>
-    </section>
-    -->
-
-    <!-- Publications -->
-    <section id="publications" class="scroll-mt-24 py-6 md:py-8">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight border-b border-zinc-200 dark:border-zinc-800 pb-3 mb-3">Publications</h2>
-      <div id="pub-list" class="space-y-10"></div>
-      <div class="mt-8 text-sm">Full list on <a class="underline" href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
-    </section>
-
-    <!-- Awards -->
-  <section id="awards" class="py-6 md:py-4">
-    <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Awards</h2>
-    <ul class="list-disc pl-6 space-y-1">
-      <li>National Scholarship for Ph.D. Students (2025)</li>
-      <li>Presidential Scholarship, Sun Yat-sen University (2025)</li>
-      <li>First-class Academic Scholarship, Sun Yat-sen University (2024)</li>
-      <li>Outstanding Master's Thesis Award, BJUT (2023)</li>
-      <li>Outstanding Graduate, BJUT (2023)</li>
-      <li>Beijing Excellent Graduate (2023)</li>
-      <li>Xiaomi Special Award, BJUT (Top 10 University-wide, 2022)</li>
-      <li>National Scholarship for Master's Students (2022)</li>
-      </ul>
-    </section>
-
-    <!-- Service -->
-    <section id="service" class="py-6 md:py-8">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Academic Service</h2>
-      <p>Reviewer for IEEE TNNLS, IEEE TCSS, IEEE TMC, IEEE TETC, ACM TIST, ACM TKDD, IEEE Communications Letters, Information Fusion, Neural Networks, Pattern Recognition, Neurocomputing, EAAI, ESWA, KBS, ACM MM, AAAI.</p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-6 md:py-8">
-      <h2 class="text-2xl font-semibold border-b pb-3 mb-3">Contact</h2>
-      <ul class="list-disc pl-6">
-        <li><a href="mailto:limr39@mail2.sysu.edu.cn">limr39@mail2.sysu.edu.cn</a></li>
-        <li><a href="mailto:limengran1998@163.com">limengran1998@163.com</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="border-t py-10 mt-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
-    © 2025 Mengran Li. Built with TailwindCSS.
-  </footer>
-
-  <!-- Scripts after DOM so #pub-list exists -->
   <script>
-    // Dark mode
+    // 1. Selected Works (Representative)
+    const SELECTED_WORKS = [
+      {
+        id: 'chmr',
+        title: 'Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling',
+        venue: 'AAAI 2025 (Oral)',
+        authors: 'Mengran Li, Zelin Zang, Wenbin Xing, Junzhou Chen, Ronghui Zhang, Jiebo Luo, Stan Z. Li',
+        desc: 'We propose CHMR, a framework that jointly models local-global dependencies between molecules and cellular responses. By using a tree-structured vector quantization, we capture latent biological hierarchies, significantly improving molecular property prediction.',
+        img: './images/chmr_framework.png', 
+        paperUrl: 'https://arxiv.org/abs/2511.21120',
+        codeUrl: 'https://github.com/limengran98/CHMR',
+        tags: ['AI for Science', 'Molecular Modeling'],
+        bibtex: `@inproceedings{li2025learning,
+  title={Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling},
+  author={Li, Mengran and Zang, Zelin and Xing, Wenbin and Chen, Junzhou and Zhang, Ronghui and Luo, Jiebo and Li, Stan Z},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2025}
+}`
+      },
+      // Placeholders for other representative works as requested
+      {
+        id: 'placeholder1',
+        title: '[Placeholder] Selected Work 2',
+        venue: 'Journal/Conference 2025',
+        authors: 'Mengran Li, et al.',
+        desc: 'This slot is reserved for your next representative work. Please update the title, image, and description in the code.',
+        img: 'https://via.placeholder.com/300x180?text=Work+2', 
+        paperUrl: '#',
+        codeUrl: '#',
+        tags: ['Graph Learning'],
+        bibtex: ``
+      },
+      {
+        id: 'placeholder2',
+        title: '[Placeholder] Selected Work 3',
+        venue: 'Journal/Conference 2025',
+        authors: 'Mengran Li, et al.',
+        desc: 'This slot is reserved for your next representative work. Please update the title, image, and description in the code.',
+        img: 'https://via.placeholder.com/300x180?text=Work+3',
+        paperUrl: '#',
+        codeUrl: '#',
+        tags: ['Hypergraph'],
+        bibtex: ``
+      },
+      {
+        id: 'placeholder3',
+        title: '[Placeholder] Selected Work 4',
+        venue: 'Journal/Conference 2025',
+        authors: 'Mengran Li, et al.',
+        desc: 'This slot is reserved for your next representative work. Please update the title, image, and description in the code.',
+        img: 'https://via.placeholder.com/300x180?text=Work+4',
+        paperUrl: '#',
+        codeUrl: '#',
+        tags: ['Bioinformatics'],
+        bibtex: ``
+      },
+      {
+        id: 'placeholder4',
+        title: '[Placeholder] Selected Work 5',
+        venue: 'Journal/Conference 2025',
+        authors: 'Mengran Li, et al.',
+        desc: 'This slot is reserved for your next representative work. Please update the title, image, and description in the code.',
+        img: 'https://via.placeholder.com/300x180?text=Work+5',
+        paperUrl: '#',
+        codeUrl: '#',
+        tags: ['AI + X'],
+        bibtex: ``
+      }
+    ];
+
+    // 2. Full Publications List (ALL TITLES ARE NOW FULL LENGTH)
+    const FULL_PUBLICATIONS = [
+      // --- 2025 ---
+      { title: 'Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling', venue: 'AAAI Oral', year: '2025', url: 'https://arxiv.org/abs/2511.21120' },
+      { title: 'A Survey of Large Language Models for Data Challenges in Graphs', venue: 'Expert Systems with Applications', year: '2025', url: 'https://doi.org/10.1016/j.eswa.2025.129643' },
+      { title: 'Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs', venue: 'arXiv', year: '2025', url: 'https://arxiv.org/pdf/2501.00743' },
+      { title: 'Mdvt: Enhancing multimodal recommendation with model-agnostic multimodal-driven virtual triplets', venue: 'ACM SIGKDD', year: '2025', url: 'https://doi.org/10.1145/3711896.3737042' },
+      { title: 'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning', venue: 'IEEE TNNLS', year: '2025', url: 'https://doi.org/10.1109/TNNLS.2024.3357080' },
+      { title: 'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation', venue: 'IEEE TCSS', year: '2025', url: 'https://doi.org/10.1109/TCSS.2024.3509399' },
+      { title: 'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things', venue: 'IEEE IoT-J', year: '2025', url: 'https://doi.org/10.1109/JIOT.2025.3531985' },
+      { title: 'ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images', venue: 'IJCAI', year: '2025', url: 'https://doi.org/10.24963/ijcai.2025/235' },
+      { title: 'A Two-Stage Method for Specular Highlight Detection and Removal in Medical Images', venue: 'MICCAI', year: '2025', url: 'https://link.springer.com/chapter/10.1007/978-3-032-05127-1_3' },
+      { title: 'Effective Finite Time Stability Control for Human–Machine Shared Vehicle Following System', venue: 'IEEE TITS', year: '2025', url: 'https://doi.org/10.1109/TITS.2025.3619092' },
+      { title: 'MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling', venue: 'IEEE TITS', year: '2025', url: 'https://doi.org/10.1109/TITS.2025.3588867' },
+      { title: 'Ms-AeDNet: A multi-scale attention-enhanced dynamic network for multi-step performance prediction of hydrogen proton exchange membrane fuel cells', venue: 'Process Safety and Environmental Protection', year: '2025', url: 'https://doi.org/10.1016/j.psep.2025.107674' },
+      { title: 'TAS-TsC: A data-driven framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of truck trajectories', venue: 'Applied Soft Computing', year: '2025', url: 'https://doi.org/10.1016/j.asoc.2025.113214' },
+      
+      // --- 2024 ---
+      { title: 'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning', venue: 'IEEE Transactions on Big Data', year: '2024', url: 'https://doi.org/10.1109/TBDATA.2023.3275374' },
+      { title: 'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks', venue: 'IEEE TCSS', year: '2024', url: 'https://doi.org/10.1109/TCSS.2023.3292145' },
+      { title: 'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning', venue: 'ACM TOMM', year: '2024', url: 'https://doi.org/10.1145/3672078' },
+      { title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems', venue: 'IEEE TCSS', year: '2024', url: 'https://doi.org/10.1109/TCSS.2024.3394701' },
+      { title: 'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks', venue: 'Briefings in Bioinformatics', year: '2024', url: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248' },
+
+      // --- 2023 ---
+      { title: 'Hypergraph Transformer Neural Networks', venue: 'ACM TKDD', year: '2023', url: 'https://doi.org/10.1145/3565028' },
+      { title: 'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model', venue: 'Intelligent Data Analysis', year: '2023', url: 'https://doi.org/10.3233/IDA-216318' },
+
+      // --- 2022 ---
+      { title: 'SHCN: Self-supervised General Hypergraph Clustering Network', venue: 'IEEE BigData', year: '2022', url: 'https://doi.org/10.1109/BigData55660.2022.10020643' },
+      { title: 'Student achievement prediction using deep neural network from multi-source campus data', venue: 'Complex & Intelligent Systems', year: '2022', url: 'https://doi.org/10.1007/s40747-022-00731-8' },
+      { title: 'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction', venue: 'Engineering Applications of Artificial Intelligence', year: '2022', url: 'https://doi.org/10.1016/j.engappai.2022.105174' }
+    ];
+
+    // 3. Render Functions
+    function renderSelected() {
+      const container = document.getElementById('selected-list');
+      container.innerHTML = SELECTED_WORKS.map((work, index) => `
+        <article class="group relative grid md:grid-cols-[280px,1fr] gap-6 p-4 rounded-2xl border border-zinc-100 dark:border-zinc-800 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition bg-white dark:bg-zinc-900/50">
+          
+          <div class="overflow-hidden rounded-lg bg-zinc-100 border border-zinc-200 dark:border-zinc-800 relative">
+            <img src="${work.img}" alt="${work.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/300x180?text=Paper+Image'"/>
+          </div>
+
+          <div class="flex flex-col justify-center">
+            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 leading-tight mb-2 group-hover:text-primary transition">
+              <a href="${work.paperUrl}" target="_blank">${work.title}</a>
+            </h3>
+            <div class="text-xs text-zinc-500 mb-2 font-mono">${work.venue}</div>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-3 leading-relaxed line-clamp-3">
+              ${work.desc}
+            </p>
+            
+            <div class="flex items-center gap-4 mt-auto">
+              ${work.paperUrl !== '#' ? `<a href="${work.paperUrl}" target="_blank" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">📄 Paper</a>` : '<span class="text-xs text-zinc-300 cursor-not-allowed flex items-center gap-1">📄 Paper</span>'}
+              ${work.codeUrl !== '#' ? `<a href="${work.codeUrl}" target="_blank" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">🐙 Code</a>` : ''}
+              
+              ${work.bibtex ? `<button onclick="openBibtex(${index})" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">❝ Cite</button>` : ''}
+
+              <div class="ml-auto flex gap-2">
+                ${work.tags.map(tag => `<span class="px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-[10px] font-medium uppercase tracking-wider">${tag}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderFullList(filterYear) {
+      const container = document.getElementById('full-list');
+      const filtered = filterYear === 'all' 
+        ? FULL_PUBLICATIONS 
+        : FULL_PUBLICATIONS.filter(p => p.year === filterYear);
+
+      container.innerHTML = filtered.map(pub => `
+        <div class="flex items-baseline gap-4 py-3 border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition group">
+          <span class="text-xs font-mono text-zinc-400 w-12 shrink-0 pt-1">${pub.year}</span>
+          <div class="flex-1">
+            <a href="${pub.url}" target="_blank" class="text-base font-medium text-zinc-800 dark:text-zinc-200 hover:text-primary transition block leading-snug">
+              ${pub.title}
+            </a>
+            <span class="text-xs text-zinc-500 mt-1 block group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition">${pub.venue}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 4. Modal & BibTeX Logic
+    const modal = document.getElementById('bibtexModal');
+    const modalContent = document.getElementById('modalContent');
+    const bibTextArea = document.getElementById('bibtexText');
+
+    function openBibtex(index) {
+      const bib = SELECTED_WORKS[index].bibtex;
+      if (!bib) return;
+      bibTextArea.value = bib;
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      modal.classList.add('opacity-0');
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    function copyBibtex() {
+      bibTextArea.select();
+      navigator.clipboard.writeText(bibTextArea.value).then(() => {
+        const btn = document.querySelector('button[onclick="copyBibtex()"]');
+        const originalText = btn.innerText;
+        btn.innerText = 'Copied!';
+        btn.classList.add('bg-green-600');
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.remove('bg-green-600');
+        }, 2000);
+      });
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // 5. Initialization
+    window.filterList = (year) => renderFullList(year);
+    
     (function(){
       const key='ml-dark';
       const root=document.documentElement;
@@ -134,330 +414,9 @@
       });
     })();
 
-    // ---- Publications Data
+    renderSelected();
+    renderFullList('all');
 
-    const AI_FOUNDATION_MODELS = [
-      {
-        title: 'Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling',
-        venue: 'AAAI Oral (CCF A)',
-        year: '2025',
-        paperUrl: 'https://arxiv.org/abs/2511.21120',
-        codeUrl: 'https://github.com/limengran98/CHMR',
-        authors: 'Mengran Li, Zelin Zang, Wenbin Xing, Junzhou Chen, Ronghui Zhang, Jiebo Luo, and Stan Z. Li',
-        abstract: 'Understanding how chemical perturbations propagate through biological systems is essential for robust molecular property prediction. While most existing methods focus on chemical structures alone, recent advances highlight the crucial role of cellular responses such as morphology and gene expression in shaping drug effects. However, current cell-aware approaches face two key limitations: (1) modality incompleteness in external biological data, and (2) insufficient modeling of hierarchical dependencies across molecular, cellular, and genomic levels. We propose \textbf{CHMR} (Cell-aware Hierarchical Multi-modal Representation), a robust framework that jointly models local-global dependencies between molecules and cellular responses and captures latent biological hierarchies via a novel tree-structured vector quantization module. Evaluated on nine public benchmarks spanning 728 tasks, CHMR outperforms state-of-the-art baselines, yielding average improvements of \textbf{3.6\%} on classification and \textbf{17.2\%} on regression tasks. These results demonstrate the advantage of hierarchy-aware, multimodal learning for reliable and biologically grounded molecular representations, offering a generalizable framework for integrative biomedical modeling.',
-        thumbnail: ''
-      },
-      {
-        title: 'A Survey of Large Language Models for Data Challenges in Graphs',
-        venue: 'Expert Systems with Applications',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1016/j.eswa.2025.129643',
-        codeUrl: ' https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges',
-        authors: 'Mengran Li, Pengyu Zhang, Wenbin Xing, Yijia Zheng, Klim Zaporojets, Junzhou Chen, Ronghui Zhang, Yong Zhang, Siyuan Gong, Jia Hu, Xiaolei Ma, Zhiyuan Liu, Paul Groth, Marcel Worring',
-        abstract: 'Graphs are a widely used paradigm for representing non-Euclidean data, with applications ranging from social network analysis to biomolecular prediction. While graph learning has achieved remarkable progress, real-world graph data presents a number of challenges that significantly hinder the learning process. In this survey, we focus on four fundamental data-centric challenges: (1) Incompleteness, real-world graphs have missing nodes, edges, or attributes; (2) Imbalance, the distribution of the labels of nodes or edges and their structures for real-world graphs are highly skewed; (3) Cross-domain Heterogeneity, graphs from different domains exhibit incompatible feature spaces or structural patterns; and (4) Dynamic Instability, graphs evolve over time in unpredictable ways. Recently, Large Language Models (LLMs) offer the potential to tackle these challenges by leveraging rich semantic reasoning and external knowledge. This survey focuses on how LLMs can address four fundamental data-centric challenges in graph-structured data, thereby improving the effectiveness of graph learning. For each challenge, we review both traditional solutions and modern LLM-driven approaches, highlighting how LLMs contribute unique advantages. Finally, we discuss open research questions and promising future directions in this emerging interdisciplinary field. ',
-        thumbnail: ''
-      },
-      {
-        title: 'Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs',
-        venue: 'arXiv',
-        year: '2025',
-        paperUrl: 'https://arxiv.org/pdf/2501.00743',
-        codeUrl: 'https://github.com/limengran98/ARB',
-        authors: 'Mengran Li, Chaojun Ding, Junzhou Chen, Wenbin Xing, Cong Ye, Ronghui Zhang, Songlin Zhuang, Jia Hu, Tony Z Qiu, Huijun Gao',
-        abstract: 'Missing attribute issues are prevalent in the graph learning, leading to biased outcomes in Graph Neural Networks (GNNs). Existing methods that rely on feature propagation are prone to cold start problem, particularly when dealing with attribute resetting and low-degree nodes, which hinder effective propagation and convergence. To address these challenges, we propose AttriReBoost (ARB), a novel method that incorporates propagation-based method to mitigate cold start problems in attribute-missing graphs. ARB enhances global feature propagation by redefining initial boundary conditions and strategically integrating virtual edges, thereby improving node connectivity and ensuring more stable and efficient convergence. This method facilitates gradient-free attribute reconstruction with lower computational overhead. The proposed method is theoretically grounded, with its convergence rigorously established. Extensive experiments on several real-world benchmark datasets demonstrate the effectiveness of ARB, achieving an average accuracy improvement of 5.11% over state-of-the-art methods. Additionally, ARB exhibits remarkable computational efficiency, processing a large-scale graph with 2.49 million nodes in just 16 seconds on a single GPU. Our code is available at https://github.com/limengran98/ARB.',
-        thumbnail: ''
-      },
-      {
-        title: 'Mdvt: Enhancing multimodal recommendation with model-agnostic multimodal-driven virtual triplets',
-        venue: 'ACM SIGKDD Conference on Knowledge Discovery and Data Mining (CCF A)',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1145/3711896.3737042',
-        codeUrl: 'https://github.com/Jinfeng-Xu/MDVT',
-        authors: 'Jinfeng Xu, Zheyu Chen, Jinze Li, Shuo Yang, Hewei Wang, Yijie Li, Mengran Li, Puzhen Wu, Edith CH Ngai',
-        abstract: 'The data sparsity problem significantly hinders the performance of recommender systems, as traditional models rely on limited historical interactions to learn user preferences and item properties. While incorporating multimodal information can explicitly represent these preferences and properties, existing works often use it only as side information, failing to fully leverage its potential. In this paper, we propose MDVT, a model-agnostic approach that constructs multimodal-driven virtual triplets to provide valuable supervision signals, effectively mitigating the data sparsity problem in multimodal recommendation systems. To ensure high-quality virtual triplets, we introduce three tailored warm-up threshold strategies: static, dynamic, and hybrid. The static warm-up threshold strategy exhaustively searches for the optimal number of warm-up epochs but is time-consuming and computationally intensive. The dynamic warm-up threshold strategy adjusts the warm-up period based on loss trends, improving efficiency but potentially missing optimal performance. The hybrid strategy combines both, using the dynamic strategy to find the approximate optimal number of warm-up epochs and then refining it with the static strategy in a narrow hyper-parameter space. Once the warm-up threshold is satisfied, the virtual triplets are used for joint model optimization by our enhanced pair-wise loss function without causing significant gradient skew. Extensive experiments on multiple real-world datasets demonstrate that integrating MDVT into advanced multimodal recommendation models effectively alleviates the data sparsity problem and improves recommendation performance, particularly in sparse data scenarios.',
-        thumbnail: ''
-      },
-      {
-        title: 'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning',
-        venue: 'IEEE Transactions on Neural Networks and Learning Systems',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/TNNLS.2024.3357080',
-        codeUrl: null,
-        authors: 'Mengran Li, Yong Zhang, Shaofan Wang, Yongli Hu, Baocai Yin',
-        abstract: 'Attribute graphs are a crucial data structure for graph communities. However, the presence of redundancy and noise in the attribute graph can impair the aggregation effect of integrating two different heterogeneous distributions of attribute and structural features, resulting in inconsistent and distorted data that ultimately compromises the accuracy and reliability of attribute graph learning. For instance, redundant or irrelevant attributes can result in overfitting, while noisy attributes can lead to underfitting. Similarly, redundant or noisy structural features can affect the accuracy of graph representations, making it challenging to distinguish between different nodes or communities. To address these issues, we propose the embedded fusion graph auto-encoder framework for self-supervised learning (SSL), which leverages multitask learning to fuse node features across different tasks to reduce redundancy. The embedding fusion graph auto-encoder (EFGAE) framework comprises two phases: pretraining (PT) and downstream task learning (DTL). During the PT phase, EFGAE uses a graph auto-encoder (GAE) based on adversarial contrastive learning to learn structural and attribute embeddings separately and then fuses these embeddings to obtain a representation of the entire graph. During the DTL phase, we introduce an adaptive graph convolutional network (AGCN), which is applied to graph neural network (GNN) classifiers to enhance recognition for downstream tasks. The experimental results demonstrate that our approach outperforms state-of-the-art (SOTA) techniques in terms of accuracy, generalization ability, and robustness.',
-        thumbnail: '',
-        esi: true
-      },
-      {
-        title: 'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation',
-        venue: 'IEEE Transactions on Computational Social Systems',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/TCSS.2024.3509399',
-        codeUrl: 'https://github.com/limengran98/TDG-Mamba',
-        authors: 'Mengran Li, Junzhou Chen, Bo Li, Yong Zhang, Ronghui Zhang, Siyuan Gong, Xiaolei Ma, Zhihong Tian',
-        abstract: 'Temporal dynamic graphs (TDGs), representing the dynamic evolution of entities and their relationships over time with intricate temporal features, are widely used in various real-world domains. Existing methods typically rely on mainstream techniques such as transformers and graph neural networks (GNNs) to capture the spatiotemporal information of TDGs. However, despite their advanced capabilities, these methods often struggle with significant computational complexity and limited ability to capture temporal dynamic contextual relationships. Recently, a new model architecture called mamba has emerged, noted for its capability to capture complex dependencies in sequences while significantly reducing computational complexity. Building on this, we propose a novel method, TDG-mamba, which integrates mamba for TDG learning. TDG-mamba introduces deep semantic spatiotemporal embeddings into the mamba architecture through a specially designed spatiotemporal prior tokenization module (SPTM). Furthermore, to better leverage temporal information differences and enhance the modeling of dynamic changes in graph structures, we separately design a bidirectional mamba and a directed GNN for improved spatiotemporal embedding learning. Link prediction experiments on multiple public datasets demonstrate that our method delivers superior performance, with an average improvement of 5.11\% over baseline methods across various settings.',
-        thumbnail: ''
-      },
-      {
-        title: 'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things',
-        venue: 'IEEE Internet of Things Journal',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/JIOT.2025.3531985',
-        codeUrl: 'https://github.com/limengran98/TDAR',
-        authors: 'Mengran Li, Junzhou Chen, Chenyun Yu, Guanying Jiang, Ronghui Zhang, Yanming Shen, Houbing Herbert Song',
-        abstract: 'With the advancement of information technology, the Social Internet of Things (SIoT) has fostered the integration of physical devices and social networks, deepening the study of complex interaction patterns. Text attribute graphs (TAGs) capture both topological structures and semantic attributes, enhancing the analysis of complex interactions within the SIoT. However, existing graph learning methods are typically designed for complete attributed graphs, and the common issue of missing attributes in attribute missing graphs (AMGs) increases the difficulty of analysis tasks. To address this, we propose the topology-driven attribute recovery (TDAR) framework, which leverages topological data for AMG learning. TDAR introduces an improved prefilling method for initial attribute recovery using native graph topology. Additionally, it dynamically adjusts propagation weights and incorporates homogeneity strategies within the embedding space to suit AMGs’ unique topological structures, effectively reducing noise during information propagation. Extensive experiments on public datasets demonstrate that TDAR significantly outperforms state-of-the-art methods in attribute reconstruction and downstream tasks, offering a robust solution to the challenges posed by AMGs.',
-        thumbnail: ''
-      },
-      {
-        title: 'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning',
-        venue: 'IEEE Transactions on Big Data',
-        year: '2024',
-        paperUrl: 'https://doi.org/10.1109/TBDATA.2023.3275374',
-        codeUrl: 'https://github.com/limengran98/SNHE',
-        authors: 'Mengran Li, Yong Zhang, Wei Zhang, Yi Chu, Yongli Hu, Baocai Yin',
-        abstract: 'The exploration of self-supervised information mining of heterogeneous datasets has gained significant traction in recent years. Heterogeneous graph neural networks (HGNNs) have emerged as a highly promising method for handling heterogeneous information networks (HINs) due to their superior performance. These networks leverage aggregation functions to convert pairwise relations-based features from raw heterogeneous graphs into embedding vectors. However, real-world HINs contain valuable higher-order relations that are often overlooked but can provide complementary information. To address this issue, we propose a novel method called Self-supervised Nodes-Hyperedges Embedding (SNHE), which leverages hypergraph structures to incorporate higher-order information into the embedding process of HINs. Our method decomposes the raw graph structure into snapshots based on various meta-paths, which are then transformed into hypergraphs to aggregate high-order information within the data and generate embedding representations. Given the complexity of HINs, we develop a dual self-supervised structure that maximizes mutual information in the enhanced graph data space, guides the overall model update, and reduces redundancy and noise. We evaluate our proposed method on various real-world datasets for node classification and clustering tasks, and compare it against state-of-the-art methods.',
-        thumbnail: ''
-      },
-      {
-        title: 'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks',
-        venue: 'IEEE Transactions on Computational Social Systems',
-        year: '2024',
-        paperUrl: 'https://doi.org/10.1109/TCSS.2023.3292145',
-        codeUrl: null,
-        authors: 'Mengran Li, Yong Zhang, Wei Zhang, Shiyu Zhao, Xinglin Piao, Baocai Yin',
-        abstract: 'Community detection aims to identify dense subgroups of nodes within a network. However, in real-world networks, node attributes are often missing, making traditional methods less effective. In networks with missing attributes, the main challenge of community detection is to deal with the missing attribute information efficiently and use network structure information to make accurate predictions. This article proposes an innovative method called contrastive sampling-aggregating transformer (CSAT) for community detection in attribute-missing networks. CSAT incorporates the contrastive learning principle to capture hidden patterns among nodes and to aggregate information from different samples to create a more robust and accurate methodology for community detection. Specifically, CSAT utilizes a sampling and propagation strategy to obtain different samples and smooth attribute features of the network structure and leverages the Transformer architecture to model the pairwise relationships between nodes. Therefore, our method can address the attribute-missing issue by integrating the auxiliary information from both the network structure and other sources. Extensive experiments on several benchmark datasets demonstrate CSAT’s superior performance compared to the state-of-the-art methods for community detection.',
-        thumbnail: ''
-      },
-      {
-        title: 'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning',
-        venue: 'ACM Transactions on Multimedia Computing, Communications and Applications',
-        year: '2024',
-        paperUrl: 'https://doi.org/10.1145/3672078',
-        codeUrl: 'https://github.com/limengran98/SCAE',
-        authors: 'Mengran Li, Ronghui Zhang, Yong Zhang, Xinglin Piao, Shiyu Zhao, Baocai Yin',
-        abstract: 'Describing an object from multiple perspectives often leads to incomplete data representation. Consequently, learning consistent representations for missing data from multiple views has emerged as a key focus in the realm of Incomplete Multi-view Representation Learning (IMRL). In recent years, various strategies, such as subspace learning, matrix decomposition, and deep learning, have been harnessed to develop numerous IMRL methods. In this article, our primary research revolves around IMRL, with a particular emphasis on addressing two main challenges. Firstly, we delve into the effective integration of intra-view similarity and contextual structure into a unified framework. Secondly, we explore the effective facilitation of information exchange and fusion across multiple views. To tackle these issues, we propose a deep learning approach known as Structural Contrastive Auto-Encoder (SCAE) to solve the challenges of IMRL. SCAE comprises two major components: intra-view structural representation learning and inter-view contrastive representation learning. The former involves capturing intra-view similarity by minimizing the Dirichlet energy of the feature matrix, while also applying spatial dispersion regularization to capture intra-view contextual structure. The latter encourages maximizing the mutual information of inter-view representations, facilitating information exchange and fusion across views. Experimental results demonstrate the efficacy of our approach in significantly enhancing model accuracy and robustly addressing IMRL problems.',
-        thumbnail: '',
-        esi: true
-      },
-      {
-        title: 'Hypergraph Transformer Neural Networks',
-        venue: 'ACM Transactions on Knowledge Discovery from Data',
-        year: '2023',
-        paperUrl: 'https://doi.org/10.1145/3565028',
-        codeUrl: 'https://github.com/limengran98/HGTN',
-        authors: 'Mengran Li, Yong Zhang, Xiaoyong Li, Yuchen Zhang, Baocai Yin',
-        abstract: 'Graph neural networks (GNNs) have been widely used for graph structure learning and achieved excellent performance in tasks such as node classification and link prediction. Real-world graph networks imply complex and various semantic information and are often referred to as heterogeneous information networks (HINs). Previous GNNs have laboriously modeled heterogeneous graph networks with pairwise relations, in which the semantic information representation for learning is incomplete and severely hinders node embedded learning. Therefore, the conventional graph structure cannot satisfy the demand for information discovery in HINs. In this article, we propose an end-to-end hypergraph transformer neural network (HGTN) that exploits the communication abilities between different types of nodes and hyperedges to learn higher-order relations and discover semantic information. Specifically, attention mechanisms weigh the importance of semantic information hidden in original HINs to generate useful meta-paths. Meanwhile, our method develops a multi-scale attention module to aggregate node embeddings in higher-order neighborhoods. We evaluate the proposed model with node classification tasks on six datasets: DBLP, ACM, IBDM, Reuters, STUD-BJUT, and Citeseer. Experiments on a large number of benchmarks show the advantages of HGTN.',
-        thumbnail: ''
-      },
-      {
-        title: 'SHCN: Self-supervised General Hypergraph Clustering Network',
-        venue: 'IEEE Conference on Big Data (CCF C)',
-        year: '2022',
-        paperUrl: 'https://doi.org/10.1109/BigData55660.2022.10020643',
-        codeUrl: 'https://github.com/limengran98/SHCN',
-        authors: 'Li Mengran, Piao Xinglin, Zhang Yong, Hu Yongli, Yin Baocai',
-        abstract: 'Clustering is a fundamental and hot issue in the unsupervised learning area. With the rapid development of deep learning and graph neural networks (GNNs) techniques, researchers have proposed a series of effective clustering methods. However, most existing approaches adopt a conventional graph to aggregate the neighborhood information, where only the pairwise relations are considered. Moreover, the redundancy/noise in the raw data samples may result in less accurate sample relations and inferior clustering results. In this paper, we proposed a new GNNs based clustering method, which adopts the hypergraph learning approach to explore the high-order relationship for accurate relation learning. Specifically, we first construct two hypergraph representations based on the topology feature and attribute feature from data samples. Then, a self-supervised structure is integrated to learn a cross-correlation matrix from the original hypergraph to act as a higher-order neighborhood with reduced redundancy and noise. Finally the embedding representation of the clustering space is learned in the graph convolution. The proposed method has been evaluated on six public datasets for clustering tasks. Experimental results show that our proposed method outperforms the state-of-the-art ones.',
-        thumbnail: ''
-      }
-    ];
-
-    const AI_MODELS_X = [
-        {
-        title: 'ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images',
-        venue: 'Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence (CCF A)',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.24963/ijcai.2025/235',
-        codeUrl: '',
-        authors: 'Lijuan Xu, Kai Wang, Fuqiang Yu, Fenghua Tong, Mengran Li, Dawei Zhao',
-        abstract: 'Breast diseases pose a significant threat to women’s health. Automatic lesion segmentation in breast ultrasound images (BUSI) plays a crucial role in fast diagnosis. While various enhanced U-Net-based models have achieved success in multi-scale feature analysis and handling blurred boundaries, two key challenges persist that could guide the improvement of BUSI segmentation networks: 1) significant fluctuations in pixel intensity distribution similarity between the lesion and surrounding tissues, and 2) inconsistent transmission of spatial detail due to multi-scale lesion sampling. These issues highlight the necessity of semantic elasticity understanding and consistency control. To this end, we propose ElaD-Net, an Elastic Semantic Decoupling Network for lesion segmentation in BUSI. This network uses the pre-trained EfficientNet-B2 for multi-scale encoding of BUSI. The decoding stage features two key modules: Elastic Semantic Decoupling (ESD) and Spatial Semantic Reconstruction (SSR). ESD learns and decouples multi-frequency semantics in multi-scale channels with a self-calibration mechanism, enabling dynamic adjustment of receptive depth to resist similarity fluctuations. SSR further optimizes ESD outputs via feature branching, compression, and excitation to ensure spatial semantic consistency, thereby separately reconstructing edge and body.',
-        thumbnail: ''
-      },
-      {
-        title: 'A Two-Stage Method for Specular Highlight Detection and Removal in Medical Images',
-        venue: 'MICCAI (CCF B)',
-        year: '2025',
-        paperUrl: 'https://link.springer.com/chapter/10.1007/978-3-032-05127-1_3',
-        codeUrl: 'https://github.com/tkllndxn/highlight-removal',
-        authors: 'Zefeng Li, Mingyue Cui, Daosong Hu, Jin Gong, Jingchong Weng, Zeyu Zhang, Lele Tian, Mengran Li, Kai Huang',
-        abstract: 'In minimally invasive surgeries, such as endoscopic and ophthalmic procedures, specular highlights on tissue and instrument surfaces can obscure critical details, compromising surgical safety and precision. Traditional methods rely on color segmentation and filtering optimization but are highly sensitive to lighting variations and produce suboptimal restoration. While deep learning enhances detection robustness, its effectiveness is constrained by the scarcity of annotated medical data and unnatural boundary transitions in restored regions. To address these challenges, this paper proposes a two-stage hierarchical network framework. First, a Hierarchical Feature Attention Network (HFA-Net) is designed, integrating spatial-shift segmented attention (SMLP), dual-flow attention (DFA), multi-scale feature fusion (SFF), and partial mask convolution (PMConv) to achieve precise detection and removal of specular highlights. Second, a large-mask inpainting model (LaMa) is introduced, utilizing dilated mask expansion to enhance contextual awareness and improve texture consistency in the restored regions. To address the scarcity of medical highlight datasets, we construct four specialized datasets covering various surgical scenarios, including ophthalmic injections and instrument reflections, while also incorporating publicly available data to enhance model generalization. Experimental results demonstrate that the proposed method outperforms existing approaches across six datasets in terms of detection accuracy and restoration quality, particularly excelling in complex textures and natural boundary transitions.',
-        thumbnail: ''
-      },
-      {
-        title: 'Effective Finite Time Stability Control for Human–Machine Shared Vehicle Following System',
-        venue: 'IEEE Transactions on Intelligent Transportation Systems',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/TITS.2025.3619092',
-        codeUrl: '',
-        authors: 'Zihan Wang; Mengran Li; Ronghui Zhang; Jing Zhao; Chuan Hu; Xiaolei Ma; Tony Z. Qiu',
-        abstract: 'With the development of intelligent connected vehicle technology, human-machine shared control has gained popularity in vehicle following due to its effectiveness in driver assistance. However, traditional vehicle following systems struggle to maintain stability when driver reaction time fluctuates, as these variations require different levels of system intervention. To address this issue, the proposed human-machine shared vehicle following assistance system (HM-VFAS) integrates driver outputs under various states with the assistance system. The system employs an intelligent driver model that accounts for reaction time delays, simulating time-varying driver outputs. Acontrol authority allocation strategy is designed to dynamically adjust the level of intervention based on real-time driver state assessment. To handle instability from driver authority switching, the proposed solution includes a two-layer adaptive finite time sliding mode controller (A-FTSMC). The first layer is an integral sliding mode adaptive controller that ensures robustness by compensating for uncertainties in the driver output. The second layer is a fast non-singular terminal sliding mode controller designed to accelerate convergence for rapid stabilization. Based on the driver-in-the-loop experimental results using the intelligent cockpit system, the performance of the HM-VFAS was evaluated. Results show that the proposed control strategy maintains a safe distance under time-varying driver states, with the actual acceleration error relative to the target acceleration maintained within ±0.6 m/s2 and the maximum acceleration error reduced by 1.3 m/s2 . Compared to traditional controllers, the A-FTSMC controller offers faster convergence and less vibration, reducing the stabilization time by 26.8%.',
-        thumbnail: ''
-      },
-      {
-        title: 'MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling',
-        venue: ' IEEE Transactions on Intelligent Transportation Systems',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1109/TITS.2025.3588867',
-        codeUrl: 'https://github.com/BMRETURN/MM-STFlowNet',
-        authors: 'Ronghui Zhang, Wenbin Xing, Mengran Li, Zihan Wang, Junzhou Chen, Xiaolei Ma, Zhiyuan Liu, Zhengbing He',
-        abstract: 'Accurate and refined passenger flow prediction is essential for optimizing the collaborative management of multiple collection and distribution modes in large-scale transportation hubs. Traditional methods often focus only on the overall passenger volume, neglecting the interdependence between different modes within the hub. To address this limitation, we propose MM-STFlowNet, a comprehensive multi-mode prediction framework grounded in dynamic spatial-temporal graph modeling. Initially, an integrated temporal feature processing strategy is implemented using signal decomposition and convolution techniques to address data spikes and high volatility. Subsequently, we introduce the Spatial-Temporal Dynamic Graph Convolutional Recurrent Network (STDGCRN) to capture detailed spatial-temporal dependencies across multiple traffic modes, enhanced by an adaptive channel attention mechanism. Finally, the self-attention mechanism is applied to incorporate various external factors, further enhancing prediction accuracy. Experiments on a real-world dataset from Guangzhounan Railway Station in China demonstrate that MM-STFlowNet achieves state-of-the-art performance, particularly during peak periods, providing valuable insight for transportation hub management.',
-        thumbnail: ''
-      },
-      {
-        title: 'Ms-AeDNet: A multi-scale attention-enhanced dynamic network for multi-step performance prediction of hydrogen proton exchange membrane fuel cells',
-        venue: 'Process Safety and Environmental Protection',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1016/j.psep.2025.107674',
-        codeUrl: 'https://github.com/BMRETURN/Ms-AeDNet',
-        authors: 'Mengran Li, Wenbin Xing, Ronghui Zhang',
-        abstract: 'The global transition to sustainable, low-carbon energy systems positions hydrogen energy as a pivotal solution for mitigating climate change and enhancing energy security. Among the most promising technologies for clean hydrogen utilization are Proton Exchange Membrane Fuel Cells (PEMFCs), known for their high efficiency and zero emissions. However, the long-term durability and performance prediction of PEMFCs remain major challenges, hindering their widespread adoption in critical sectors. Traditional methods struggle to capture the multi-scale temporal dependencies and the dynamic effects of external operating conditions. To address these challenges, we propose a Multi-scale Attention-enhanced Dynamic Network (Ms-AeDNet) that integrates global adaptive decomposition, local time enhancement, and cross-factor attentive fusion. This solution enhances the performance prediction accuracy of PEMFCs by leveraging deep learning to model degradation patterns and environmental influences simultaneously. Validated on two industrial datasets, Ms-AeDNet outperforms baseline models, reducing MAE and MSE by 27.63% and 37.48% on average. Functional contribution analysis and visualization studies further confirm its robustness across varying operating conditions, making it a reliable tool for predictive maintenance and life cycle optimization of hydrogen PEMFCs.',
-        thumbnail: ''
-      },
-      {
-        title: 'TAS-TsC: A data-driven framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of truck trajectories',
-        venue: 'Applied Soft Computing',
-        year: '2025',
-        paperUrl: 'https://doi.org/10.1016/j.asoc.2025.113214',
-        codeUrl: null,
-        authors: 'Mengran Li, Junzhou Chen, Guanying Jiang, Fuliang Li, Ronghui Zhang, Siyuan Gong, Zhihan Lv',
-        abstract: 'Accurately estimating the time of arrival (ETA) for trucks is crucial for optimizing transportation efficiency in logistics. GPS trajectory data provides valuable information for ETA, but challenges arise due to temporal sparsity, variable sequence lengths, and the interdependencies among multiple trucks. To address these issues, we propose the Temporal-Attribute-Spatial Tri-space Coordination (TAS-TsC) framework, which leverages three feature spaces – temporal, attribute, and spatial – to enhance ETA. Our framework consists of a Temporal Learning Module (TLM) that uses state space models to capture temporal dependencies, an Attribute Extraction Module (AEM) that transforms sequential features into structured attribute embeddings, and a Spatial Fusion Module (SFM) that models the interactions among multiple trajectories using graph representation learning. These modules collaboratively learn trajectory embeddings, which are then used by a Downstream Prediction Module (DPM) to estimate arrival times. We validate TAS-TsC on real truck trajectory datasets collected from Shenzhen, China, demonstrating its superior performance compared to existing methods.',
-        thumbnail: ''
-      },
-      {
-        title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems',
-        venue: 'IEEE TCSS',
-        year: '2024',
-        paperUrl: 'https://doi.org/10.1109/TCSS.2024.3394701',
-        codeUrl: null,
-        authors: 'Shiyu Zhao, Yong Zhang, Mengran Li, Xinglin Piao, Baocai Yin',
-        abstract: 'Temporal dynamic graphs (TDGs), representing the dynamic evolution of entities and their relationships over time with intricate temporal features, are widely used in various real-world domains. Existing methods typically rely on mainstream techniques such as transformers and graph neural networks (GNNs) to capture the spatiotemporal information of TDGs. However, despite their advanced capabilities, these methods often struggle with significant computational complexity and limited ability to capture temporal dynamic contextual relationships. Recently, a new model architecture called mamba has emerged, noted for its capability to capture complex dependencies in sequences while significantly reducing computational complexity. Building on this, we propose a novel method, TDG-mamba, which integrates mamba for TDG learning. TDG-mamba introduces deep semantic spatiotemporal embeddings into the mamba architecture through a specially designed spatiotemporal prior tokenization module (SPTM). Furthermore, to better leverage temporal information differences and enhance the modeling of dynamic changes in graph structures, we separately design a bidirectional mamba and a directed GNN for improved spatiotemporal embedding learning. Link prediction experiments on multiple public datasets demonstrate that our method delivers superior performance, with an average improvement of 5.11\% over baseline methods across various settings.',
-        thumbnail: ''
-      },
-      {
-        title: 'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks',
-        venue: 'Briefings in Bioinformatics',
-        year: '2024',
-        paperUrl: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248',
-        codeUrl: 'https://github.com/QSong-github/HGGEP',
-        authors: 'Bo Li, Yong Zhang, Qing Wang, Chengyang Zhang, Mengran Li, Guangyu Wang, Qianqian Song',
-        abstract: 'Spatial transcriptomics reveals the spatial distribution of genes in complex tissues, providing crucial insights into biological processes, disease mechanisms, and drug development. The prediction of gene expression based on cost-effective histology images is a promising yet challenging field of research. Existing methods for gene prediction from histology images exhibit two major limitations. First, they ignore the intricate relationship between cell morphological information and gene expression. Second, these methods do not fully utilize the different latent stages of features extracted from the images. To address these limitations, we propose a novel hypergraph neural network model, HGGEP, to predict gene expressions from histology images. HGGEP includes a gradient enhancement module to enhance the model’s perception of cell morphological information. A lightweight backbone network extracts multiple latent stage features from the image, followed by attention mechanisms to refine the representation of features at each latent stage and capture their relations with nearby features. To explore higher-order associations among multiple latent stage features, we stack them and feed into the hypergraph to establish associations among features at different scales. Experimental results on multiple datasets from disease samples including cancers and tumor disease, demonstrate the superior performance of our HGGEP model than existing methods.',
-        thumbnail: ''
-      },
-      {
-        title: 'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model',
-        venue: 'Intelligent Data Analysis',
-        year: '2023',
-        paperUrl: 'https://doi.org/10.3233/IDA-216318',
-        codeUrl: null,
-        authors: 'Mengran Li, Yong Zhang, Xiaoyong Li, Xuanqi Lin, Baocai Yin',
-        abstract: 'Social link is an important index to understand master students’ mental health and social ability in educational management. Extracting hidden social strength from students’ rich daily life behaviors has also become an attractive research hotspot. Devices with positioning functions record many students’ spatiotemporal behavior data, which can infer students’ social links. However, under the guidance of school regulations, students’ daily activities have a certain regularity and periodicity. Traditional methods usually compare the co-occurrence frequency of two users to infer social association but do not consider the location-intensive and time-sensitive in campus scenes. Aiming at the campus environment, a Spatiotemporal Entropy-Based Analyzing (S-EBA) model for inferring students’ social strength is proposed. The model is based on students’ multi-source heterogeneous behavioral data to calculate the frequency of co-occurrence under the influence of time intervals. Then, the three features of diversity, spatiotemporal hotspot and behavior similarity are introduced to calculate social strength. Experiments show that our method is superior to the traditional methods under many evaluating criteria. The inferred social strength is used as the weight of the edge to construct a social network further to analyze its important impact on students’ education management.',
-        thumbnail: ''
-      },
-      {
-        title: 'Student achievement prediction using deep neural network from multi-source campus data',
-        venue: 'Complex & Intelligent Systems',
-        year: '2022',
-        paperUrl: 'https://doi.org/10.1007/s40747-022-00731-8',
-        codeUrl: null,
-        authors: 'Xiaoyong Li, Yong Zhang, Huimin Cheng, Mengran Li, Baocai Yin',
-        abstract: 'Finding students at high risk of poor academic performance as early as possible plays an important role in improving education quality. To do so, most existing studies have used the traditional machine learning algorithms to predict students’ achievement based on their behavior data, from which behavior features are extracted manually thanks to expert experience and knowledge. However, owing to an increase in the varieties and overall volume of behavioral data, it has become more and more challenging to identify high-quality handcrafted features. In this paper, we propose an end-to-end deep learning model that automatically extracts features from students’ multi-source heterogeneous behavior data to predict academic performance. The key innovation of this model is that it uses long short-term memory networks to capture inherent time-series features for each type of behavior, and it takes two-dimensional convolutional networks to extract correlation features among different behaviors. We conducted experiments with four types of daily behavior data from students of the university in Beijing. The experimental results demonstrate that the proposed deep model method outperforms several machine learning algorithms.',
-        thumbnail: ''
-      },
-      {
-        title: 'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction',
-        venue: 'Engineering Applications of Artificial Intelligence',
-        year: '2022',
-        paperUrl: 'https://doi.org/10.1016/j.engappai.2022.105174',
-        codeUrl: null,
-        authors: 'Mengran Li, Yong Zhang, Xiaoyong Li, Lijia Cai, Baocai Yin',
-        abstract: 'Academic performance prediction is a fundamental and hot issue in educational data mining (EDM). Recently, researchers have proposed a series of effective machine learning (ML) based classification strategies to predict students’ academic performance. However, prior arts are typically concerned about individual models but neglect the association among students, which might considerably have an effect on the integrity of the academic performance-related representations. Meanwhile, students’ multi-viewing behavior contains complex relations among students. Therefore, we propose a Multi-View Hypergraph Neural Network (MVHGNN) for predicting students’ academic performance. MVHGNN uses hypergraphs to construct high-order relations among students. The semantic information implied by multiple behaviors is consolidated through meta-paths. Further, a Cascade Attention Transformer (CAT) module is introduced to mine the weight of different behaviors by the self-attention mechanism. Our method is evaluated on real campus student behavioral datasets. The experimental results demonstrate that our method outperforms the state-of-the-art ones.',
-        thumbnail: ''
-      }
-
-    ];
-
-    // Render publications (with ESI badge)
-    function renderCategory(categoryKey, title, list){
-      const wrap = document.createElement('div');
-      wrap.innerHTML = `<h3 class="text-xl font-semibold mb-3">${title}</h3>`;
-
-      const group = document.createElement('div');
-      group.className = 'space-y-4';
-
-      list.forEach((p, i) => {
-        const card = document.createElement('article');
-        card.className = 'border rounded-xl p-4 bg-white/70 dark:bg-zinc-900/60';
-
-        const head = document.createElement('div');
-        head.className = 'font-medium flex items-center gap-2';
-
-        const titleSpan = document.createElement('span');
-        titleSpan.textContent = p.title;
-        head.appendChild(titleSpan);
-
-        if (p.esi) {
-          const badge = document.createElement('span');
-          badge.textContent = '🔥 ESI Highly Cited';
-          badge.className = 'text-xs px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 border border-orange-300';
-          head.appendChild(badge);
-        }
-
-        const meta = document.createElement('div');
-        meta.className = 'text-sm text-zinc-500 dark:text-zinc-400 mt-1';
-        meta.textContent = `${p.venue}${p.year ? ', ' + p.year : ''}`;
-
-        const actions = document.createElement('div');
-        actions.className = 'flex gap-3 mt-2 items-center';
-
-        const paperBtn = document.createElement(p.paperUrl ? 'a' : 'span');
-        paperBtn.className = p.paperUrl ? 'text-blue-600' : 'text-zinc-400';
-        paperBtn.innerText = '📄 Paper';
-        if (p.paperUrl) { paperBtn.href = p.paperUrl; paperBtn.target = '_blank'; }
-
-        const codeBtn = document.createElement(p.codeUrl ? 'a' : 'span');
-        codeBtn.className = p.codeUrl ? 'text-green-600' : 'text-zinc-400';
-        codeBtn.innerText = '🐙 Code';
-        if (p.codeUrl) { codeBtn.href = p.codeUrl; codeBtn.target = '_blank'; }
-
-        const toggle = document.createElement('button');
-        toggle.className = 'ml-auto text-sm underline';
-        toggle.textContent = 'Details';
-        const detailsId = `det-${categoryKey}-${i}`;
-        toggle.setAttribute('data-toggle', detailsId);
-
-        actions.append(paperBtn, codeBtn, toggle);
-
-        const details = document.createElement('div');
-        details.id = detailsId;
-        details.className = 'hidden mt-3 text-sm text-zinc-600 dark:text-zinc-400';
-        details.innerHTML = `
-          ${p.authors ? `<div><strong>Authors:</strong> ${p.authors}</div>` : ''}
-          ${p.abstract ? `<div class='mt-1'><strong>Abstract:</strong> ${p.abstract}</div>` : ''}
-          ${p.thumbnail ? `<img src='${p.thumbnail}' alt='thumbnail' class='mt-2 rounded border'/>` : ''}
-        `;
-
-        card.append(head, meta, actions, details);
-        group.append(card);
-      });
-
-      wrap.append(group);
-
-      wrap.querySelectorAll('[data-toggle]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const id = btn.getAttribute('data-toggle');
-          const el = wrap.querySelector('#' + CSS.escape(id));
-          if (el) el.classList.toggle('hidden');
-        });
-      });
-
-      return wrap;
-    }
-
-    const pubRoot = document.getElementById('pub-list');
-    pubRoot.innerHTML = '';
-    pubRoot.append(
-      renderCategory('gfm', 'AI Foundation Models', AI_FOUNDATION_MODELS),
-      renderCategory('gxx', 'AI Models + X', AI_MODELS_X)
-    );
   </script>
 </body>
 </html>
