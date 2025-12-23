@@ -21,7 +21,7 @@
     .fade-in { animation: fadeIn 0.5s ease-in; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     .modal-overlay { background-color: rgba(0, 0, 0, 0.5); }
-    /* 修复 ClustrMaps 在某些情况下宽度溢出的问题 */
+    /* 修复 ClustrMaps 可能的溢出问题 */
     #clustrmaps-widget-v2 { max-width: 100%; }
   </style>
 </head>
@@ -48,7 +48,7 @@
         <img src="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" alt="Mengran Li" class="w-40 h-40 rounded-xl object-cover shadow-lg border border-zinc-100 dark:border-zinc-800" />
       </div>
       <div>
-        <h1 class="text-4xl font-bold tracking-tight mb-2">Mengran Li <span class="text-zinc-400 font-normal text-2xl">(李孟燃)</span></h1>
+        <h1 class="text-4xl font-bold tracking-tight mb-2">Mengran Li <span class="text-zinc-400 font-normal text-2xl">(李梦然)</span></h1>
         <p class="text-lg text-zinc-600 dark:text-zinc-300 mb-4">
           Ph.D. Student in Control Science & Engineering @ <a href="https://www.sysu.edu.cn/" class="text-primary hover:underline" target="_blank">Sun Yat-sen University</a>
         </p>
@@ -110,8 +110,8 @@
 
     <section id="map" class="pt-8 border-t border-zinc-200 dark:border-zinc-800">
       <h2 class="text-xl font-bold mb-4 text-center">Visitor Map</h2>
-      <div class="flex justify-center grayscale hover:grayscale-0 transition opacity-80 hover:opacity-100 overflow-hidden">
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=EO4WwligewGDvWwRyQC9S5OqQniwGcIxTOqOSCvSPGY&cl=ffffff&w=a"></script>
+      <div class="w-80 mx-auto grayscale hover:grayscale-0 transition opacity-80 hover:opacity-100 overflow-hidden">
+        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=EO4WwligewGDvWwRyQC9S5OqQniwGcIxTOqOSCvSPGY&cl=ffffff&w=a&t=tt"></script>
       </div>
     </section>
 
@@ -164,7 +164,11 @@
           <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 leading-tight mb-2 group-hover:text-primary transition">
             <a href="${work.paperUrl}" target="_blank">${work.title}</a>
           </h3>
-          <div class="text-xs text-zinc-500 mb-2 font-mono">${work.venue}</div>
+          <div class="text-sm text-zinc-800 dark:text-zinc-300 font-medium mb-1 leading-snug">
+             ${work.authors}
+          </div>
+          <div class="text-sm font-bold text-primary mb-3">${work.venue}</div>
+          
           <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-3 leading-relaxed line-clamp-3">${work.desc}</p>
           <div class="flex items-center gap-4 mt-auto">
             ${work.paperUrl !== '#' ? `<a href="${work.paperUrl}" target="_blank" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">📄 Paper</a>` : ''}
@@ -186,7 +190,7 @@
             <div class="flex flex-col gap-1">
               <a href="${pub.url}" target="_blank" class="text-base font-medium text-zinc-800 dark:text-zinc-200 hover:text-primary transition block leading-snug">${pub.title}</a>
               <div class="flex flex-wrap items-center gap-3 text-xs text-zinc-500 mt-1">
-                <span>${pub.venue}</span>
+                <span class="font-medium text-zinc-700 dark:text-zinc-300">${pub.venue}</span>
                 <span class="px-1.5 py-0.5 rounded border border-zinc-200 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 font-medium">${pub.rank}</span>
                 ${pub.codeUrl ? `<a href="${pub.codeUrl}" target="_blank" class="text-green-600 dark:text-green-400 hover:underline flex items-center gap-1">🐙 Code</a>` : ''}
               </div>
