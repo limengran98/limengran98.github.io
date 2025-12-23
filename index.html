@@ -111,6 +111,12 @@
         </li>
         <li class="flex gap-4">
           <span class="font-mono text-zinc-400 shrink-0">2025.09</span>
+          <span>
+            Two papers (<em>Redundancy Is Not What You Need...</em> and <em>SCAE...</em>) selected as <strong>ESI Highly Cited Papers</strong>.
+          </span>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-mono text-zinc-400 shrink-0">2025.09</span>
           <span>One survey paper on Graph LLMs accepted by <strong>Expert Systems with Applications (ESWA)</strong>.</span>
         </li>
         <li class="flex gap-4">
@@ -134,12 +140,13 @@
       <h2 class="text-2xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6">
         📝 Full Publication List
       </h2>
-      <div class="flex gap-2 mb-4 text-sm">
+      <div class="flex flex-wrap gap-2 mb-4 text-sm">
         <span class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500">Filters:</span>
         <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('all')">All</button>
         <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2025')">2025</button>
         <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2024')">2024</button>
         <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2023')">2023</button>
+        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2022')">2022</button>
       </div>
       <div id="full-list" class="space-y-3">
         </div>
@@ -197,7 +204,7 @@
   </div>
 
   <script>
-    // 1. Selected Works (Representative)
+    // 1. Selected Works
     const SELECTED_WORKS = [
       {
         id: 'chmr',
@@ -216,7 +223,7 @@
   year={2025}
 }`
       },
-      // Placeholders for other representative works as requested
+      // Placeholders
       {
         id: 'placeholder1',
         title: '[Placeholder] Selected Work 2',
@@ -234,7 +241,7 @@
         title: '[Placeholder] Selected Work 3',
         venue: 'Journal/Conference 2025',
         authors: 'Mengran Li, et al.',
-        desc: 'This slot is reserved for your next representative work. Please update the title, image, and description in the code.',
+        desc: 'This slot is reserved for your next representative work.',
         img: 'https://via.placeholder.com/300x180?text=Work+3',
         paperUrl: '#',
         codeUrl: '#',
@@ -246,7 +253,7 @@
         title: '[Placeholder] Selected Work 4',
         venue: 'Journal/Conference 2025',
         authors: 'Mengran Li, et al.',
-        desc: 'This slot is reserved for your next representative work. Please update the title, image, and description in the code.',
+        desc: 'This slot is reserved for your next representative work.',
         img: 'https://via.placeholder.com/300x180?text=Work+4',
         paperUrl: '#',
         codeUrl: '#',
@@ -258,7 +265,7 @@
         title: '[Placeholder] Selected Work 5',
         venue: 'Journal/Conference 2025',
         authors: 'Mengran Li, et al.',
-        desc: 'This slot is reserved for your next representative work. Please update the title, image, and description in the code.',
+        desc: 'This slot is reserved for your next representative work.',
         img: 'https://via.placeholder.com/300x180?text=Work+5',
         paperUrl: '#',
         codeUrl: '#',
@@ -267,38 +274,176 @@
       }
     ];
 
-    // 2. Full Publications List (ALL TITLES ARE NOW FULL LENGTH)
+    // 2. Full Publications List (Updated with Code URLs and Author Ranks)
     const FULL_PUBLICATIONS = [
       // --- 2025 ---
-      { title: 'Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling', venue: 'AAAI Oral', year: '2025', url: 'https://arxiv.org/abs/2511.21120' },
-      { title: 'A Survey of Large Language Models for Data Challenges in Graphs', venue: 'Expert Systems with Applications', year: '2025', url: 'https://doi.org/10.1016/j.eswa.2025.129643' },
-      { title: 'Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs', venue: 'arXiv', year: '2025', url: 'https://arxiv.org/pdf/2501.00743' },
-      { title: 'Mdvt: Enhancing multimodal recommendation with model-agnostic multimodal-driven virtual triplets', venue: 'ACM SIGKDD', year: '2025', url: 'https://doi.org/10.1145/3711896.3737042' },
-      { title: 'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning', venue: 'IEEE TNNLS', year: '2025', url: 'https://doi.org/10.1109/TNNLS.2024.3357080' },
-      { title: 'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation', venue: 'IEEE TCSS', year: '2025', url: 'https://doi.org/10.1109/TCSS.2024.3509399' },
-      { title: 'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things', venue: 'IEEE IoT-J', year: '2025', url: 'https://doi.org/10.1109/JIOT.2025.3531985' },
-      { title: 'ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images', venue: 'IJCAI', year: '2025', url: 'https://doi.org/10.24963/ijcai.2025/235' },
-      { title: 'A Two-Stage Method for Specular Highlight Detection and Removal in Medical Images', venue: 'MICCAI', year: '2025', url: 'https://link.springer.com/chapter/10.1007/978-3-032-05127-1_3' },
-      { title: 'Effective Finite Time Stability Control for Human–Machine Shared Vehicle Following System', venue: 'IEEE TITS', year: '2025', url: 'https://doi.org/10.1109/TITS.2025.3619092' },
-      { title: 'MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling', venue: 'IEEE TITS', year: '2025', url: 'https://doi.org/10.1109/TITS.2025.3588867' },
-      { title: 'Ms-AeDNet: A multi-scale attention-enhanced dynamic network for multi-step performance prediction of hydrogen proton exchange membrane fuel cells', venue: 'Process Safety and Environmental Protection', year: '2025', url: 'https://doi.org/10.1016/j.psep.2025.107674' },
-      { title: 'TAS-TsC: A data-driven framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of truck trajectories', venue: 'Applied Soft Computing', year: '2025', url: 'https://doi.org/10.1016/j.asoc.2025.113214' },
+      { 
+        title: 'Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling', 
+        venue: 'AAAI Oral', year: '2025', 
+        url: 'https://arxiv.org/abs/2511.21120',
+        codeUrl: 'https://github.com/limengran98/CHMR',
+        rank: '1st Author'
+      },
+      { 
+        title: 'A Survey of Large Language Models for Data Challenges in Graphs', 
+        venue: 'Expert Systems with Applications', year: '2025', 
+        url: 'https://doi.org/10.1016/j.eswa.2025.129643',
+        codeUrl: 'https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges',
+        rank: '1st Author'
+      },
+      { 
+        title: 'Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs', 
+        venue: 'arXiv', year: '2025', 
+        url: 'https://arxiv.org/pdf/2501.00743',
+        codeUrl: 'https://github.com/limengran98/ARB',
+        rank: '1st Author'
+      },
+      { 
+        title: 'Mdvt: Enhancing multimodal recommendation with model-agnostic multimodal-driven virtual triplets', 
+        venue: 'ACM SIGKDD', year: '2025', 
+        url: 'https://doi.org/10.1145/3711896.3737042',
+        codeUrl: 'https://github.com/Jinfeng-Xu/MDVT',
+        rank: '7th Author' // based on provided list
+      },
+      { 
+        title: 'Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning', 
+        venue: 'IEEE TNNLS', year: '2025', 
+        url: 'https://doi.org/10.1109/TNNLS.2024.3357080',
+        codeUrl: null, // No code provided in source
+        rank: '1st Author'
+      },
+      { 
+        title: 'TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation', 
+        venue: 'IEEE TCSS', year: '2025', 
+        url: 'https://doi.org/10.1109/TCSS.2024.3509399',
+        codeUrl: 'https://github.com/limengran98/TDG-Mamba',
+        rank: '1st Author'
+      },
+      { 
+        title: 'Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things', 
+        venue: 'IEEE IoT-J', year: '2025', 
+        url: 'https://doi.org/10.1109/JIOT.2025.3531985',
+        codeUrl: 'https://github.com/limengran98/TDAR',
+        rank: '1st Author'
+      },
+      { 
+        title: 'ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images', 
+        venue: 'IJCAI', year: '2025', 
+        url: 'https://doi.org/10.24963/ijcai.2025/235',
+        codeUrl: null,
+        rank: '5th Author'
+      },
+      { 
+        title: 'A Two-Stage Method for Specular Highlight Detection and Removal in Medical Images', 
+        venue: 'MICCAI', year: '2025', 
+        url: 'https://link.springer.com/chapter/10.1007/978-3-032-05127-1_3',
+        codeUrl: 'https://github.com/tkllndxn/highlight-removal',
+        rank: '8th Author'
+      },
+      { 
+        title: 'Effective Finite Time Stability Control for Human–Machine Shared Vehicle Following System', 
+        venue: 'IEEE TITS', year: '2025', 
+        url: 'https://doi.org/10.1109/TITS.2025.3619092',
+        codeUrl: null,
+        rank: '2nd Author'
+      },
+      { 
+        title: 'MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling', 
+        venue: 'IEEE TITS', year: '2025', 
+        url: 'https://doi.org/10.1109/TITS.2025.3588867',
+        codeUrl: 'https://github.com/BMRETURN/MM-STFlowNet',
+        rank: '3rd Author'
+      },
+      { 
+        title: 'Ms-AeDNet: A multi-scale attention-enhanced dynamic network for multi-step performance prediction of hydrogen proton exchange membrane fuel cells', 
+        venue: 'Process Safety and Environmental Protection', year: '2025', 
+        url: 'https://doi.org/10.1016/j.psep.2025.107674',
+        codeUrl: 'https://github.com/BMRETURN/Ms-AeDNet',
+        rank: '1st Author'
+      },
+      { 
+        title: 'TAS-TsC: A data-driven framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of truck trajectories', 
+        venue: 'Applied Soft Computing', year: '2025', 
+        url: 'https://doi.org/10.1016/j.asoc.2025.113214',
+        codeUrl: null,
+        rank: '1st Author'
+      },
       
       // --- 2024 ---
-      { title: 'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning', venue: 'IEEE Transactions on Big Data', year: '2024', url: 'https://doi.org/10.1109/TBDATA.2023.3275374' },
-      { title: 'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks', venue: 'IEEE TCSS', year: '2024', url: 'https://doi.org/10.1109/TCSS.2023.3292145' },
-      { title: 'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning', venue: 'ACM TOMM', year: '2024', url: 'https://doi.org/10.1145/3672078' },
-      { title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems', venue: 'IEEE TCSS', year: '2024', url: 'https://doi.org/10.1109/TCSS.2024.3394701' },
-      { title: 'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks', venue: 'Briefings in Bioinformatics', year: '2024', url: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248' },
+      { 
+        title: 'Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning', 
+        venue: 'IEEE Transactions on Big Data', year: '2024', 
+        url: 'https://doi.org/10.1109/TBDATA.2023.3275374',
+        codeUrl: 'https://github.com/limengran98/SNHE',
+        rank: '1st Author'
+      },
+      { 
+        title: 'CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks', 
+        venue: 'IEEE TCSS', year: '2024', 
+        url: 'https://doi.org/10.1109/TCSS.2023.3292145',
+        codeUrl: null,
+        rank: '1st Author'
+      },
+      { 
+        title: 'SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning', 
+        venue: 'ACM TOMM', year: '2024', 
+        url: 'https://doi.org/10.1145/3672078',
+        codeUrl: 'https://github.com/limengran98/SCAE',
+        rank: '1st Author'
+      },
+      { 
+        title: 'Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems', 
+        venue: 'IEEE TCSS', year: '2024', 
+        url: 'https://doi.org/10.1109/TCSS.2024.3394701',
+        codeUrl: null,
+        rank: '3rd Author'
+      },
+      { 
+        title: 'Gene Expression Prediction from Histology Images via Hypergraph Neural Networks', 
+        venue: 'Briefings in Bioinformatics', year: '2024', 
+        url: 'https://academic.oup.com/bib/article/25/6/bbae500/7937248',
+        codeUrl: 'https://github.com/QSong-github/HGGEP',
+        rank: '5th Author'
+      },
 
       // --- 2023 ---
-      { title: 'Hypergraph Transformer Neural Networks', venue: 'ACM TKDD', year: '2023', url: 'https://doi.org/10.1145/3565028' },
-      { title: 'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model', venue: 'Intelligent Data Analysis', year: '2023', url: 'https://doi.org/10.3233/IDA-216318' },
+      { 
+        title: 'Hypergraph Transformer Neural Networks', 
+        venue: 'ACM TKDD', year: '2023', 
+        url: 'https://doi.org/10.1145/3565028',
+        codeUrl: 'https://github.com/limengran98/HGTN',
+        rank: '1st Author'
+      },
+      { 
+        title: 'Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model', 
+        venue: 'Intelligent Data Analysis', year: '2023', 
+        url: 'https://doi.org/10.3233/IDA-216318',
+        codeUrl: null,
+        rank: '1st Author'
+      },
 
       // --- 2022 ---
-      { title: 'SHCN: Self-supervised General Hypergraph Clustering Network', venue: 'IEEE BigData', year: '2022', url: 'https://doi.org/10.1109/BigData55660.2022.10020643' },
-      { title: 'Student achievement prediction using deep neural network from multi-source campus data', venue: 'Complex & Intelligent Systems', year: '2022', url: 'https://doi.org/10.1007/s40747-022-00731-8' },
-      { title: 'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction', venue: 'Engineering Applications of Artificial Intelligence', year: '2022', url: 'https://doi.org/10.1016/j.engappai.2022.105174' }
+      { 
+        title: 'SHCN: Self-supervised General Hypergraph Clustering Network', 
+        venue: 'IEEE BigData', year: '2022', 
+        url: 'https://doi.org/10.1109/BigData55660.2022.10020643',
+        codeUrl: 'https://github.com/limengran98/SHCN',
+        rank: '1st Author'
+      },
+      { 
+        title: 'Student achievement prediction using deep neural network from multi-source campus data', 
+        venue: 'Complex & Intelligent Systems', year: '2022', 
+        url: 'https://doi.org/10.1007/s40747-022-00731-8',
+        codeUrl: null,
+        rank: '4th Author'
+      },
+      { 
+        title: 'Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction', 
+        venue: 'Engineering Applications of Artificial Intelligence', year: '2022', 
+        url: 'https://doi.org/10.1016/j.engappai.2022.105174',
+        codeUrl: null,
+        rank: '1st Author'
+      }
     ];
 
     // 3. Render Functions
@@ -342,13 +487,21 @@
         : FULL_PUBLICATIONS.filter(p => p.year === filterYear);
 
       container.innerHTML = filtered.map(pub => `
-        <div class="flex items-baseline gap-4 py-3 border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition group">
+        <div class="flex items-start gap-4 py-3 border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition group">
           <span class="text-xs font-mono text-zinc-400 w-12 shrink-0 pt-1">${pub.year}</span>
           <div class="flex-1">
-            <a href="${pub.url}" target="_blank" class="text-base font-medium text-zinc-800 dark:text-zinc-200 hover:text-primary transition block leading-snug">
-              ${pub.title}
-            </a>
-            <span class="text-xs text-zinc-500 mt-1 block group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition">${pub.venue}</span>
+            <div class="flex flex-col gap-1">
+              <a href="${pub.url}" target="_blank" class="text-base font-medium text-zinc-800 dark:text-zinc-200 hover:text-primary transition block leading-snug">
+                ${pub.title}
+              </a>
+              <div class="flex flex-wrap items-center gap-3 text-xs text-zinc-500 mt-1">
+                <span>${pub.venue}</span>
+                <span class="px-1.5 py-0.5 rounded border border-zinc-200 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 font-medium">
+                  ${pub.rank}
+                </span>
+                ${pub.codeUrl ? `<a href="${pub.codeUrl}" target="_blank" class="text-green-600 dark:text-green-400 hover:underline flex items-center gap-1">🐙 Code</a>` : ''}
+              </div>
+            </div>
           </div>
         </div>
       `).join('');
