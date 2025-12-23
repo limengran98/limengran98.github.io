@@ -1,7 +1,7 @@
-// data.js - 这里存储所有的个人数据
+// data.js - 个人数据文件
+// 请确保保存此文件时编码为 UTF-8
 
 // 1. News (新闻)
-// 格式：{ date: '日期', content: '内容（支持HTML标签，如链接）' }
 const newsData = [
   {
     date: "2025.12",
@@ -37,7 +37,7 @@ const newsData = [
   }
 ];
 
-// 2. Selected Publications (代表作 - 建议放5篇)
+// 2. Selected Publications (代表作 - 目前放两篇)
 const selectedWorks = [
   {
     id: "chmr",
@@ -45,7 +45,7 @@ const selectedWorks = [
     venue: "AAAI 2025 (Oral)",
     authors: "Mengran Li, Zelin Zang, Wenbin Xing, Junzhou Chen, Ronghui Zhang, Jiebo Luo, Stan Z. Li",
     desc: "We propose CHMR, a framework that jointly models local-global dependencies between molecules and cellular responses. By using a tree-structured vector quantization, we capture latent biological hierarchies, significantly improving molecular property prediction.",
-    img: "./images/chmr_framework.png", // 确保你在 images 文件夹里放了这张图
+    img: "./images/CHMR.png", 
     paperUrl: "https://arxiv.org/abs/2511.21120",
     codeUrl: "https://github.com/limengran98/CHMR",
     tags: ["AI for Science", "Molecular Modeling"],
@@ -56,24 +56,27 @@ const selectedWorks = [
   year={2025}
 }`
   },
-  // 你可以继续复制上面的结构添加更多代表作...
   {
-    id: "placeholder1",
-    title: "[Placeholder] Selected Work 2",
-    venue: "Journal/Conference 2025",
-    authors: "Mengran Li, et al.",
-    desc: "This slot is reserved for your next representative work.",
-    img: "https://via.placeholder.com/300x180?text=Work+2", 
-    paperUrl: "#",
-    codeUrl: "#",
-    tags: ["Graph Learning"],
-    bibtex: ``
+    id: "eswa-survey",
+    title: "A Survey of Large Language Models for Data Challenges in Graphs",
+    venue: "Expert Systems with Applications (ESWA) 2025",
+    authors: "Mengran Li, Pengyu Zhang, Wenbin Xing, Yijia Zheng, Klim Zaporojets, Junzhou Chen, Ronghui Zhang, Yong Zhang, Siyuan Gong, Jia Hu, Xiaolei Ma, Zhiyuan Liu, Paul Groth, Marcel Worring",
+    desc: "This survey systematically explores how Large Language Models (LLMs) address four fundamental data-centric challenges in graph learning: Incompleteness, Imbalance, Heterogeneity, and Dynamics.",
+    img: "./images/graph_llm_survey.png", // 请将你的综述图片命名为 graph_llm_survey.png 并放入 images 文件夹
+    paperUrl: "https://doi.org/10.1016/j.eswa.2025.129643",
+    codeUrl: "https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges",
+    tags: ["Graph Learning", "LLM", "Survey"],
+    bibtex: `@article{li2025survey,
+  title={A Survey of Large Language Models for Data Challenges in Graphs},
+  author={Li, Mengran and Zhang, Pengyu and Xing, Wenbin and others},
+  journal={Expert Systems with Applications},
+  year={2025},
+  publisher={Elsevier}
+}`
   }
 ];
 
-// 3. Full Publications (完整论文列表)
-// rank: 作者次序说明 (如 "1st Author", "Co-1st", "Corresponding")
-// codeUrl: 如果没有代码，设置为 null
+// 3. Full Publications (完整列表)
 const fullPublications = [
   // --- 2025 ---
   { 
@@ -125,7 +128,124 @@ const fullPublications = [
     codeUrl: "https://github.com/limengran98/TDAR",
     rank: "1st Author"
   },
-  // ... 可以在这里继续添加你的其他论文
+  { 
+    title: "ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images", 
+    venue: "IJCAI", year: "2025", 
+    url: "https://doi.org/10.24963/ijcai.2025/235",
+    codeUrl: null,
+    rank: "5th Author"
+  },
+  { 
+    title: "A Two-Stage Method for Specular Highlight Detection and Removal in Medical Images", 
+    venue: "MICCAI", year: "2025", 
+    url: "https://link.springer.com/chapter/10.1007/978-3-032-05127-1_3",
+    codeUrl: "https://github.com/tkllndxn/highlight-removal",
+    rank: "8th Author"
+  },
+  { 
+    title: "Effective Finite Time Stability Control for Human–Machine Shared Vehicle Following System", 
+    venue: "IEEE TITS", year: "2025", 
+    url: "https://doi.org/10.1109/TITS.2025.3619092",
+    codeUrl: null,
+    rank: "2nd Author"
+  },
+  { 
+    title: "MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling", 
+    venue: "IEEE TITS", year: "2025", 
+    url: "https://doi.org/10.1109/TITS.2025.3588867",
+    codeUrl: "https://github.com/BMRETURN/MM-STFlowNet",
+    rank: "3rd Author"
+  },
+  { 
+    title: "Ms-AeDNet: A multi-scale attention-enhanced dynamic network for multi-step performance prediction of hydrogen proton exchange membrane fuel cells", 
+    venue: "Process Safety and Environmental Protection", year: "2025", 
+    url: "https://doi.org/10.1016/j.psep.2025.107674",
+    codeUrl: "https://github.com/BMRETURN/Ms-AeDNet",
+    rank: "1st Author"
+  },
+  { 
+    title: "TAS-TsC: A data-driven framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of truck trajectories", 
+    venue: "Applied Soft Computing", year: "2025", 
+    url: "https://doi.org/10.1016/j.asoc.2025.113214",
+    codeUrl: null,
+    rank: "1st Author"
+  },
+
+  // --- 2024 ---
+  { 
+    title: "Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning", 
+    venue: "IEEE Transactions on Big Data", year: "2024", 
+    url: "https://doi.org/10.1109/TBDATA.2023.3275374",
+    codeUrl: "https://github.com/limengran98/SNHE",
+    rank: "1st Author"
+  },
+  { 
+    title: "CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks", 
+    venue: "IEEE TCSS", year: "2024", 
+    url: "https://doi.org/10.1109/TCSS.2023.3292145",
+    codeUrl: null,
+    rank: "1st Author"
+  },
+  { 
+    title: "SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning", 
+    venue: "ACM TOMM", year: "2024", 
+    url: "https://doi.org/10.1145/3672078",
+    codeUrl: "https://github.com/limengran98/SCAE",
+    rank: "1st Author"
+  },
+  { 
+    title: "Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems", 
+    venue: "IEEE TCSS", year: "2024", 
+    url: "https://doi.org/10.1109/TCSS.2024.3394701",
+    codeUrl: null,
+    rank: "3rd Author"
+  },
+  { 
+    title: "Gene Expression Prediction from Histology Images via Hypergraph Neural Networks", 
+    venue: "Briefings in Bioinformatics", year: "2024", 
+    url: "https://academic.oup.com/bib/article/25/6/bbae500/7937248",
+    codeUrl: "https://github.com/QSong-github/HGGEP",
+    rank: "5th Author"
+  },
+
+  // --- 2023 ---
+  { 
+    title: "Hypergraph Transformer Neural Networks", 
+    venue: "ACM TKDD", year: "2023", 
+    url: "https://doi.org/10.1145/3565028",
+    codeUrl: "https://github.com/limengran98/HGTN",
+    rank: "1st Author"
+  },
+  { 
+    title: "Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model", 
+    venue: "Intelligent Data Analysis", year: "2023", 
+    url: "https://doi.org/10.3233/IDA-216318",
+    codeUrl: null,
+    rank: "1st Author"
+  },
+
+  // --- 2022 ---
+  { 
+    title: "SHCN: Self-supervised General Hypergraph Clustering Network", 
+    venue: "IEEE BigData", year: "2022", 
+    url: "https://doi.org/10.1109/BigData55660.2022.10020643",
+    codeUrl: "https://github.com/limengran98/SHCN",
+    rank: "1st Author"
+  },
+  { 
+    title: "Student achievement prediction using deep neural network from multi-source campus data", 
+    venue: "Complex & Intelligent Systems", year: "2022", 
+    url: "https://doi.org/10.1007/s40747-022-00731-8",
+    codeUrl: null,
+    rank: "4th Author"
+  },
+  { 
+    title: "Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction", 
+    venue: "Engineering Applications of Artificial Intelligence", year: "2022", 
+    url: "https://doi.org/10.1016/j.engappai.2022.105174",
+    codeUrl: null,
+    rank: "1st Author"
+  }
 ];
 
 // 4. Awards (奖项)
