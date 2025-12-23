@@ -21,8 +21,8 @@
     .fade-in { animation: fadeIn 0.5s ease-in; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     .modal-overlay { background-color: rgba(0, 0, 0, 0.5); }
-    /* 修复 ClustrMaps 可能的溢出问题 */
     #clustrmaps-widget-v2 { max-width: 100%; }
+    .select-all { user-select: all; -webkit-user-select: all; }
   </style>
 </head>
 <body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased font-sans relative">
@@ -52,19 +52,39 @@
         <p class="text-lg text-zinc-600 dark:text-zinc-300 mb-4">
           Ph.D. Student in Control Science & Engineering @ <a href="https://www.sysu.edu.cn/" class="text-primary hover:underline" target="_blank">Sun Yat-sen University</a>
         </p>
-        <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6 max-w-2xl">
+        <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4 max-w-2xl">
           My research focuses on <strong>AI for Science</strong>, specifically in heterogeneous graph learning, hypergraphs, temporal modeling, and bioinformatics. 
           I am advised by <a href="https://ise.sysu.edu.cn/teacher/ZhangRonghui" target="_blank" class="text-primary hover:underline">Prof. Ronghui Zhang</a> and <a href="https://sist.bjut.edu.cn/info/1403/2489.htm" target="_blank" class="text-primary hover:underline">Prof. Yong Zhang</a>.
           Previously, I interned at Baidu, SIAT, Westlake University, and CAIR.
         </p>
-        <div class="flex gap-4 text-sm font-medium">
-          <a href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank" class="flex items-center gap-1 hover:text-primary transition">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg> Google Scholar
+
+        <div class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg border border-blue-100 dark:border-blue-900/30 text-sm text-zinc-700 dark:text-zinc-300">
+          <p class="mb-2">
+            🚀 <strong>Open for Opportunities:</strong> I am actively seeking collaboration, internships, and job opportunities in <strong>AI for Science</strong> and <strong>Agent</strong> related fields.
+          </p>
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium">
+            <span class="flex items-center gap-1.5 bg-white dark:bg-zinc-800 px-2 py-1 rounded border border-zinc-200 dark:border-zinc-700">
+              <span class="text-green-600">💬 WeChat:</span> 
+              <span class="font-mono select-all text-zinc-900 dark:text-zinc-100 font-bold">Limr_618</span>
+            </span>
+            <span class="flex items-center gap-1.5 bg-white dark:bg-zinc-800 px-2 py-1 rounded border border-zinc-200 dark:border-zinc-700">
+              <span class="text-blue-600">📧 Email:</span> 
+              <a href="mailto:limengran1998@163.com" class="font-mono hover:text-primary transition">limengran1998@163.com</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 text-sm font-medium">
+          <a href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank" class="flex items-center gap-1 hover:text-primary transition group">
+            <svg class="w-4 h-4 text-zinc-400 group-hover:text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg> Google Scholar
           </a>
-          <a href="https://github.com/limengran98" target="_blank" class="flex items-center gap-1 hover:text-primary transition">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
+          <a href="https://orcid.org/0000-0001-7540-530X" target="_blank" class="flex items-center gap-1 hover:text-primary transition group">
+             <svg class="w-4 h-4 text-zinc-400 group-hover:text-[#A6CE39]" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path fill="currentColor" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM78.6 61.6c-5.8 0-10.5-4.6-10.5-10.5s4.7-10.6 10.5-10.6 10.5 4.6 10.5 10.6-4.7 10.5-10.5 10.5zM127 186.2h-15.2v-107.1h15.2v4.7c6.1-7.1 14.3-8.8 22-8.8 24.3 0 35.3 15.6 35.3 43.1v68.2h-15.2V122c0-18.7-7-25.1-18.4-25.1-11.8 0-23.7 10.6-23.7 28.7v60.6z"/></svg> ORCID
           </a>
-          <a href="mailto:limr39@mail2.sysu.edu.cn" class="flex items-center gap-1 hover:text-primary transition">
+          <a href="https://github.com/limengran98" target="_blank" class="flex items-center gap-1 hover:text-primary transition group">
+            <svg class="w-4 h-4 text-zinc-400 group-hover:text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
+          </a>
+          <a href="mailto:limr39@mail2.sysu.edu.cn" class="flex items-center gap-1 hover:text-primary transition group">
             ✉️ Email
           </a>
         </div>
@@ -93,7 +113,7 @@
         <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2023')">2023</button>
         <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2022')">2022</button>
       </div>
-      <div id="full-list" class="space-y-3">
+      <div id="full-list" class="space-y-2">
         </div>
     </section>
 
@@ -168,7 +188,6 @@
              ${work.authors}
           </div>
           <div class="text-sm font-bold text-primary mb-3">${work.venue}</div>
-          
           <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-3 leading-relaxed line-clamp-3">${work.desc}</p>
           <div class="flex items-center gap-4 mt-auto">
             ${work.paperUrl !== '#' ? `<a href="${work.paperUrl}" target="_blank" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">📄 Paper</a>` : ''}
@@ -184,7 +203,7 @@
       const container = document.getElementById('full-list');
       const filtered = year === 'all' ? fullPublications : fullPublications.filter(p => p.year === year);
       container.innerHTML = filtered.map(pub => `
-        <div class="flex items-start gap-4 py-3 border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition group">
+        <div class="flex items-start gap-4 py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition group">
           <span class="text-xs font-mono text-zinc-400 w-12 shrink-0 pt-1">${pub.year}</span>
           <div class="flex-1">
             <div class="flex flex-col gap-1">
