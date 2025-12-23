@@ -62,14 +62,15 @@ const selectedWorks = [
     venue: "Expert Systems with Applications (ESWA) 2025",
     authors: "Mengran Li, Pengyu Zhang, Wenbin Xing, Yijia Zheng, Klim Zaporojets, Junzhou Chen, Ronghui Zhang, Yong Zhang, Siyuan Gong, Jia Hu, Xiaolei Ma, Zhiyuan Liu, Paul Groth, Marcel Worring",
     desc: "This survey systematically explores how Large Language Models (LLMs) address four fundamental data-centric challenges in graph learning: Incompleteness, Imbalance, Heterogeneity, and Dynamics.",
-    img: "./images/graph_llm_survey.png", // 请将你的综述图片命名为 graph_llm_survey.png 并放入 images 文件夹
+    img: "./images/graph_llm_survey.png",
     paperUrl: "https://doi.org/10.1016/j.eswa.2025.129643",
     codeUrl: "https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges",
     tags: ["Graph Learning", "LLM", "Survey"],
     bibtex: `@article{li2025survey,
-  title={A Survey of Large Language Models for Data Challenges in Graphs},
-  author={Li, Mengran and Zhang, Pengyu and Xing, Wenbin and others},
+  title={A survey of large language models for data challenges in graphs},
+  author={Li, Mengran and Zhang, Pengyu and Xing, Wenbin and Zheng, Yijia and Zaporojets, Klim and Chen, Junzhou and Zhang, Ronghui and Zhang, Yong and Gong, Siyuan and Hu, Jia and others},
   journal={Expert Systems with Applications},
+  pages={129643},
   year={2025},
   publisher={Elsevier}
 }`
