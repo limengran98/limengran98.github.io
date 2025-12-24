@@ -42,7 +42,7 @@ const selectedWorks = [
   {
     id: "chmr",
     title: "Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling",
-    venue: "AAAI 2025 (Oral)",
+    venue: "AAAI 2026 (Oral)",
     authors: "Mengran Li, Zelin Zang, Wenbin Xing, Junzhou Chen, Ronghui Zhang, Jiebo Luo, Stan Z. Li",
     desc: "We propose CHMR, a framework that jointly models local-global dependencies between molecules and cellular responses. By using a tree-structured vector quantization, we capture latent biological hierarchies, significantly improving molecular property prediction.",
     img: "./images/CHMR.png", 
