@@ -84,16 +84,16 @@ const fullPublications = [
     title: "PhenoProfiler: advancing phenotypic learning for image-based drug discovery", 
     venue: "Nature Communications", 
     year: "2025", 
-    url: "#", 
-    codeUrl: null, 
+    url: "https://doi.org/10.1038/s41467-025-67479-w", 
+    codeUrl: "https://github.com/QSong-github/PhenoProfiler", 
     rank: "8th Author" 
   },
   { 
     title: "Hypergraph-driven spatial multimodal fusion for precise domain delineation and tumor microenvironment decoding", 
     venue: "Communications Biology", 
     year: "2025", 
-    url: "#", 
-    codeUrl: null, 
+    url: "https://doi.org/10.1038/s42003-025-09312-0", 
+    codeUrl: "https://github.com/VitaIntelli-CQU/HAST", 
     rank: "5th Author" 
   },
 
