@@ -81,6 +81,14 @@ const selectedWorks = [
 const fullPublications = [
   // --- 2025 (New Additions) ---
   { 
+    title: "MORSE: Molecular Representation Learning via Structured Semantic Extraction across Hierarchical and Asymmetric Biological Modalities", 
+    venue: "Pattern Recognition", 
+    year: "2025", 
+    url: "https://doi.org/10.1016/j.patcog.2025.112975", 
+    codeUrl: "", 
+    rank: "2th Author" 
+  },
+  { 
     title: "PhenoProfiler: advancing phenotypic learning for image-based drug discovery", 
     venue: "Nature Communications", 
     year: "2025", 
