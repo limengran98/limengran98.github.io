@@ -117,7 +117,7 @@
 
         <span class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500">Authors:</span>
         <button id="authorFilterAll" class="px-2 py-1 hover:text-primary font-medium" onclick="setAuthorFilter('all')">All</button>
-        <button id="authorFilterFC" class="px-2 py-1 hover:text-primary font-medium" onclick="setAuthorFilter('fc')">First/通讯</button>
+        <button id="authorFilterFC" class="px-2 py-1 hover:text-primary font-medium" onclick="setAuthorFilter('fc')">First/Corresponding</button>
       </div>
 
       <div id="pub-category-viz" class="mb-6 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/40">
@@ -246,7 +246,7 @@
 
     function isFirstOrCorresponding(pub) {
       const r = (pub.rank || '').toLowerCase();
-      return r.includes('1st') || r.includes('first') || r.includes('correspond') || r.includes('通讯') || r.includes('co-first') || r.includes('cofirst');
+      return r.includes('1st') || r.includes('first') || r.includes('correspond') || r.includes('Corresponding') || r.includes('co-first') || r.includes('cofirst');
     }
 
     // Build stable codes (do NOT change data.js)
@@ -363,7 +363,7 @@
       const pp = pct(counts.preprint);
 
       if (subtitle) subtitle.textContent = `Total: ${total}  ·  Journals ${counts.journal} (${pj.toFixed(1)}%)  ·  Conferences ${counts.conference} (${pc.toFixed(1)}%)  ·  Preprints ${counts.preprint} (${pp.toFixed(1)}%)`;
-      if (scope) scope.textContent = `${currentYearFilter === 'all' ? 'All years' : currentYearFilter} · ${currentAuthorFilter === 'fc' ? 'First/通讯 only' : 'All authors'}`;
+      if (scope) scope.textContent = `${currentYearFilter === 'all' ? 'All years' : currentYearFilter} · ${currentAuthorFilter === 'fc' ? 'First/Corresponding only' : 'All authors'}`;
 
       if (bar) {
         bar.innerHTML = `
