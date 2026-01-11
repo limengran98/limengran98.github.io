@@ -226,177 +226,172 @@
       </article>
     `).join('');
 
-    // 渲染 Full List
-    // Publications: (Journal / Conference / Preprint) + J#/C#/P# labels + author-scope toggle
-    let currentYearFilter = 'all';
-    let currentAuthorFilter = 'all'; // 'all' | 'fc' (First/Corresponding)
+// ===================== Publications (Final Version) =====================
 
-    const CONFERENCE_HINTS = [
-      'aaai','ijcai','icml','neurips','iclr','cvpr','iccv','eccv',
-      'sigkdd','kdd','www','the web conference','acl','emnlp','naacl','eacl','coling',
-      'icassp','miccai','icme','icdm','cikm','ubicom','ubiquitous','bigdata','ieee bigdata'
-    ];
+// Filter states
+let currentYearFilter = 'all';
+let currentAuthorFilter = 'all'; // 'all' | 'fc'
 
-    function getPubType(pub) {
-      const v = (pub.venue || '').toLowerCase();
-      if (v.includes('arxiv')) return 'preprint';
-      if (CONFERENCE_HINTS.some(k => v.includes(k))) return 'conference';
-      return 'journal';
-    }
+// Identify conference venues
+const CONFERENCE_HINTS = [
+  'aaai','ijcai','icml','neurips','iclr','cvpr','iccv','eccv',
+  'sigkdd','kdd','www','the web conference','acl','emnlp','naacl','eacl','coling',
+  'icassp','miccai','icme','icdm','cikm','ubicom','ubiquitous','bigdata','ieee bigdata'
+];
 
-    function isFirstOrCorresponding(pub) {
-      const r = (pub.rank || '').toLowerCase();
-      return r.includes('1st') || r.includes('first') || r.includes('correspond') || r.includes('Corresponding') || r.includes('co-first') || r.includes('cofirst');
-    }
+// -------------- Publication Type --------------
+function getPubType(pub) {
+  const v = (pub.venue || '').toLowerCase();
+  if (v.includes('arxiv') || v.includes('preprint')) return 'preprint';
+  if (CONFERENCE_HINTS.some(k => v.includes(k))) return 'conference';
+  return 'journal';
+}
 
-    // Build stable codes (do NOT change data.js)
-    const pubMetaByIndex = (() => {
-      const counters = { journal: 0, conference: 0, preprint: 0 };
-      const map = new Map();
-      fullPublications.forEach((pub, idx) => {
-        const type = getPubType(pub);
-        counters[type] += 1;
-        const prefix = type === 'journal' ? 'J' : (type === 'conference' ? 'C' : 'P');
-        map.set(idx, { type, code: `${prefix}${counters[type]}` });
-      });
-      return map;
-    })();
+// -------------- First / Corresponding --------------
+function isFirstAuthor(pub) {
+  const r = (pub.rank || '').toLowerCase();
+  return r.includes('1st') || r.includes('first');
+}
 
-    function setAuthorFilter(scope) {
-      currentAuthorFilter = scope;
-      renderPublications();
-    }
+function isCorresponding(pub) {
+  if (pub.corr === true) return true;
+  const r = (pub.rank || '').toLowerCase();
+  return r.includes('correspond') || r.includes('通讯');
+}
 
-    function filterList(year) {
-      currentYearFilter = year;
-      renderPublications();
-    }
+function isFirstOrCorresponding(pub) {
+  return isFirstAuthor(pub) || isCorresponding(pub);
+}
 
-    function renderPublications() {
-      const container = document.getElementById('full-list');
+// -------------- J#/C#/P# Numbering (倒序)--------------
+const pubMetaByIndex = (() => {
+  const counts = { journal: 0, conference: 0, preprint: 0 };
+  // count total
+  fullPublications.forEach(pub => { counts[getPubType(pub)]++; });
 
-      let list = fullPublications.map((p, idx) => ({ ...p, __idx: idx }));
-      if (currentYearFilter !== 'all') list = list.filter(p => p.year === currentYearFilter);
-      if (currentAuthorFilter === 'fc') list = list.filter(isFirstOrCorresponding);
+  const cur = { ...counts };
+  const map = new Map();
 
-      const groups = { journal: [], conference: [], preprint: [] };
-      list.forEach(pub => {
-        const meta = pubMetaByIndex.get(pub.__idx);
-        groups[meta.type].push({ ...pub, __type: meta.type, __code: meta.code });
-      });
+  fullPublications.forEach((pub, idx) => {
+    const t = getPubType(pub);
+    const n = cur[t]--;
+    const prefix = t === 'journal' ? 'J' : (t === 'conference' ? 'C' : 'P');
+    map.set(idx, { type: t, code: `${prefix}${n}` });
+  });
+  return map;
+})();
 
-      updatePubCategoryViz(
-        { journal: groups.journal.length, conference: groups.conference.length, preprint: groups.preprint.length },
-        list.length
-      );
+// -------------- UI Buttons --------------
+function setAuthorFilter(scope) {
+  currentAuthorFilter = scope;
+  renderPublications();
+}
 
-      const sections = [
-        { type: 'journal', title: '📚 Journals' },
-        { type: 'conference', title: '🎤 Conferences' },
-        { type: 'preprint', title: '🧾 Preprints' }
-      ];
+function filterList(year) {
+  currentYearFilter = year;
+  renderPublications();
+}
 
-      const html = sections.map(sec => {
-        const items = groups[sec.type];
-        if (!items.length) return '';
-        return `
-          <div>
-            <div class="flex items-baseline justify-between gap-3 mb-2">
-              <h3 class="text-sm font-semibold text-zinc-800 dark:text-zinc-200">${sec.title}</h3>
-              <span class="text-xs text-zinc-500">${items.length} item${items.length > 1 ? 's' : ''}</span>
-            </div>
-            <div class="space-y-2">
-              ${items.map(pub => renderPubItem(pub)).join('')}
-            </div>
-          </div>
-        `;
-      }).join('');
+// -------------- Render Main List --------------
+function renderPublications() {
+  const container = document.getElementById('full-list');
 
-      container.innerHTML = html || `<div class="text-sm text-zinc-500">No publications found under the current filters.</div>`;
+  let list = fullPublications.map((p, idx) => ({ ...p, __idx: idx }));
 
-      // Author toggle button highlight (optional)
-      const allBtn = document.getElementById('authorFilterAll');
-      const fcBtn = document.getElementById('authorFilterFC');
-      if (allBtn && fcBtn) {
-        allBtn.classList.toggle('text-primary', currentAuthorFilter === 'all');
-        fcBtn.classList.toggle('text-primary', currentAuthorFilter === 'fc');
-      }
-    }
+  if (currentYearFilter !== 'all')
+    list = list.filter(p => p.year === currentYearFilter);
 
-    function renderPubItem(pub) {
-      return `
-        <div class="flex items-start gap-4 py-2 border-b border-zinc-100 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition group">
-          <span class="text-xs font-mono text-zinc-400 w-12 shrink-0 pt-1">${pub.year}</span>
-          <div class="flex-1">
-            <div class="flex flex-col gap-1">
-              <a href="${pub.url}" target="_blank" class="text-base font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-primary transition block leading-snug">${pub.title}</a>
-              <div class="flex flex-wrap items-center gap-3 text-xs text-zinc-500 mt-1">
-                <span class="inline-flex items-center gap-2">
-                  <span class="px-1.5 py-0.5 rounded border border-zinc-200 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-200 font-mono">${pub.__code}</span>
-                  <span class="font-medium text-zinc-700 dark:text-zinc-300">${pub.venue}</span>
-                </span>
-                <span class="px-1.5 py-0.5 rounded border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 font-medium">${pub.rank}</span>
-                ${pub.codeUrl ? `<a href="${pub.codeUrl}" target="_blank" class="text-primary/80 hover:text-primary transition flex items-center gap-1">🐙 Code</a>` : ''}
-              </div>
-            </div>
-          </div>
+  if (currentAuthorFilter === 'fc')
+    list = list.filter(isFirstOrCorresponding);
+
+  //统计可视化要用
+  const counts = { journal: 0, conference: 0, preprint: 0 };
+  list.forEach(p => counts[pubMetaByIndex.get(p.__idx).type]++);
+
+  updatePubCategoryViz(counts, list.length);
+
+  // 主列表：按 data.js 原顺序
+  const html = list.map(pub => {
+    const meta = pubMetaByIndex.get(pub.__idx);
+    return renderPubItem(pub, meta);
+  }).join('');
+
+  container.innerHTML = html || `<div class="text-sm text-zinc-500">No publications found.</div>`;
+
+  // 下拉按钮高亮
+  document.getElementById('authorFilterAll')
+    .classList.toggle('text-primary', currentAuthorFilter === 'all');
+  document.getElementById('authorFilterFC')
+    .classList.toggle('text-primary', currentAuthorFilter === 'fc');
+}
+
+// -------------- Render Single Item --------------
+function renderPubItem(pub, meta) {
+  const isCorr = isCorresponding(pub);
+
+  return `
+    <div class="flex items-start gap-4 py-2 border-b border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition">
+      <span class="text-xs font-mono text-zinc-400 w-12 shrink-0 pt-1">${pub.year}</span>
+
+      <div class="flex-1">
+        <a href="${pub.url}" target="_blank"
+           class="text-base font-medium text-zinc-900 dark:text-zinc-100 hover:text-primary transition block leading-snug">
+          ${pub.title}
+        </a>
+
+        <div class="mt-1 flex flex-wrap items-center gap-3 text-xs text-zinc-500">
+          
+          <!-- J#/C#/P# Label -->
+          <span class="px-1.5 py-0.5 rounded border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 font-mono">
+            ${meta.code}
+          </span>
+
+          <span class="font-medium text-zinc-700 dark:text-zinc-300">${pub.venue}</span>
+
+          <!-- Rank (always show) -->
+          <span class="px-1.5 py-0.5 rounded border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400">
+            ${pub.rank}
+          </span>
+
+          <!-- Corresponding ONLY if corr:true -->
+          ${
+            isCorr
+              ? `<span class="px-1.5 py-0.5 rounded border border-amber-300 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 text-[11px] font-medium">Corresponding</span>`
+              : ''
+          }
+
+          ${pub.codeUrl ? `<a href="${pub.codeUrl}" target="_blank" class="text-primary hover:underline">🐙 Code</a>` : ''}
         </div>
-      `;
-    }
+      </div>
+    </div>
+  `;
+}
 
-    function updatePubCategoryViz(counts, total) {
-      const subtitle = document.getElementById('pub-category-subtitle');
-      const scope = document.getElementById('pub-category-scope');
-      const bar = document.getElementById('pub-category-bar');
+// -------------- Category Visualization --------------
+function updatePubCategoryViz(counts, total) {
+  const pct = (n) => total ? (n * 100 / total) : 0;
 
-      const cj = document.getElementById('count-journal');
-      const cc = document.getElementById('count-conference');
-      const cp = document.getElementById('count-preprint');
+  document.getElementById('count-journal').textContent = counts.journal;
+  document.getElementById('count-conference').textContent = counts.conference;
+  document.getElementById('count-preprint').textContent = counts.preprint;
 
-      if (cj) cj.textContent = counts.journal;
-      if (cc) cc.textContent = counts.conference;
-      if (cp) cp.textContent = counts.preprint;
+  document.getElementById('pub-category-subtitle').textContent =
+    `Total: ${total} · Journals ${counts.journal} (${pct(counts.journal).toFixed(1)}%) · Conferences ${counts.conference} (${pct(counts.conference).toFixed(1)}%) · Preprints ${counts.preprint} (${pct(counts.preprint).toFixed(1)}%)`;
 
-      const pct = (n) => total ? (n * 100 / total) : 0;
-      const pj = pct(counts.journal);
-      const pc = pct(counts.conference);
-      const pp = pct(counts.preprint);
+  document.getElementById('pub-category-scope').textContent =
+    `${currentYearFilter === 'all' ? 'All years' : currentYearFilter} · ` +
+    `${currentAuthorFilter === 'fc' ? 'First/Corresponding only' : 'All authors'}`;
 
-      if (subtitle) subtitle.textContent = `Total: ${total}  ·  Journals ${counts.journal} (${pj.toFixed(1)}%)  ·  Conferences ${counts.conference} (${pc.toFixed(1)}%)  ·  Preprints ${counts.preprint} (${pp.toFixed(1)}%)`;
-      if (scope) scope.textContent = `${currentYearFilter === 'all' ? 'All years' : currentYearFilter} · ${currentAuthorFilter === 'fc' ? 'First/Corresponding only' : 'All authors'}`;
+  document.getElementById('pub-category-bar').innerHTML = `
+    <div class="h-full bg-primary" style="width:${pct(counts.journal)}%"></div>
+    <div class="h-full bg-emerald-500" style="width:${pct(counts.conference)}%"></div>
+    <div class="h-full bg-amber-500" style="width:${pct(counts.preprint)}%"></div>
+  `;
+}
 
-      if (bar) {
-        bar.innerHTML = `
-          <div class="h-full bg-primary" style="width:${pj}%"></div>
-          <div class="h-full bg-emerald-500" style="width:${pc}%"></div>
-          <div class="h-full bg-amber-500" style="width:${pp}%"></div>
-        `;
-      }
-    }
-
-    // Modal Logic
-    const modal = document.getElementById('bibtexModal');
-    const modalContent = document.getElementById('modalContent');
-    const bibTextArea = document.getElementById('bibtexText');
-    function openBibtex(index) {
-      bibTextArea.value = selectedWorks[index].bibtex;
-      modal.classList.remove('hidden');
-      setTimeout(() => { modal.classList.remove('opacity-0'); modalContent.classList.remove('scale-95'); modalContent.classList.add('scale-100'); }, 10);
-    }
-    function closeModal() {
-      modal.classList.add('opacity-0'); modalContent.classList.remove('scale-100'); modalContent.classList.add('scale-95');
-      setTimeout(() => { modal.classList.add('hidden'); }, 300);
-    }
-    function copyBibtex() {
-      bibTextArea.select();
-      navigator.clipboard.writeText(bibTextArea.value).then(() => {
-        const btn = document.querySelector('button[onclick="copyBibtex()"]');
-        btn.innerText = 'Copied!'; btn.classList.add('bg-green-600');
-        setTimeout(() => { btn.innerText = 'Copy to Clipboard'; btn.classList.remove('bg-green-600'); }, 2000);
-      });
-    }
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
+// Init
+document.addEventListener('DOMContentLoaded', () => { renderPublications(); });
+    
     // Init
     filterList('all');
     (function(){
