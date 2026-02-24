@@ -3,9 +3,17 @@
 
 // 1. News (新闻)
 const newsData = [
+{
+    date: "2026.01",
+    content: "Presented our work as an <strong>Oral Presentation</strong> at <strong>AAAI 2026</strong> in Singapore: <a href='https://underline.io/lecture/139636-learning-cell-aware-hierarchical-multi-modal-representations-for-robust-molecular-modeling' target='_blank' class='text-primary hover:underline font-medium'>Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling</a>."
+  },
   {
     date: "2025.12",
     content: "One paper accepted by <strong>Pattern Recognition (PR)</strong>."
+  },
+{
+    date: "2025.12",
+    content: "Two collaborative papers were accepted by <strong>Nature Communications</strong> and <strong>Communications Biology</strong>, respectively."
   },
   {
     date: "2025.12",
@@ -309,5 +317,5 @@ const awardsData = [
 
 // 5. Service (学术服务)
 const serviceData = [
-  "<strong>Reviewer:</strong> IJCV, IEEE TPAMI,TNNLS, IEEE TCSS, ACM TKDD, TIST, ACM MM, AAAI, Neural Networks, Pattern Recognition, Information Fusion etc."
+  "<strong>Reviewer:</strong> IJCV, ICML, AAAI, ACM MM; IEEE TPAMI, TNNLS, TKDE, TCSS; ACM TKDD, TOIS; Pattern Recognition, Information Fusion etc."
 ];
