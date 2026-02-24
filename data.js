@@ -41,8 +41,8 @@ const newsData = [
   },
   {
     date: "2025.03",
-    content: "Awarded the SYSU Hong Kong/Macau Exchange Funding. Joint training at <strong>Westlake University</strong> and <strong>CAIR, HK</strong> (Supervisor: <a href='https://en.westlake.edu.cn/faculty/stan-zq-li.html' target='_blank' class='text-primary hover:underline'>Prof. Stan Z. Li</a> and <a href='https://www.cs.rochester.edu/u/jluo/' target='_blank' class='text-primary hover:underline'>Prof. Jiebo Luo</a>)."
-  }
+    content: "Awarded the SYSU Hong Kong/Macau Exchange Funding. Joint training at <strong>Westlake University</strong> and <strong>CAIR, HK</strong> (Supervisor: <a href='https://en.westlake.edu.cn/faculty/stan-zq-li.html' target='_blank' class='text-primary hover:underline'>Prof. Stan Z. Li</a>, <a href='https://people.ucas.ac.cn/~zlei?language=en' target='_blank' class='text-primary hover:underline'>Prof. Zhen Lei</a> and <a href='https://www.cs.rochester.edu/u/jluo/' target='_blank' class='text-primary hover:underline'>Prof. Jiebo Luo</a>)."
+  },
 ];
 
 // 2. Selected Publications (代表作 - 目前放两篇)
