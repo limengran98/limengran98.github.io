@@ -95,7 +95,23 @@ const selectedWorks = [
 
 // 3. Full Publications (完整列表)
 const fullPublications = [
-  // --- 2025 (New Additions) ---
+  // --- 2026 (New Additions) ---
+  { 
+    title: "Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs", 
+    venue: "IEEE Transactions on Cybernetics", 
+    year: "2026", 
+    url: "https://arxiv.org/pdf/2501.00743",
+    codeUrl: "https://github.com/limengran98/ARB",
+    rank: "1st Author"
+  },
+  { 
+    title: "Adaptive Prototype-guided Personalized Propagation for Heterophilic Graphs with Missing Data", 
+    venue: "IEEE Transactions on Neural Networks and Learning Systems", 
+    year: "2026", 
+    url: "",
+    codeUrl: "https://github.com/limengran98/APP",
+    rank: "1st Author"
+  },
   { 
     title: "MORSE: Molecular Representation Learning via Structured Semantic Extraction across Hierarchical and Asymmetric Biological Modalities", 
     venue: "Pattern Recognition", 
@@ -137,14 +153,6 @@ const fullPublications = [
     year: "2025", 
     url: "https://doi.org/10.1016/j.eswa.2025.129643",
     codeUrl: "https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges",
-    rank: "1st Author"
-  },
-  { 
-    title: "Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs", 
-    venue: "arXiv", 
-    year: "2025", 
-    url: "https://arxiv.org/pdf/2501.00743",
-    codeUrl: "https://github.com/limengran98/ARB",
     rank: "1st Author"
   },
   { 
