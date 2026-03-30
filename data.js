@@ -5,7 +5,11 @@
 const newsData = [
   {
     date: "2026.03",
-    content: "One paper accepted by <strong>TNNLS</strong>."
+    content: "One paper accepted by <strong>IEEE TCYB</strong>."
+  },
+  {
+    date: "2026.03",
+    content: "One paper accepted by <strong>IEEE TNNLS</strong>."
   },
   {
     date: "2026.01",
