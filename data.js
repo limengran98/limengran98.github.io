@@ -53,8 +53,25 @@ const newsData = [
   },
 ];
 
-// 2. Selected Publications (代表作 - 目前放两篇)
+// 2. Selected Publications (代表作)
 const selectedWorks = [
+  {
+  id: "app",
+  title: "Adaptive Prototype-Guided Personalized Propagation for Heterophilic Graphs With Missing Data",
+  venue: "IEEE TNNLS 2026",
+  authors: "Mengran Li, Wenbin Xing, Zelin Zang, Bo Li, Chengyang Zhang, Yong Zhang, Junzhou Chen, Ronghui Zhang, Yongfu Li, Chuan Hu, Xiaolei Ma, Zibin Zheng",
+  desc: "We propose APP, a unified framework for learning on heterophilic graphs with missing features. By introducing global semantic prototypes, virtual edge propagation, and adaptive fusion, APP jointly addresses propagation distortion and feature imputation, achieving robust performance under the challenging heterophily-missing coupling (HMC) setting.",
+  img: "./images/app.png",
+  paperUrl: "https://doi.org/10.1109/TNNLS.2026.3676197",
+  codeUrl: "https://github.com/limengran98/APP",
+  tags: ["Graph Learning", "Missing Data", "Heterophily"],
+  bibtex: `@article{li2026adaptive,
+  title={Adaptive Prototype-Guided Personalized Propagation for Heterophilic Graphs With Missing Data},
+  author={Li, Mengran and Xing, Wenbin and Zang, Zelin and Li, Bo and Zhang, Chengyang and Zhang, Yong and Chen, Junzhou and Zhang, Ronghui and Li, Yongfu and Hu, Chuan and Ma, Xiaolei and Zheng, Zibin},
+  journal={IEEE Transactions on Neural Networks and Learning Systems},
+  year={2026}
+}`
+},
   {
     id: "chmr",
     title: "Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling",
@@ -65,11 +82,14 @@ const selectedWorks = [
     paperUrl: "https://arxiv.org/abs/2511.21120",
     codeUrl: "https://github.com/limengran98/CHMR",
     tags: ["AI for Science", "Molecular Modeling"],
-    bibtex: `@inproceedings{li2025learning,
+    bibtex: `@inproceedings{li2026learning,
   title={Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling},
   author={Li, Mengran and Zang, Zelin and Xing, Wenbin and Chen, Junzhou and Zhang, Ronghui and Luo, Jiebo and Li, Stan Z},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025}
+  volume={40},
+  number={1},
+  pages={623--631},
+  year={2026}
 }`
   },
   {
@@ -112,6 +132,14 @@ const fullPublications = [
     codeUrl: "https://github.com/limengran98/APP",
     rank: "1st Author"
   },
+  { 
+    title: "Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling", 
+    venue: "AAAI", 
+    year: "2026", 
+    url: "https://arxiv.org/abs/2511.21120",
+    codeUrl: "https://github.com/limengran98/CHMR",
+    rank: "1st Author"
+  },
     // --- 2025 (Existing) ---
   { 
     title: "MORSE: Molecular Representation Learning via Structured Semantic Extraction across Hierarchical and Asymmetric Biological Modalities", 
@@ -137,15 +165,6 @@ const fullPublications = [
     url: "https://doi.org/10.1038/s42003-025-09312-0", 
     codeUrl: "https://github.com/VitaIntelli-CQU/HAST", 
     rank: "5th Author" 
-  },
-
-  { 
-    title: "Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling", 
-    venue: "AAAI", 
-    year: "2025", 
-    url: "https://arxiv.org/abs/2511.21120",
-    codeUrl: "https://github.com/limengran98/CHMR",
-    rank: "1st Author"
   },
   { 
     title: "A Survey of Large Language Models for Data Challenges in Graphs", 
