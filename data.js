@@ -108,16 +108,17 @@ const fullPublications = [
     title: "Adaptive Prototype-guided Personalized Propagation for Heterophilic Graphs with Missing Data", 
     venue: "IEEE Transactions on Neural Networks and Learning Systems", 
     year: "2026", 
-    url: "",
+    url: "https://doi.org/10.1109/TNNLS.2026.3676197",
     codeUrl: "https://github.com/limengran98/APP",
     rank: "1st Author"
   },
+    // --- 2025 (Existing) ---
   { 
     title: "MORSE: Molecular Representation Learning via Structured Semantic Extraction across Hierarchical and Asymmetric Biological Modalities", 
     venue: "Pattern Recognition", 
     year: "2025", 
     url: "https://doi.org/10.1016/j.patcog.2025.112975", 
-    codeUrl: "", 
+    codeUrl: "https://ieeexplore.ieee.org/document/11481194", 
     rank: "2th Author" ,
     corr: false
   },
@@ -138,7 +139,6 @@ const fullPublications = [
     rank: "5th Author" 
   },
 
-  // --- 2025 (Existing) ---
   { 
     title: "Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling", 
     venue: "AAAI", 
