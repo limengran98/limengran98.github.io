@@ -55,6 +55,23 @@ const newsData = [
 
 // 2. Selected Publications (代表作)
 const selectedWorks = [
+    {
+    id: "arb",
+    title: "AttriReBoost: A Gradient-Free Propagation Optimization Method for Cold-Start Mitigation in Attribute Missing Graphs",
+    venue: "IEEE Transactions on Cybernetics (IEEE TCYB 2026)",
+    authors: "Mengran Li, Chaojun Ding, Junzhou Chen, Wenbin Xing, Cong Ye, Ronghui Zhang, Songlin Zhuang, Jia Hu, Tony Z. Qiu, Huijun Gao",
+    desc: "We propose ARB, a gradient-free propagation framework for attribute-missing graphs that mitigates cold-start via boundary redefinition and virtual edges, achieving accurate reconstruction with strong scalability.",
+    img: "./images/arb.png",
+    paperUrl: "https://doi.org/10.1109/TCYB.2026.3681613",
+    codeUrl: "https://github.com/limengran98/ARB",
+    tags: ["Graph Learning", "Missing Data", "Cold-Start", "Propagation"],
+    bibtex: `@article{li2026attriboost,
+  title={AttriReBoost: A Gradient-Free Propagation Optimization Method for Cold-Start Mitigation in Attribute Missing Graphs},
+  author={Li, Mengran and Ding, Chaojun and Chen, Junzhou and Xing, Wenbin and Ye, Cong and Zhang, Ronghui and Zhuang, Songlin and Hu, Jia and Qiu, Tony Z. and Gao, Huijun},
+  journal={IEEE Transactions on Cybernetics},
+  year={2026}
+}`
+  },
   {
   id: "app",
   title: "Adaptive Prototype-Guided Personalized Propagation for Heterophilic Graphs With Missing Data",
