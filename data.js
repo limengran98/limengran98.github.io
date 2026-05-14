@@ -4,6 +4,10 @@
 // 1. News (新闻)
 const newsData = [
   {
+  date: "2026.05",
+  content: "Recognized as a <strong>Gold Reviewer</strong> for <strong>ICML 2026</strong>."
+  },
+  {
     date: "2026.05",
     content: "One collaborative paper accepted by <strong>ICML 2026</strong>."
   },
