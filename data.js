@@ -171,7 +171,7 @@ const fullPublications = [
     venue: "Pattern Recognition", 
     year: "2025", 
     url: "https://doi.org/10.1016/j.patcog.2025.112975", 
-    codeUrl: "https://ieeexplore.ieee.org/document/11481194", 
+    codeUrl: "", 
     rank: "2th Author" ,
     corr: false
   },
