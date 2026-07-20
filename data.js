@@ -4,6 +4,10 @@
 // 1. News (新闻)
 const newsData = [
   {
+  date: "2026.07",
+  content: "One paper accepted by <strong>IEEE/CAA Journal of Automatica Sinica</strong>."
+  },
+  {
   date: "2026.05",
   content: "Recognized as a <strong>Gold Reviewer</strong> for <strong>ICML 2026</strong>."
   },
@@ -142,10 +146,18 @@ const selectedWorks = [
 const fullPublications = [
   // --- 2026 (New Additions) ---
   { 
+    title: "SFAR: Semantic Fusion Attribute Recovery for Text Attribute Missing Graphs via Large Language Model Knowledge Generalization", 
+    venue: "IEEE/CAA Journal of Automatica Sinica", 
+    year: "2026", 
+    url: "",
+    codeUrl: "https://github.com/limengran98/SFAR",
+    rank: "1st Author"
+  },
+  { 
     title: "Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs", 
     venue: "IEEE Transactions on Cybernetics", 
     year: "2026", 
-    url: "https://arxiv.org/pdf/2501.00743",
+    url: "https://doi.org/10.1109/TCYB.2026.3681613",
     codeUrl: "https://github.com/limengran98/ARB",
     rank: "1st Author"
   },
