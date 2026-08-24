@@ -11,6 +11,7 @@ const newsData = [
     date: "2026.08",
     content: "Two papers accepted by <strong>Renewable Energy</strong>, including one as corresponding author and one collaborative work."
   },
+  {
   date: "2026.07",
   content: "One paper accepted by <strong>IEEE/CAA Journal of Automatica Sinica</strong>."
   },
