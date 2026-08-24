@@ -4,6 +4,13 @@
 // 1. News (新闻)
 const newsData = [
   {
+    date: "2026.08",
+    content: "One collaborative paper accepted by <strong>IEEE TNNLS</strong>."
+  },
+  {
+    date: "2026.08",
+    content: "Two papers accepted by <strong>Renewable Energy</strong>, including one as corresponding author and one collaborative work."
+  },
   date: "2026.07",
   content: "One paper accepted by <strong>IEEE/CAA Journal of Automatica Sinica</strong>."
   },
@@ -145,14 +152,14 @@ const selectedWorks = [
 // 3. Full Publications (完整列表)
 const fullPublications = [
   // --- 2026 (New Additions) ---
-  // { 
-  //   title: "SFAR: Semantic Fusion Attribute Recovery for Text Attribute Missing Graphs via Large Language Model Knowledge Generalization", 
-  //   venue: "IEEE/CAA Journal of Automatica Sinica", 
-  //   year: "2026", 
-  //   url: "",
-  //   codeUrl: "https://github.com/limengran98/SFAR",
-  //   rank: "1st Author"
-  // },
+  { 
+    title: "SFAR: Semantic Fusion Attribute Recovery for Text Attribute Missing Graphs via Large Language Model Knowledge Generalization", 
+    venue: "IEEE/CAA Journal of Automatica Sinica", 
+    year: "2026", 
+    url: "",
+    codeUrl: "https://github.com/limengran98/SFAR",
+    rank: "1st Author"
+  },
   { 
     title: "Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs", 
     venue: "IEEE Transactions on Cybernetics", 
