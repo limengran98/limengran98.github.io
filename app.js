@@ -25,3 +25,15 @@ $('#copyright-year').textContent=new Date().getFullYear();
 let visitorLoaded=false;
 $('#visitor-toggle').addEventListener('click',()=>{const panel=$('#visitor-panel');panel.hidden=!panel.hidden;$('#visitor-toggle').setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden&&!visitorLoaded){visitorLoaded=true;$('#visitor-status').textContent='Loading visitor map…';const script=document.createElement('script');script.id='clustrmaps';script.src='https://clustrmaps.com/map_v2.js?d=EO4WwligewGDvWwRyQC9S5OqQniwGcIxTOqOSCvSPGY&cl=ffffff&w=a&t=tt';script.async=true;script.onload=()=>$('#visitor-status').textContent='';script.onerror=()=>$('#visitor-status').textContent='The visitor map is temporarily unavailable.';$('#visitor-map').append(script);}});
 document.querySelectorAll('a[target="_blank"]').forEach(a=>a.rel='noopener noreferrer');
+
+const figureDialog=$('#figure-dialog');
+document.querySelectorAll('[data-figure]').forEach(link=>link.addEventListener('click',event=>{
+  event.preventDefault();
+  $('#figure-detail').src=link.dataset.figure;
+  $('#figure-detail').alt=link.dataset.caption;
+  $('#figure-caption').textContent=link.dataset.caption;
+  $('#figure-original').href=link.dataset.figure;
+  figureDialog.showModal();
+}));
+$('#close-figure').addEventListener('click',()=>figureDialog.close());
+figureDialog.addEventListener('click',event=>{if(event.target===figureDialog){const bounds=figureDialog.getBoundingClientRect();if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)figureDialog.close();}});
