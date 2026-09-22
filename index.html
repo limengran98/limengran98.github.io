@@ -1,403 +1,63 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mengran Li — Researcher Profile</title>
-  <meta name="description" content="Mengran Li · Ph.D. Student in Control Science & Engineering, Sun Yat-sen University." />
-  <link rel="icon" href="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" />
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { 
-      darkMode: 'class',
-      theme: {
-        extend: { colors: { primary: '#2563eb' } }
-      }
-    };
-  </script>
-
-  <style>
-    .fade-in { animation: fadeIn 0.5s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .modal-overlay { background-color: rgba(0, 0, 0, 0.5); }
-    #clustrmaps-widget-v2 { max-width: 100%; }
-    .select-all { user-select: all; -webkit-user-select: all; }
-  </style>
-</head>
-<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased font-sans relative">
-
-  <nav class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-zinc-950/80 border-b border-zinc-200 dark:border-zinc-800">
-    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="#" class="font-bold text-lg tracking-tight">Mengran Li</a>
-      <div class="hidden md:flex gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-        <a href="#about" class="hover:text-primary transition">About</a>
-        <a href="#news" class="hover:text-primary transition">News</a>
-        <a href="#selected" class="hover:text-primary transition">Selected</a>
-        <a href="#publications" class="hover:text-primary transition">Publications</a>
-        <a href="#contact" class="hover:text-primary transition">Contact</a>
-      </div>
-      <button id="darkToggle" class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">🌙</button>
-    </div>
-  </nav>
-
-  <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
-    
-    <section id="about" class="grid md:grid-cols-[180px,1fr] gap-8 items-start fade-in">
-      <div class="relative group">
-        <img src="https://raw.githubusercontent.com/limengran98/limengran98.github.io/main/lmr.jpg" alt="Mengran Li" class="w-40 h-40 rounded-xl object-cover shadow-lg border border-zinc-100 dark:border-zinc-800" />
-      </div>
-      <div>
-        <h1 class="text-4xl font-bold tracking-tight mb-2">Mengran Li <span class="text-zinc-400 font-normal text-2xl">(李孟燃)</span></h1>
-        <p class="text-lg text-zinc-600 dark:text-zinc-300 mb-4">
-          Ph.D. Student in Control Science & Engineering @ <a href="https://www.sysu.edu.cn/" class="text-primary hover:underline" target="_blank">Sun Yat-sen University</a>
-        </p>
-        <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4 max-w-2xl">
-          My research focuses on <strong>AI for Science</strong>, specifically in heterogeneous graph learning, hypergraphs, temporal modeling, and bioinformatics. 
-          I am advised by <a href="https://ise.sysu.edu.cn/teacher/ZhangRonghui" target="_blank" class="text-primary hover:underline">Prof. Ronghui Zhang</a> and <a href="https://sist.bjut.edu.cn/info/1403/2489.htm" target="_blank" class="text-primary hover:underline">Prof. Yong Zhang</a>.
-          Previously, I interned at Baidu, SIAT, Westlake University, and CAIR.
-        </p>
-
-        <div class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg border border-blue-100 dark:border-blue-900/30 text-sm text-zinc-700 dark:text-zinc-300">
-          <p class="mb-2">
-            🚀 <strong>Open for Opportunities:</strong> I am actively seeking collaboration, internships, and job opportunities in <strong>AI for Science</strong> and <strong>Agent</strong> related fields.
-          </p>
-          <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium">
-            <span class="flex items-center gap-1.5 bg-white dark:bg-zinc-800 px-2 py-1 rounded border border-zinc-200 dark:border-zinc-700">
-              <span class="text-blue-600">📧 Email:</span> 
-              <a href="mailto:limengran1998@163.com" class="font-mono hover:text-primary transition">limengran1998@163.com</a>
-            </span>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap gap-4 text-sm font-medium">
-          <a href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank" class="flex items-center gap-1 hover:text-primary transition group">
-            <svg class="w-4 h-4 text-zinc-400 group-hover:text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg> Google Scholar
-          </a>
-          <a href="https://orcid.org/0000-0001-7540-530X" target="_blank" class="flex items-center gap-1 hover:text-primary transition group">
-             <svg class="w-4 h-4 text-zinc-400 group-hover:text-[#A6CE39]" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path fill="currentColor" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM78.6 61.6c-5.8 0-10.5-4.6-10.5-10.5s4.7-10.6 10.5-10.6 10.5 4.6 10.5 10.6-4.7 10.5-10.5 10.5zM127 186.2h-15.2v-107.1h15.2v4.7c6.1-7.1 14.3-8.8 22-8.8 24.3 0 35.3 15.6 35.3 43.1v68.2h-15.2V122c0-18.7-7-25.1-18.4-25.1-11.8 0-23.7 10.6-23.7 28.7v60.6z"/></svg> ORCID
-          </a>
-          <a href="https://github.com/limengran98" target="_blank" class="flex items-center gap-1 hover:text-primary transition group">
-            <svg class="w-4 h-4 text-zinc-400 group-hover:text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
-          </a>
-          <a href="mailto:limr39@mail2.sysu.edu.cn" class="flex items-center gap-1 hover:text-primary transition group">
-            ✉️ Email
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="news">
-      <h2 class="text-2xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-4 flex items-center gap-2">🔥 News</h2>
-      <ul id="news-list" class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
-        </ul>
-    </section>
-
-    <section id="selected" class="scroll-mt-20">
-      <h2 class="text-2xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6">🌟 Selected Publications</h2>
-      <div id="selected-list" class="space-y-8">
-        </div>
-    </section>
-
-    <section id="publications" class="scroll-mt-20">
-      <h2 class="text-2xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6">📝 Full Publication List</h2>
-      <div class="flex flex-wrap items-center gap-2 mb-4 text-sm">
-        <span class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500">Year:</span>
-        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('all')">All</button>
-        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2026')">2026</button>
-        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2025')">2025</button>
-        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2024')">2024</button>
-        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2023')">2023</button>
-        <button class="px-2 py-1 hover:text-primary font-medium" onclick="filterList('2022')">2022</button>
-
-        <span class="mx-1 text-zinc-300 dark:text-zinc-700">|</span>
-
-        <span class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500">Authors:</span>
-        <button id="authorFilterAll" class="px-2 py-1 hover:text-primary font-medium" onclick="setAuthorFilter('all')">All</button>
-        <button id="authorFilterFC" class="px-2 py-1 hover:text-primary font-medium" onclick="setAuthorFilter('fc')">First/Corresponding</button>
-      </div>
-
-      <div id="pub-category-viz" class="mb-6 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/40">
-        <div class="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <div class="text-sm font-semibold">Category Overview</div>
-            <div id="pub-category-subtitle" class="text-xs text-zinc-500 mt-1">—</div>
-          </div>
-          <div id="pub-category-scope" class="text-xs text-zinc-500"></div>
-        </div>
-        <div class="mt-3">
-          <div class="h-2 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden flex" id="pub-category-bar">
-            <div class="h-full bg-primary" style="width:0%"></div>
-            <div class="h-full bg-emerald-500" style="width:0%"></div>
-            <div class="h-full bg-amber-500" style="width:0%"></div>
-          </div>
-          <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-500">
-            <span class="inline-flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-sm bg-primary"></span>Journals: <span id="count-journal" class="font-semibold text-zinc-700 dark:text-zinc-300">0</span></span>
-            <span class="inline-flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-sm bg-emerald-500"></span>Conferences: <span id="count-conference" class="font-semibold text-zinc-700 dark:text-zinc-300">0</span></span>
-            <span class="inline-flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-sm bg-amber-500"></span>Preprints: <span id="count-preprint" class="font-semibold text-zinc-700 dark:text-zinc-300">0</span></span>
-          </div>
-        </div>
-      </div>
-
-      <div id="full-list" class="space-y-8"></div>
-    </section>
-
-    <div class="grid md:grid-cols-2 gap-10">
-      <section id="awards">
-        <h2 class="text-xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-4">🏆 Awards</h2>
-        <ul id="awards-list" class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400"></ul>
-      </section>
-      <section id="service">
-        <h2 class="text-xl font-bold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-4">⚖️ Service</h2>
-        <div id="service-list" class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed"></div>
-      </section>
-    </div>
-
-    <section id="map" class="pt-8 border-t border-zinc-200 dark:border-zinc-800">
-      <h2 class="text-xl font-bold mb-4 text-center">Visitor Map</h2>
-      <div class="w-80 mx-auto grayscale hover:grayscale-0 transition opacity-80 hover:opacity-100 overflow-hidden">
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=EO4WwligewGDvWwRyQC9S5OqQniwGcIxTOqOSCvSPGY&cl=ffffff&w=a&t=tt"></script>
-      </div>
-    </section>
-
-    <footer id="contact" class="py-10 text-center text-sm text-zinc-500">
-      <p>© 2025 Mengran Li. Hosted on GitHub Pages.</p>
-    </footer>
-
-  </main>
-
-  <div id="bibtexModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-overlay opacity-0 transition-opacity duration-300">
-    <div class="bg-white dark:bg-zinc-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 overflow-hidden transform scale-95 transition-transform duration-300" id="modalContent">
-      <div class="px-6 py-4 border-b dark:border-zinc-800 flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/50">
-        <h3 class="font-bold text-lg">BibTeX Citation</h3>
-        <button onclick="closeModal()" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200">✕</button>
-      </div>
-      <div class="p-6">
-        <textarea id="bibtexText" class="w-full h-48 p-3 text-xs font-mono bg-zinc-100 dark:bg-zinc-950 rounded border dark:border-zinc-800 focus:outline-none focus:ring-2 ring-primary/50 resize-none" readonly></textarea>
-        <div class="mt-4 flex justify-end gap-3">
-          <button onclick="closeModal()" class="px-4 py-2 text-sm rounded-lg border hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800 transition">Close</button>
-          <button onclick="copyBibtex()" class="px-4 py-2 text-sm rounded-lg bg-primary text-white hover:bg-blue-600 transition shadow-lg shadow-blue-500/20">Copy to Clipboard</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="data.js"></script>
-
-  <script>
-    // 渲染 News
-    document.getElementById('news-list').innerHTML = newsData.map(item => `
-      <li class="flex gap-4">
-        <span class="font-mono text-zinc-400 shrink-0">${item.date}</span>
-        <span>${item.content}</span>
-      </li>
-    `).join('');
-
-    // 渲染 Awards
-    document.getElementById('awards-list').innerHTML = awardsData.map(item => `<li>${item}</li>`).join('');
-
-    // 渲染 Service
-    document.getElementById('service-list').innerHTML = serviceData.join('<br>');
-
-    // 渲染 Representative Works
-    document.getElementById('selected-list').innerHTML = selectedWorks.map((work, index) => `
-      <article class="group relative grid md:grid-cols-[280px,1fr] gap-6 p-4 rounded-2xl border border-zinc-100 dark:border-zinc-800 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition bg-white dark:bg-zinc-900/50">
-        <div class="overflow-hidden rounded-lg bg-zinc-100 border border-zinc-200 dark:border-zinc-800 relative">
-          <img src="${work.img}" alt="${work.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/300x180?text=Paper+Image'"/>
-        </div>
-        <div class="flex flex-col justify-center">
-          <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 leading-tight mb-2 group-hover:text-primary transition">
-            <a href="${work.paperUrl}" target="_blank">${work.title}</a>
-          </h3>
-          <div class="text-sm text-zinc-800 dark:text-zinc-300 font-medium mb-1 leading-snug">
-             ${work.authors}
-          </div>
-          <div class="text-sm font-bold text-primary mb-3">${work.venue}</div>
-          <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-3 leading-relaxed line-clamp-3">${work.desc}</p>
-          <div class="flex items-center gap-4 mt-auto">
-            ${work.paperUrl !== '#' ? `<a href="${work.paperUrl}" target="_blank" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">📄 Paper</a>` : ''}
-            ${work.codeUrl !== '#' && work.codeUrl !== null ? `<a href="${work.codeUrl}" target="_blank" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">🐙 Code</a>` : ''}
-            ${work.bibtex ? `<button onclick="openBibtex(${index})" class="text-xs font-semibold flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-primary">❝ Cite</button>` : ''}
-          </div>
-        </div>
-      </article>
-    `).join('');
-
-// ===================== Publications (Final Version) =====================
-
-// Filter states
-let currentYearFilter = 'all';
-let currentAuthorFilter = 'all'; // 'all' | 'fc'
-
-// Identify conference venues
-const CONFERENCE_HINTS = [
-  'aaai','ijcai','icml','neurips','iclr','cvpr','iccv','eccv',
-  'sigkdd','kdd','www','the web conference','acl','emnlp','naacl','eacl','coling',
-  'icassp','miccai','icme','icdm','cikm','ubicom','ubiquitous','bigdata','ieee bigdata'
-];
-
-// -------------- Publication Type --------------
-function getPubType(pub) {
-  const v = (pub.venue || '').toLowerCase();
-  if (v.includes('arxiv') || v.includes('preprint')) return 'preprint';
-  if (CONFERENCE_HINTS.some(k => v.includes(k))) return 'conference';
-  return 'journal';
-}
-
-// -------------- First / Corresponding --------------
-function isFirstAuthor(pub) {
-  const r = (pub.rank || '').toLowerCase();
-  return r.includes('1st') || r.includes('first');
-}
-
-function isCorresponding(pub) {
-  if (pub.corr === true) return true;
-  const r = (pub.rank || '').toLowerCase();
-  return r.includes('correspond') || r.includes('通讯');
-}
-
-function isFirstOrCorresponding(pub) {
-  return isFirstAuthor(pub) || isCorresponding(pub);
-}
-
-// -------------- J#/C#/P# Numbering (倒序)--------------
-const pubMetaByIndex = (() => {
-  const counts = { journal: 0, conference: 0, preprint: 0 };
-  // count total
-  fullPublications.forEach(pub => { counts[getPubType(pub)]++; });
-
-  const cur = { ...counts };
-  const map = new Map();
-
-  fullPublications.forEach((pub, idx) => {
-    const t = getPubType(pub);
-    const n = cur[t]--;
-    const prefix = t === 'journal' ? 'J' : (t === 'conference' ? 'C' : 'P');
-    map.set(idx, { type: t, code: `${prefix}${n}` });
-  });
-  return map;
-})();
-
-// -------------- UI Buttons --------------
-function setAuthorFilter(scope) {
-  currentAuthorFilter = scope;
-  renderPublications();
-}
-
-function filterList(year) {
-  currentYearFilter = year;
-  renderPublications();
-}
-
-// -------------- Render Main List --------------
-function renderPublications() {
-  const container = document.getElementById('full-list');
-
-  let list = fullPublications.map((p, idx) => ({ ...p, __idx: idx }));
-
-  if (currentYearFilter !== 'all')
-    list = list.filter(p => p.year === currentYearFilter);
-
-  if (currentAuthorFilter === 'fc')
-    list = list.filter(isFirstOrCorresponding);
-
-  //统计可视化要用
-  const counts = { journal: 0, conference: 0, preprint: 0 };
-  list.forEach(p => counts[pubMetaByIndex.get(p.__idx).type]++);
-
-  updatePubCategoryViz(counts, list.length);
-
-  // 主列表：按 data.js 原顺序
-  const html = list.map(pub => {
-    const meta = pubMetaByIndex.get(pub.__idx);
-    return renderPubItem(pub, meta);
-  }).join('');
-
-  container.innerHTML = html || `<div class="text-sm text-zinc-500">No publications found.</div>`;
-
-  // 下拉按钮高亮
-  document.getElementById('authorFilterAll')
-    .classList.toggle('text-primary', currentAuthorFilter === 'all');
-  document.getElementById('authorFilterFC')
-    .classList.toggle('text-primary', currentAuthorFilter === 'fc');
-}
-
-// -------------- Render Single Item --------------
-function renderPubItem(pub, meta) {
-  const isCorr = isCorresponding(pub);
-
-  return `
-    <div class="flex items-start gap-4 py-2 border-b border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 px-3 rounded-lg transition">
-      <span class="text-xs font-mono text-zinc-400 w-12 shrink-0 pt-1">${pub.year}</span>
-
-      <div class="flex-1">
-        <a href="${pub.url}" target="_blank"
-           class="text-base font-medium text-zinc-900 dark:text-zinc-100 hover:text-primary transition block leading-snug">
-          ${pub.title}
-        </a>
-
-        <div class="mt-1 flex flex-wrap items-center gap-3 text-xs text-zinc-500">
-          
-          <!-- J#/C#/P# Label -->
-          <span class="px-1.5 py-0.5 rounded border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 font-mono">
-            ${meta.code}
-          </span>
-
-          <span class="font-medium text-zinc-700 dark:text-zinc-300">${pub.venue}</span>
-
-          <!-- Rank (always show) -->
-          <span class="px-1.5 py-0.5 rounded border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400">
-            ${pub.rank}
-          </span>
-
-          <!-- Corresponding ONLY if corr:true -->
-          ${
-            isCorr
-              ? `<span class="px-1.5 py-0.5 rounded border border-amber-300 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 text-[11px] font-medium">Corresponding</span>`
-              : ''
-          }
-
-          ${pub.codeUrl ? `<a href="${pub.codeUrl}" target="_blank" class="text-primary hover:underline">🐙 Code</a>` : ''}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// -------------- Category Visualization --------------
-function updatePubCategoryViz(counts, total) {
-  const pct = (n) => total ? (n * 100 / total) : 0;
-
-  document.getElementById('count-journal').textContent = counts.journal;
-  document.getElementById('count-conference').textContent = counts.conference;
-  document.getElementById('count-preprint').textContent = counts.preprint;
-
-  document.getElementById('pub-category-subtitle').textContent =
-    `Total: ${total} · Journals ${counts.journal} (${pct(counts.journal).toFixed(1)}%) · Conferences ${counts.conference} (${pct(counts.conference).toFixed(1)}%) · Preprints ${counts.preprint} (${pct(counts.preprint).toFixed(1)}%)`;
-
-  document.getElementById('pub-category-scope').textContent =
-    `${currentYearFilter === 'all' ? 'All years' : currentYearFilter} · ` +
-    `${currentAuthorFilter === 'fc' ? 'First/Corresponding only' : 'All authors'}`;
-
-  document.getElementById('pub-category-bar').innerHTML = `
-    <div class="h-full bg-primary" style="width:${pct(counts.journal)}%"></div>
-    <div class="h-full bg-emerald-500" style="width:${pct(counts.conference)}%"></div>
-    <div class="h-full bg-amber-500" style="width:${pct(counts.preprint)}%"></div>
-  `;
-}
-
-// Init
-document.addEventListener('DOMContentLoaded', () => { renderPublications(); });
-    
-    // Init
-    filterList('all');
-    (function(){
-      const key='ml-dark'; const root=document.documentElement; const saved=localStorage.getItem(key);
-      if(saved==='1'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
-      document.getElementById('darkToggle').addEventListener('click',()=>{
-        const d=root.classList.toggle('dark'); localStorage.setItem(key,d?'1':'0');
-      });
-    })();
-  </script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mengran Li · AI for Science & Scientific Agents</title><meta name="description" content="Mengran Li, Ph.D. student at Sun Yat-sen University. Research in scientific agents, cellular modeling, measurement sufficiency, and graph learning."><meta name="theme-color" content="#f7f8fa"><link rel="canonical" href="https://limengran98.github.io/"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23182f43'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='34' fill='%23ffffff'%3EML%3C/text%3E%3C/svg%3E"><script>try{if(localStorage.getItem('ml-dark')==='1'||(!localStorage.getItem('ml-dark')&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch{}</script><link rel="stylesheet" href="styles.css"><script src="data.js" defer></script><script src="render.js" defer></script><script src="app.js" defer></script></head>
+<body id="top"><a class="skip" href="#main">Skip to main content</a><header class="site-header"><div class="shell navigation"><a class="wordmark" href="#top">Mengran Li<span> / Research</span></a><nav aria-label="Main navigation"><a href="#selected">Selected work</a><a href="#publications">Publications</a><a href="#news">News</a><a href="#contact">Contact</a></nav><button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false">◐ <span>Theme</span></button></div></header>
+<main id="main" class="shell"><section class="hero" id="about"><div class="hero-copy"><p class="eyebrow">AI FOR SCIENCE · SCIENTIFIC AGENTS · GRAPH LEARNING</p><h1>Mengran Li <span lang="zh">李孟燃</span></h1><p class="position">Ph.D. Student in Control Science & Engineering<br><a href="https://www.sysu.edu.cn/" target="_blank" rel="noopener">Sun Yat-sen University ↗</a></p><p class="research-lead">Learning from cellular measurements.<br>Building reliable scientific AI.</p><p class="biography">My research spans <strong>AI for Science</strong>, heterogeneous graph learning, hypergraphs, temporal modeling, and bioinformatics. My recent work studies measurement sufficiency, model revision through execution feedback, and input-use auditing in cellular-response models.</p><p class="biography">I am advised by <a href="https://ise.sysu.edu.cn/teacher/ZhangRonghui" target="_blank" rel="noopener">Prof. Ronghui Zhang</a> and <a href="https://sist.bjut.edu.cn/info/1403/2489.htm" target="_blank" rel="noopener">Prof. Yong Zhang</a>. Previously, I interned at Baidu, SIAT, Westlake University, and CAIR.</p><div class="profile-links"><a href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a><a href="https://orcid.org/0000-0001-7540-530X" target="_blank" rel="noopener">ORCID ↗</a><a href="https://github.com/limengran98" target="_blank" rel="noopener">GitHub ↗</a><a href="mailto:limr39@mail2.sysu.edu.cn">Email ↗</a></div></div><aside class="profile-panel"><img class="portrait" src="lmr.jpg" alt="Portrait of Mengran Li" width="256" height="300" fetchpriority="high"><div class="availability"><span class="availability-dot"></span><strong>Open to opportunities</strong><p>Research collaborations, internships, and roles in AI for Science and scientific agents.</p><a href="mailto:limengran1998@163.com">limengran1998@163.com ↗</a></div></aside></section>
+<section id="selected" class="section"><div class="section-head"><div><p class="eyebrow">01 / SELECTED RESEARCH</p><h2>Selected Publications <span lang="zh">代表作</span></h2></div><a class="subtle-link" href="#publications">Browse all publications ↓</a></div><p class="section-intro">Scientific agents, cellular measurements, and learning from incomplete data.</p><div id="selected-list" class="selected-list"><article class="work-card" id="work-morphosuff"><a class="work-image" href="https://limengran98.github.io/MorphoSuff/" target="_blank" rel="noopener"><img src="images/morphosuff.webp" alt="MorphoSuff research framework" loading="lazy" width="800" height="480"><span>View project ↗</span></a><div class="work-content"><div class="work-topline"><span class="work-name">MorphoSuff</span><span class="venue">Preprint · 2026</span></div><h3><a class="" href="https://limengran98.github.io/MorphoSuff/" target="_blank" rel="noopener noreferrer">When label-free morphology is sufficient for targeted cellular measurements</a></h3><p class="authors"><strong>Mengran Li</strong>, Jianqing Zhu, Bo Li, Chengyang Zhang, Zhenchao Tang, Jiaying Wang, Wenbin Xing, Boyu Zhang, Jinfeng Xu, Lingbei Meng, Bob Zhang, Junzhou Chen, Ronghui Zhang, Lian Zhang, Jinchao Xu</p><p class="work-description">A measurement-sufficiency framework that tests when inferred cellular readouts preserve perturbation responses, experimental priorities, and biological conclusions.</p><div class="work-bottom"><div class="work-links"><a class="project-link" href="https://limengran98.github.io/MorphoSuff/" target="_blank" rel="noopener noreferrer">Project ↗</a><a class="" href="https://limengran98.github.io/MorphoSuff/assets/manuscript.pdf" target="_blank" rel="noopener noreferrer">Paper ↗</a><a class="" href="https://github.com/limengran98/MorphoSuff" target="_blank" rel="noopener noreferrer">Code ↗</a><button class="cite-button" data-cite="0" aria-label="Cite MorphoSuff">BibTeX</button></div><div class="tags"><span>Cell Morphology</span><span>Measurement Sufficiency</span><span>Experimental Design</span></div></div></div></article>
+<article class="work-card" id="work-cellscientist"><a class="work-image" href="https://limengran98.github.io/CellScientist/" target="_blank" rel="noopener"><img src="images/cellscientist.webp" alt="CellScientist research framework" loading="lazy" width="800" height="480"><span>View project ↗</span></a><div class="work-content"><div class="work-topline"><span class="work-name">CellScientist</span><span class="venue">Preprint · 2026</span></div><h3><a class="" href="https://limengran98.github.io/CellScientist/" target="_blank" rel="noopener noreferrer">CellScientist: From Execution Feedback to Auditable Model-Revision Trajectories for Cellular Perturbation Prediction</a></h3><p class="authors"><strong>Mengran Li</strong>, Bo Li, Jiaying Wang, Wenbin Xing, Chengyang Zhang, Jinlin Wu, Zhen Lei, Jiebo Luo, Stan Z. Li, Zelin Zang</p><p class="work-description">CellScientist converts execution and validation feedback into local model revisions under a fixed task contract, preserving successful updates, regressions, rejected candidates, and failures as auditable trajectories for cellular perturbation prediction across morphological, transcriptomic, and single-cell response spaces.</p><div class="work-bottom"><div class="work-links"><a class="project-link" href="https://limengran98.github.io/CellScientist/" target="_blank" rel="noopener noreferrer">Project ↗</a><a class="" href="https://limengran98.github.io/CellScientist/assets/CellScientist.pdf" target="_blank" rel="noopener noreferrer">Paper ↗</a><a class="" href="https://github.com/limengran98/CellScientist" target="_blank" rel="noopener noreferrer">Code ↗</a><button class="cite-button" data-cite="1" aria-label="Cite CellScientist">BibTeX</button></div><div class="tags"><span>AI for Science</span><span>Model Revision</span><span>Perturbation Prediction</span></div></div></div></article>
+<article class="work-card" id="work-cellaudit"><a class="work-image" href="https://limengran98.github.io/CellAudit/" target="_blank" rel="noopener"><img src="images/cellaudit.webp" alt="CellAudit research framework" loading="lazy" width="800" height="480"><span>View project ↗</span></a><div class="work-content"><div class="work-topline"><span class="work-name">CellAudit</span><span class="venue">Preprint · 2026</span></div><h3><a class="" href="https://limengran98.github.io/CellAudit/" target="_blank" rel="noopener noreferrer">Discover, Falsify, Revise: Auditing Input-Use Claims from Source Code to Predictive Contribution in Agent-Discovered Cell Models</a></h3><p class="authors"><strong>Mengran Li</strong>, Bo Li, Chengyang Zhang, Yang Yan, Jinfeng Xu, Zhenchao Tang</p><p class="work-description">CellAudit traces input-use claims from source code to fitted-model dependence and target-relevant predictive contribution, revealing when strong cellular-response prediction masks unused perturbation inputs and using falsification evidence to guide model revision and test claim generalization across independently acquired cohorts.</p><div class="work-bottom"><div class="work-links"><a class="project-link" href="https://limengran98.github.io/CellAudit/" target="_blank" rel="noopener noreferrer">Project ↗</a><a class="" href="https://limengran98.github.io/CellAudit/assets/CellAudit.pdf" target="_blank" rel="noopener noreferrer">Paper ↗</a><a class="" href="https://github.com/limengran98/CellAudit" target="_blank" rel="noopener noreferrer">Code ↗</a><button class="cite-button" data-cite="2" aria-label="Cite CellAudit">BibTeX</button></div><div class="tags"><span>AI for Science</span><span>Model Auditing</span><span>Perturbation Prediction</span></div></div></div></article>
+<article class="work-card" id="work-arb"><a class="work-image" href="https://doi.org/10.1109/TCYB.2026.3681613" target="_blank" rel="noopener"><img src="./images/arb.png" alt="AttriReBoost research framework" loading="lazy" width="800" height="480"><span>View paper ↗</span></a><div class="work-content"><div class="work-topline"><span class="work-name">AttriReBoost</span><span class="venue">IEEE Transactions on Cybernetics (IEEE TCYB 2026)</span></div><h3><a class="" href="https://doi.org/10.1109/TCYB.2026.3681613" target="_blank" rel="noopener noreferrer">AttriReBoost: A Gradient-Free Propagation Optimization Method for Cold-Start Mitigation in Attribute Missing Graphs</a></h3><p class="authors"><strong>Mengran Li</strong>, Chaojun Ding, Junzhou Chen, Wenbin Xing, Cong Ye, Ronghui Zhang, Songlin Zhuang, Jia Hu, Tony Z. Qiu, Huijun Gao</p><p class="work-description">We propose ARB, a gradient-free propagation framework for attribute-missing graphs that mitigates cold-start via boundary redefinition and virtual edges, achieving accurate reconstruction with strong scalability.</p><div class="work-bottom"><div class="work-links"><a class="" href="https://doi.org/10.1109/TCYB.2026.3681613" target="_blank" rel="noopener noreferrer">Paper ↗</a><a class="" href="https://github.com/limengran98/ARB" target="_blank" rel="noopener noreferrer">Code ↗</a><button class="cite-button" data-cite="3" aria-label="Cite AttriReBoost">BibTeX</button></div><div class="tags"><span>Graph Learning</span><span>Missing Data</span><span>Cold-Start</span><span>Propagation</span></div></div></div></article>
+<article class="work-card" id="work-app"><a class="work-image" href="https://doi.org/10.1109/TNNLS.2026.3676197" target="_blank" rel="noopener"><img src="./images/app.png" alt="APP research framework" loading="lazy" width="800" height="480"><span>View paper ↗</span></a><div class="work-content"><div class="work-topline"><span class="work-name">APP</span><span class="venue">IEEE TNNLS 2026</span></div><h3><a class="" href="https://doi.org/10.1109/TNNLS.2026.3676197" target="_blank" rel="noopener noreferrer">Adaptive Prototype-Guided Personalized Propagation for Heterophilic Graphs With Missing Data</a></h3><p class="authors"><strong>Mengran Li</strong>, Wenbin Xing, Zelin Zang, Bo Li, Chengyang Zhang, Yong Zhang, Junzhou Chen, Ronghui Zhang, Yongfu Li, Chuan Hu, Xiaolei Ma, Zibin Zheng</p><p class="work-description">We propose APP, a unified framework for learning on heterophilic graphs with missing features. By introducing global semantic prototypes, virtual edge propagation, and adaptive fusion, APP jointly addresses propagation distortion and feature imputation, achieving robust performance under the challenging heterophily-missing coupling (HMC) setting.</p><div class="work-bottom"><div class="work-links"><a class="" href="https://doi.org/10.1109/TNNLS.2026.3676197" target="_blank" rel="noopener noreferrer">Paper ↗</a><a class="" href="https://github.com/limengran98/APP" target="_blank" rel="noopener noreferrer">Code ↗</a><button class="cite-button" data-cite="4" aria-label="Cite APP">BibTeX</button></div><div class="tags"><span>Graph Learning</span><span>Missing Data</span><span>Heterophily</span></div></div></div></article>
+<article class="work-card" id="work-chmr"><a class="work-image" href="https://arxiv.org/abs/2511.21120" target="_blank" rel="noopener"><img src="./images/CHMR.png" alt="CHMR research framework" loading="lazy" width="800" height="480"><span>View paper ↗</span></a><div class="work-content"><div class="work-topline"><span class="work-name">CHMR</span><span class="venue">AAAI 2026 (Oral)</span></div><h3><a class="" href="https://arxiv.org/abs/2511.21120" target="_blank" rel="noopener noreferrer">Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling</a></h3><p class="authors"><strong>Mengran Li</strong>, Zelin Zang, Wenbin Xing, Junzhou Chen, Ronghui Zhang, Jiebo Luo, Stan Z. Li</p><p class="work-description">We propose CHMR, a framework that jointly models local-global dependencies between molecules and cellular responses. By using a tree-structured vector quantization, we capture latent biological hierarchies, significantly improving molecular property prediction.</p><div class="work-bottom"><div class="work-links"><a class="" href="https://arxiv.org/abs/2511.21120" target="_blank" rel="noopener noreferrer">Paper ↗</a><a class="" href="https://github.com/limengran98/CHMR" target="_blank" rel="noopener noreferrer">Code ↗</a><button class="cite-button" data-cite="5" aria-label="Cite CHMR">BibTeX</button></div><div class="tags"><span>AI for Science</span><span>Molecular Modeling</span></div></div></div></article></div></section>
+<section id="news" class="section news-section"><div class="section-head"><div><p class="eyebrow">02 / UPDATES</p><h2>News & milestones</h2></div><span class="muted">Research, recognition, and collaborations</span></div><ul class="news-list"><li><time>2026.08</time><div>One collaborative paper accepted by <strong>IEEE TNNLS</strong>.</div></li>
+<li><time>2026.08</time><div>Two papers accepted by <strong>Renewable Energy</strong>, including one as corresponding author and one collaborative work.</div></li>
+<li><time>2026.07</time><div>One paper accepted by <strong>IEEE/CAA Journal of Automatica Sinica</strong>.</div></li>
+<li><time>2026.05</time><div>Recognized as a <strong>Gold Reviewer</strong> for <strong>ICML 2026</strong>.</div></li>
+<li><time>2026.05</time><div>One collaborative paper accepted by <strong>ICML 2026</strong>.</div></li></ul><details class="news-archive"><summary>View all 17 updates <span>＋</span></summary><ul class="news-list"><li><time>2026.03</time><div>One paper accepted by <strong>IEEE TCYB</strong>.</div></li>
+<li><time>2026.03</time><div>One paper accepted by <strong>IEEE TNNLS</strong>.</div></li>
+<li><time>2026.01</time><div>Presented our work as an <strong>Oral Presentation</strong> at <strong>AAAI 2026</strong> in Singapore: <a href='https://underline.io/lecture/139636-learning-cell-aware-hierarchical-multi-modal-representations-for-robust-molecular-modeling' target='_blank' class='text-primary hover:underline font-medium'>Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling</a>.</div></li>
+<li><time>2025.12</time><div>One paper accepted by <strong>Pattern Recognition (PR)</strong>.</div></li>
+<li><time>2025.12</time><div>Two collaborative papers were accepted by <strong>Nature Communications</strong> and <strong>Communications Biology</strong>, respectively.</div></li>
+<li><time>2025.12</time><div>Research reported by media: <a href='https://mp.weixin.qq.com/s/iC9xO-69NZXqvNLymqaIBA' target='_blank' class='text-primary hover:underline font-medium'>Analysis of CHMR Framework</a>.</div></li>
+<li><time>2025.11</time><div>One paper accepted by <strong>AAAI 2025 (Oral)</strong>.</div></li>
+<li><time>2025.10</time><div>Awarded the <strong>National Scholarship</strong> for Ph.D. Students.</div></li>
+<li><time>2025.10</time><div>Awarded the <strong>Presidential Scholarship</strong> of Sun Yat-sen University.</div></li>
+<li><time>2025.09</time><div>Two papers (<em>Redundancy Is Not What You Need...</em> and <em>SCAE...</em>) selected as <strong>ESI Highly Cited Papers</strong>.</div></li>
+<li><time>2025.09</time><div>One survey paper on Graph LLMs accepted by <strong>Expert Systems with Applications (ESWA)</strong>.</div></li>
+<li><time>2025.03</time><div>Awarded the SYSU Hong Kong/Macau Exchange Funding. Joint training at <strong>Westlake University</strong> and <strong>CAIR, HK</strong> (Supervisor: <a href='https://en.westlake.edu.cn/faculty/stan-zq-li.html' target='_blank' class='text-primary hover:underline'>Prof. Stan Z. Li</a>, <a href='https://people.ucas.ac.cn/~zlei?language=en' target='_blank' class='text-primary hover:underline'>Prof. Zhen Lei</a> and <a href='https://www.cs.rochester.edu/u/jluo/' target='_blank' class='text-primary hover:underline'>Prof. Jiebo Luo</a>).</div></li></ul></details></section>
+<section id="publications" class="section"><div class="section-head"><div><p class="eyebrow">03 / PUBLICATION RECORD</p><h2>Full Publication List</h2></div><a class="subtle-link" href="https://scholar.google.com/citations?user=MLff8bQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a></div><div class="publication-toolbar"><label class="search-label"><span>Search publications</span><input id="publication-search" type="search" placeholder="Search title, venue, or keyword" autocomplete="off"></label><label><span>Year</span><select id="year-filter"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option></select></label><label><span>Type</span><select id="type-filter"><option value="all">All types</option><option value="journal">Journal</option><option value="conference">Conference</option><option value="preprint">Preprint</option></select></label><label><span>Authorship</span><select id="author-filter"><option value="all">All roles</option><option value="fc">First / Corresponding</option></select></label><button id="reset-filters" class="reset-button">Reset</button></div><div class="publication-summary" aria-live="polite"><span id="result-count">31 publications</span><div><span><i class="dot journal"></i><b id="journal-count">23</b> journals</span><span><i class="dot conference"></i><b id="conference-count">5</b> conferences</span><span><i class="dot preprint"></i><b id="preprint-count">3</b> preprints</span></div></div><div id="full-list"><article class="publication" data-type="preprint"><span class="publication-code">P3</span><div><h4><a class="" href="https://limengran98.github.io/MorphoSuff/assets/manuscript.pdf" target="_blank" rel="noopener noreferrer">When label-free morphology is sufficient for targeted cellular measurements</a></h4><div class="publication-meta"><span>2026</span><span class="publication-venue">Preprint</span><span class="author-role">Co-first Author</span><a class="" href="https://limengran98.github.io/MorphoSuff/" target="_blank" rel="noopener noreferrer">Project ↗</a><a class="" href="https://github.com/limengran98/MorphoSuff" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="preprint"><span class="publication-code">P2</span><div><h4><a class="" href="https://limengran98.github.io/CellScientist/assets/CellScientist.pdf" target="_blank" rel="noopener noreferrer">CellScientist: From Execution Feedback to Auditable Model-Revision Trajectories for Cellular Perturbation Prediction</a></h4><div class="publication-meta"><span>2026</span><span class="publication-venue">Preprint</span><span class="author-role">Co-first Author</span><a class="" href="https://limengran98.github.io/CellScientist/" target="_blank" rel="noopener noreferrer">Project ↗</a><a class="" href="https://github.com/limengran98/CellScientist" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="preprint"><span class="publication-code">P1</span><div><h4><a class="" href="https://limengran98.github.io/CellAudit/assets/CellAudit.pdf" target="_blank" rel="noopener noreferrer">Discover, Falsify, Revise: Auditing Input-Use Claims from Source Code to Predictive Contribution in Agent-Discovered Cell Models</a></h4><div class="publication-meta"><span>2026</span><span class="publication-venue">Preprint</span><span class="author-role">1st Author</span><a class="" href="https://limengran98.github.io/CellAudit/" target="_blank" rel="noopener noreferrer">Project ↗</a><a class="" href="https://github.com/limengran98/CellAudit" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J23</span><div><h4>SFAR: Semantic Fusion Attribute Recovery for Text Attribute Missing Graphs via Large Language Model Knowledge Generalization</h4><div class="publication-meta"><span>2026</span><span class="publication-venue">IEEE/CAA Journal of Automatica Sinica</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/SFAR" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J22</span><div><h4><a class="" href="https://doi.org/10.1109/TCYB.2026.3681613" target="_blank" rel="noopener noreferrer">Attrireboost: A gradient-free propagation optimization method for cold start mitigation in attribute missing graphs</a></h4><div class="publication-meta"><span>2026</span><span class="publication-venue">IEEE Transactions on Cybernetics</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/ARB" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J21</span><div><h4><a class="" href="https://doi.org/10.1109/TNNLS.2026.3676197" target="_blank" rel="noopener noreferrer">Adaptive Prototype-guided Personalized Propagation for Heterophilic Graphs with Missing Data</a></h4><div class="publication-meta"><span>2026</span><span class="publication-venue">IEEE Transactions on Neural Networks and Learning Systems</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/APP" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="conference"><span class="publication-code">C5</span><div><h4><a class="" href="https://arxiv.org/abs/2511.21120" target="_blank" rel="noopener noreferrer">Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling</a></h4><div class="publication-meta"><span>2026</span><span class="publication-venue">AAAI</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/CHMR" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J20</span><div><h4><a class="" href="https://doi.org/10.1016/j.patcog.2025.112975" target="_blank" rel="noopener noreferrer">MORSE: Molecular Representation Learning via Structured Semantic Extraction across Hierarchical and Asymmetric Biological Modalities</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">Pattern Recognition</span><span class="author-role">2nd Author</span></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J19</span><div><h4><a class="" href="https://doi.org/10.1038/s41467-025-67479-w" target="_blank" rel="noopener noreferrer">PhenoProfiler: advancing phenotypic learning for image-based drug discovery</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">Nature Communications</span><span class="author-role">8th Author</span><a class="" href="https://github.com/QSong-github/PhenoProfiler" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J18</span><div><h4><a class="" href="https://doi.org/10.1038/s42003-025-09312-0" target="_blank" rel="noopener noreferrer">Hypergraph-driven spatial multimodal fusion for precise domain delineation and tumor microenvironment decoding</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">Communications Biology</span><span class="author-role">5th Author</span><a class="" href="https://github.com/VitaIntelli-CQU/HAST" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J17</span><div><h4><a class="" href="https://doi.org/10.1016/j.eswa.2025.129643" target="_blank" rel="noopener noreferrer">A Survey of Large Language Models for Data Challenges in Graphs</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">Expert Systems with Applications</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="conference"><span class="publication-code">C4</span><div><h4><a class="" href="https://doi.org/10.1145/3711896.3737042" target="_blank" rel="noopener noreferrer">Mdvt: Enhancing multimodal recommendation with model-agnostic multimodal-driven virtual triplets</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">ACM SIGKDD</span><span class="author-role">7th Author</span><a class="" href="https://github.com/Jinfeng-Xu/MDVT" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J16</span><div><h4><a class="" href="https://doi.org/10.1109/TNNLS.2024.3357080" target="_blank" rel="noopener noreferrer">Redundancy Is Not What You Need: An Embedding Fusion Graph Auto-Encoder for Self-Supervised Graph Representation Learning</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">IEEE Transactions on Neural Networks and Learning Systems</span><span class="author-role">1st Author</span></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J15</span><div><h4><a class="" href="https://doi.org/10.1109/TCSS.2024.3509399" target="_blank" rel="noopener noreferrer">TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">IEEE Transactions on Computational Social Systems</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/TDG-Mamba" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J14</span><div><h4><a class="" href="https://doi.org/10.1109/JIOT.2025.3531985" target="_blank" rel="noopener noreferrer">Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">IEEE Internet of Things Journal</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/TDAR" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="conference"><span class="publication-code">C3</span><div><h4><a class="" href="https://doi.org/10.24963/ijcai.2025/235" target="_blank" rel="noopener noreferrer">ElaD-Net: An Elastic Semantic Decoupling Network for Lesion Segmentation in Breast Ultrasound Images</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">IJCAI</span><span class="author-role">5th Author</span></div></div></article>
+<article class="publication" data-type="conference"><span class="publication-code">C2</span><div><h4><a class="" href="https://link.springer.com/chapter/10.1007/978-3-032-05127-1_3" target="_blank" rel="noopener noreferrer">A Two-Stage Method for Specular Highlight Detection and Removal in Medical Images</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">MICCAI</span><span class="author-role">8th Author</span><a class="" href="https://github.com/tkllndxn/highlight-removal" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J13</span><div><h4><a class="" href="https://doi.org/10.1109/TITS.2025.3619092" target="_blank" rel="noopener noreferrer">Effective Finite Time Stability Control for Human–Machine Shared Vehicle Following System</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">IEEE Transactions on Intelligent Transportation Systems</span><span class="author-role">2nd Author</span></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J12</span><div><h4><a class="" href="https://doi.org/10.1109/TITS.2025.3588867" target="_blank" rel="noopener noreferrer">MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">IEEE Transactions on Intelligent Transportation Systems</span><span class="author-role">3rd Author</span><a class="" href="https://github.com/BMRETURN/MM-STFlowNet" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J11</span><div><h4><a class="" href="https://doi.org/10.1016/j.psep.2025.107674" target="_blank" rel="noopener noreferrer">Ms-AeDNet: A multi-scale attention-enhanced dynamic network for multi-step performance prediction of hydrogen proton exchange membrane fuel cells</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">Process Safety and Environmental Protection</span><span class="author-role">1st Author</span><a class="" href="https://github.com/BMRETURN/Ms-AeDNet" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J10</span><div><h4><a class="" href="https://doi.org/10.1016/j.asoc.2025.113214" target="_blank" rel="noopener noreferrer">TAS-TsC: A data-driven framework for Estimating Time of Arrival using Temporal-Attribute-Spatial Tri-space Coordination of truck trajectories</a></h4><div class="publication-meta"><span>2025</span><span class="publication-venue">Applied Soft Computing</span><span class="author-role">1st Author</span></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J9</span><div><h4><a class="" href="https://doi.org/10.1109/TBDATA.2023.3275374" target="_blank" rel="noopener noreferrer">Self-Supervised Nodes-Hyperedges Embedding for Heterogeneous Information Network Learning</a></h4><div class="publication-meta"><span>2024</span><span class="publication-venue">IEEE Transactions on Big Data</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/SNHE" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J8</span><div><h4><a class="" href="https://doi.org/10.1109/TCSS.2023.3292145" target="_blank" rel="noopener noreferrer">CSAT: Contrastive Sampling-Aggregating Transformer for Community Detection in Attribute-Missing Networks</a></h4><div class="publication-meta"><span>2024</span><span class="publication-venue">IEEE Transactions on Computational Social Systems</span><span class="author-role">1st Author</span></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J7</span><div><h4><a class="" href="https://doi.org/10.1145/3672078" target="_blank" rel="noopener noreferrer">SCAE: Structural Contrastive Auto-encoder for Incomplete Multi-view Representation Learning</a></h4><div class="publication-meta"><span>2024</span><span class="publication-venue">ACM Transactions on Multimedia Computing, Communications and Applications</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/SCAE" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J6</span><div><h4><a class="" href="https://doi.org/10.1109/TCSS.2024.3394701" target="_blank" rel="noopener noreferrer">Contextual Semantics Interaction Graph Embedding Learning for Recommender Systems</a></h4><div class="publication-meta"><span>2024</span><span class="publication-venue">IEEE Transactions on Computational Social Systems</span><span class="author-role">3rd Author</span></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J5</span><div><h4><a class="" href="https://academic.oup.com/bib/article/25/6/bbae500/7937248" target="_blank" rel="noopener noreferrer">Gene Expression Prediction from Histology Images via Hypergraph Neural Networks</a></h4><div class="publication-meta"><span>2024</span><span class="publication-venue">Briefings in Bioinformatics</span><span class="author-role">5th Author</span><a class="" href="https://github.com/QSong-github/HGGEP" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J4</span><div><h4><a class="" href="https://doi.org/10.1145/3565028" target="_blank" rel="noopener noreferrer">Hypergraph Transformer Neural Networks</a></h4><div class="publication-meta"><span>2023</span><span class="publication-venue">ACM Transactions on Knowledge Discovery from Data</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/HGTN" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J3</span><div><h4><a class="" href="https://doi.org/10.3233/IDA-216318" target="_blank" rel="noopener noreferrer">Inferring Student Social Links from Spatiotemporal Behavior Data via Entropy-based Analyzing Model</a></h4><div class="publication-meta"><span>2023</span><span class="publication-venue">Intelligent Data Analysis</span><span class="author-role">1st Author</span></div></div></article>
+<article class="publication" data-type="conference"><span class="publication-code">C1</span><div><h4><a class="" href="https://doi.org/10.1109/BigData55660.2022.10020643" target="_blank" rel="noopener noreferrer">SHCN: Self-supervised General Hypergraph Clustering Network</a></h4><div class="publication-meta"><span>2022</span><span class="publication-venue">IEEE BigData</span><span class="author-role">1st Author</span><a class="" href="https://github.com/limengran98/SHCN" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J2</span><div><h4><a class="" href="https://doi.org/10.1007/s40747-022-00731-8" target="_blank" rel="noopener noreferrer">Student achievement prediction using deep neural network from multi-source campus data</a></h4><div class="publication-meta"><span>2022</span><span class="publication-venue">Complex &amp; Intelligent Systems</span><span class="author-role">4th Author</span></div></div></article>
+<article class="publication" data-type="journal"><span class="publication-code">J1</span><div><h4><a class="" href="https://doi.org/10.1016/j.engappai.2022.105174" target="_blank" rel="noopener noreferrer">Multi-view Hypergraph Neural Networks for Student Academic Performance Prediction</a></h4><div class="publication-meta"><span>2022</span><span class="publication-venue">Engineering Applications of Artificial Intelligence</span><span class="author-role">1st Author</span></div></div></article></div><noscript><p class="muted">All publications are shown. Enable JavaScript to search and filter this list.</p></noscript></section>
+<div class="bottom-grid section"><section id="awards"><p class="eyebrow">04 / RECOGNITION</p><h2>Honors & awards</h2><ul class="award-list"><li><strong>National Scholarship</strong> (2025, 2022)</li>
+<li>Presidential Scholarship, SYSU (2025)</li>
+<li>Outstanding Master's Thesis, BJUT (2023)</li>
+<li>Xiaomi Special Award (Top 10), BJUT (2022)</li></ul></section><section id="service"><p class="eyebrow">05 / ACADEMIC COMMUNITY</p><h2>Service</h2><div class="service-content"><p><strong>Reviewer:</strong> IJCV, ICML, AAAI, ACM MM; IEEE TPAMI, TNNLS, TKDE, TCSS; ACM TKDD, TOIS; Pattern Recognition, Information Fusion etc.</p></div></section></div>
+<section id="contact" class="contact-section"><div><p class="eyebrow">GET IN TOUCH</p><h2>Let’s work on scientific AI.</h2><p>I welcome conversations about research collaborations and opportunities.</p></div><div class="contact-links"><a href="mailto:limengran1998@163.com">limengran1998@163.com ↗</a><a href="mailto:limr39@mail2.sysu.edu.cn">limr39@mail2.sysu.edu.cn ↗</a></div></section><footer><span>© <span id="copyright-year">2026</span> Mengran Li · GitHub Pages</span><div><button id="visitor-toggle" aria-expanded="false" aria-controls="visitor-panel">Visitor map</button><a href="https://github.com/limengran98/limengran98.github.io" target="_blank" rel="noopener">Website source ↗</a><a href="#top">Back to top ↑</a></div></footer><div id="visitor-panel" hidden><div id="visitor-map"></div><p id="visitor-status" class="muted" role="status"></p></div></main>
+<dialog id="citation-dialog" aria-labelledby="citation-title"><div class="dialog-head"><div><p class="eyebrow">CITATION</p><h2 id="citation-title">BibTeX</h2></div><button id="close-citation" aria-label="Close citation">Close ×</button></div><textarea id="citation-text" readonly aria-label="BibTeX citation" spellcheck="false"></textarea><div class="dialog-actions"><span id="copy-status" role="status"></span><button id="copy-citation" class="primary-button">Copy BibTeX</button></div></dialog></body></html>
