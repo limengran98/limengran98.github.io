@@ -4,6 +4,10 @@
 // 1. News
 const newsData = [
   {
+    "date": "2026.9",
+    "content": "Awarded the <strong>National Scholarship</strong> for Ph.D. Students, and the <strong>Presidential Scholarship</strong> of Sun Yat-sen University."
+  },
+  {
     "date": "2026.08",
     "content": "One collaborative paper accepted by <strong>IEEE TNNLS</strong>."
   },
