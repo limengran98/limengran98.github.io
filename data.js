@@ -85,9 +85,9 @@ const selectedWorks = [
     "title": "When label-free morphology is sufficient for targeted cellular measurements",
     "authors": "Mengran Li, Jianqing Zhu, Bo Li, Chengyang Zhang, Zhenchao Tang, Jiaying Wang, Wenbin Xing, Boyu Zhang, Jinfeng Xu, Lingbei Meng, Bob Zhang, Junzhou Chen, Ronghui Zhang, Lian Zhang, Jinchao Xu",
     "venue": "Preprint · 2026",
-    "desc": "A measurement-sufficiency framework that tests when inferred cellular readouts preserve perturbation responses, experimental priorities, and biological conclusions.",
+    "desc": "Tests when morphology-derived measurements preserve cellular responses and the scientific decisions based on them.",
     "img": "images/morphosuff.webp",
-    "paperUrl": "https://limengran98.github.io/MorphoSuff/assets/manuscript.pdf",
+    "paperUrl": "https://doi.org/10.64898/2026.09.22.753654",
     "projectUrl": "https://limengran98.github.io/MorphoSuff/",
     "codeUrl": "https://github.com/limengran98/MorphoSuff",
     "tags": [
@@ -95,7 +95,7 @@ const selectedWorks = [
       "Measurement Sufficiency",
       "Experimental Design"
     ],
-    "bibtex": "@misc{li2026morphosuff,\n  title = {When label-free morphology is sufficient for targeted cellular measurements},\n  author = {Li, Mengran and Zhu, Jianqing and Li, Bo and Zhang, Chengyang and Tang, Zhenchao and Wang, Jiaying and Xing, Wenbin and Zhang, Boyu and Xu, Jinfeng and Meng, Lingbei and Zhang, Bob and Chen, Junzhou and Zhang, Ronghui and Zhang, Lian and Xu, Jinchao},\n  year = {2026},\n  note = {Preprint},\n  url = {https://limengran98.github.io/MorphoSuff/}\n}"
+    "bibtex": "@article{li2026morphosuff,\n  title = {When label-free morphology is sufficient for targeted cellular measurements},\n  author = {Li, Mengran and Zhu, Jianqing and Li, Bo and Zhang, Chengyang and Tang, Zhenchao and Wang, Jiaying and Xing, Wenbin and Zhang, Boyu and Xu, Jinfeng and Meng, Lingbei and Zhang, Bob and Chen, Junzhou and Zhang, Ronghui and Zhang, Lian and Xu, Jinchao},\n  journal = {bioRxiv},\n  year = {2026},\n  doi = {10.64898/2026.09.22.753654},\n  url = {https://doi.org/10.64898/2026.09.22.753654}\n}"
   },
   {
     "id": "cellscientist",
@@ -103,9 +103,9 @@ const selectedWorks = [
     "title": "CellScientist: From Execution Feedback to Auditable Model-Revision Trajectories for Cellular Perturbation Prediction",
     "authors": "Mengran Li, Bo Li, Jiaying Wang, Wenbin Xing, Chengyang Zhang, Jinlin Wu, Zhen Lei, Jiebo Luo, Stan Z. Li, Zelin Zang",
     "venue": "Preprint · 2026",
-    "desc": "CellScientist converts execution and validation feedback into local model revisions under a fixed task contract, preserving successful updates, regressions, rejected candidates, and failures as auditable trajectories for cellular perturbation prediction across morphological, transcriptomic, and single-cell response spaces.",
+    "desc": "Uses execution feedback to revise cellular-response models under a fixed evaluation protocol, recording each design change and outcome.",
     "img": "images/cellscientist.webp",
-    "paperUrl": "https://limengran98.github.io/CellScientist/assets/CellScientist.pdf",
+    "paperUrl": "https://arxiv.org/abs/2605.07335",
     "projectUrl": "https://limengran98.github.io/CellScientist/",
     "codeUrl": "https://github.com/limengran98/CellScientist",
     "tags": [
@@ -113,7 +113,7 @@ const selectedWorks = [
       "Model Revision",
       "Perturbation Prediction"
     ],
-    "bibtex": "@misc{li2026cellscientist,\n  title = {{CellScientist}: From Execution Feedback to Auditable Model-Revision Trajectories for Cellular Perturbation Prediction},\n  author = {Li, Mengran and Li, Bo and Wang, Jiaying and Xing, Wenbin and Zhang, Chengyang and Wu, Jinlin and Lei, Zhen and Luo, Jiebo and Li, Stan Z. and Zang, Zelin},\n  year = {2026},\n  note = {Preprint},\n  url = {https://limengran98.github.io/CellScientist/}\n}"
+    "bibtex": "@misc{li2026cellscientist,\n  title = {CellScientist: From Execution Feedback to Auditable Model-Revision Trajectories for Cellular Perturbation Prediction},\n  author = {Li, Mengran and Li, Bo and Wang, Jiaying and Xing, Wenbin and Zhang, Chengyang and Wu, Jinlin and Lei, Zhen and Luo, Jiebo and Li, Stan Z. and Zang, Zelin},\n  year = {2026},\n  eprint = {2605.07335},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.LG},\n  url = {https://arxiv.org/abs/2605.07335}\n}"
   },
   {
     "id": "cellaudit",
@@ -121,9 +121,9 @@ const selectedWorks = [
     "title": "Discover, Falsify, Revise: Auditing Input-Use Claims from Source Code to Predictive Contribution in Agent-Discovered Cell Models",
     "authors": "Mengran Li, Bo Li, Chengyang Zhang, Yang Yan, Jinfeng Xu, Zhenchao Tang",
     "venue": "Preprint · 2026",
-    "desc": "CellAudit traces input-use claims from source code to fitted-model dependence and target-relevant predictive contribution, revealing when strong cellular-response prediction masks unused perturbation inputs and using falsification evidence to guide model revision and test claim generalization across independently acquired cohorts.",
+    "desc": "Checks whether cellular-response models actually use perturbation inputs and whether those inputs improve prediction, then uses failures to guide revision.",
     "img": "images/cellaudit.webp",
-    "paperUrl": "https://limengran98.github.io/CellAudit/assets/CellAudit.pdf",
+    "paperUrl": "https://arxiv.org/abs/2609.27234",
     "projectUrl": "https://limengran98.github.io/CellAudit/",
     "codeUrl": "https://github.com/limengran98/CellAudit",
     "tags": [
@@ -131,7 +131,7 @@ const selectedWorks = [
       "Model Auditing",
       "Perturbation Prediction"
     ],
-    "bibtex": "@misc{li2026cellaudit,\n  title = {Discover, Falsify, Revise: Auditing Input-Use Claims from Source Code to Predictive Contribution in Agent-Discovered Cell Models},\n  author = {Li, Mengran and Li, Bo and Zhang, Chengyang and Yan, Yang and Xu, Jinfeng and Tang, Zhenchao},\n  year = {2026},\n  note = {Preprint},\n  url = {https://limengran98.github.io/CellAudit/}\n}"
+    "bibtex": "@misc{li2026cellaudit,\n  title = {Discover, Falsify, Revise: Auditing Input-Use Claims from Source Code to Predictive Contribution in Agent-Discovered Cell Models},\n  author = {Li, Mengran and Li, Bo and Zhang, Chengyang and Yan, Yang and Xu, Jinfeng and Tang, Zhenchao},\n  year = {2026},\n  eprint = {2609.27234},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.LG},\n  url = {https://arxiv.org/abs/2609.27234}\n}"
   },
   {
     "id": "arb",
@@ -155,7 +155,7 @@ const selectedWorks = [
     "title": "Adaptive Prototype-Guided Personalized Propagation for Heterophilic Graphs With Missing Data",
     "venue": "IEEE TNNLS 2026",
     "authors": "Mengran Li, Wenbin Xing, Zelin Zang, Bo Li, Chengyang Zhang, Yong Zhang, Junzhou Chen, Ronghui Zhang, Yongfu Li, Chuan Hu, Xiaolei Ma, Zibin Zheng",
-    "desc": "We propose APP, a unified framework for learning on heterophilic graphs with missing features. By introducing global semantic prototypes, virtual edge propagation, and adaptive fusion, APP jointly addresses propagation distortion and feature imputation, achieving robust performance under the challenging heterophily-missing coupling (HMC) setting.",
+    "desc": "Combines semantic prototypes, virtual edges, and adaptive fusion to learn from heterophilic graphs with missing features.",
     "img": "./images/app.png",
     "paperUrl": "https://doi.org/10.1109/TNNLS.2026.3676197",
     "codeUrl": "https://github.com/limengran98/APP",
@@ -171,7 +171,7 @@ const selectedWorks = [
     "title": "Learning Cell-Aware Hierarchical Multi-Modal Representations for Robust Molecular Modeling",
     "venue": "AAAI 2026 (Oral)",
     "authors": "Mengran Li, Zelin Zang, Wenbin Xing, Junzhou Chen, Ronghui Zhang, Jiebo Luo, Stan Z. Li",
-    "desc": "We propose CHMR, a framework that jointly models local-global dependencies between molecules and cellular responses. By using a tree-structured vector quantization, we capture latent biological hierarchies, significantly improving molecular property prediction.",
+    "desc": "Models molecular structure and cellular responses together, using hierarchical representations to improve molecular property prediction.",
     "img": "./images/CHMR.png",
     "paperUrl": "https://arxiv.org/abs/2511.21120",
     "codeUrl": "https://github.com/limengran98/CHMR",
@@ -189,7 +189,7 @@ const fullPublications = [
     "title": "When label-free morphology is sufficient for targeted cellular measurements",
     "venue": "Preprint",
     "year": "2026",
-    "url": "https://limengran98.github.io/MorphoSuff/assets/manuscript.pdf",
+    "url": "https://doi.org/10.64898/2026.09.22.753654",
     "projectUrl": "https://limengran98.github.io/MorphoSuff/",
     "codeUrl": "https://github.com/limengran98/MorphoSuff",
     "rank": "Co-first Author",
@@ -204,7 +204,7 @@ const fullPublications = [
     "title": "CellScientist: From Execution Feedback to Auditable Model-Revision Trajectories for Cellular Perturbation Prediction",
     "venue": "Preprint",
     "year": "2026",
-    "url": "https://limengran98.github.io/CellScientist/assets/CellScientist.pdf",
+    "url": "https://arxiv.org/abs/2605.07335",
     "projectUrl": "https://limengran98.github.io/CellScientist/",
     "codeUrl": "https://github.com/limengran98/CellScientist",
     "rank": "Co-first Author",
@@ -219,7 +219,7 @@ const fullPublications = [
     "title": "Discover, Falsify, Revise: Auditing Input-Use Claims from Source Code to Predictive Contribution in Agent-Discovered Cell Models",
     "venue": "Preprint",
     "year": "2026",
-    "url": "https://limengran98.github.io/CellAudit/assets/CellAudit.pdf",
+    "url": "https://arxiv.org/abs/2609.27234",
     "projectUrl": "https://limengran98.github.io/CellAudit/",
     "codeUrl": "https://github.com/limengran98/CellAudit",
     "rank": "1st Author",
@@ -459,13 +459,13 @@ const fullPublications = [
 
 // 4. Awards
 const awardsData = [
-  "<strong>National Scholarship</strong> (2025, 2022)",
-  "Presidential Scholarship, SYSU (2025)",
+  "<strong>National Scholarship</strong> (2026, 2025, 2022)",
+  "Presidential Scholarship, SYSU (2026, 2025)",
   "Outstanding Master's Thesis, BJUT (2023)",
   "Xiaomi Special Award (Top 10), BJUT (2022)"
 ];
 
 // 5. Service
 const serviceData = [
-  "<strong>Reviewer:</strong> IJCV, ICML, AAAI, ACM MM; IEEE TPAMI, TNNLS, TKDE, TCSS; ACM TKDD, TOIS; Pattern Recognition, Information Fusion etc."
+  "<strong>Reviewer:</strong> IJCV, IEEE TPAMI, ICML, NeurIPS, ICLR, AAAI, ACM MM; IEEE TNNLS, IEEE TKDE, ACM TKDD, TOIS; Pattern Recognition, Information Fusion, etc."
 ];

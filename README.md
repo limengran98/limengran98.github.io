@@ -2,7 +2,7 @@
 
 Live site: https://limengran98.github.io/
 
-The homepage presents selected work, the full publication record, news, awards,
+The homepage presents news, selected work, the full publication record, awards,
 academic service, and contact information. Essential page assets are local;
 the optional visitor map loads only when opened.
 
